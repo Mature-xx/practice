@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style type="text/css">
+	#main { width:100%; max-width:600px;height:324px; top:247px; left:450px; position:absolute;}
+	#main #main_top {width:240px; height:30px;}
+	#main #main_bot_new { width:240px; height:290px; display:block}
+	#main #main_bot_old {width:240px; height:290px; display:none}
+	#main #main_top #new {background-color:#761701; width:100px; height:30px; float:left; margin-left:20px; line-height:30px; text-align:center;}
+	#main #main_top #old {background-color:#3D0D03; width:100px; height:30px; float:left; margin-right:20px; line-height:30px; text-align:center;}
+	
+</style>
+<script language="javascript">
+	function new_over()
+	{
+		var new_=document.getElementById("new");
+		new_.style.backgroundColor="#761701";
+		document.getElementById("main_bot_new").style.display="block";
+		var old=document.getElementById("old");
+		old.style.backgroundColor="#3D0D03";
+		document.getElementById("main_bot_old").style.display="none";
+	}
+	function old_over()
+	{
+		var new_=document.getElementById("new");
+		new_.style.backgroundColor="#3D0D03";
+		document.getElementById("main_bot_new").style.display="none";
+		var old=document.getElementById("old");
+		old.style.backgroundColor="#761701";
+		document.getElementById("main_bot_old").style.display="block";
+	}
+</script>
+</head>
+
+<body marginwidth="0" marginheight="0" style="background-image:url(images/%E4%BC%A0%E5%A5%87%E9%9C%B8%E4%B8%9A%E6%B3%A8%E5%86%8C%E9%A1%B5%E9%9D%A2.jpg); max-width:600px;">
+<div style="width:100%;height:800px;">
+	<div id="main">
+    	<div id="main_top">
+        	<div id="new" onMouseOver="new_over();"><font color="#D18006" size="-1"><b>新用户注册</b></font></div>
+            <div id="old" onMouseOver="old_over();"><font color="#D18006" size="-1"><b>老用户登陆</b></font></div>
+        </div>
+        <div id="main_bot_new">
+        	<form action="#" method="post">
+            	<table>
+                	<tr>&nbsp;</tr>
+                	<tr>
+                    	<td>
+                        	<font size="-1" color="C0A9A3">用户账号 </font><input type="text" style="background-color:#C5CBC8" required border="1"\>
+                        </td>
+                    </tr>
+                    <tr>
+                    	<td align="right">
+                        	<font size="-1" color="C0A9A3">请输入长度为4~20位的帐号</font>
+                        </td>
+                    </tr>
+                    <tr>&nbsp;</tr>
+                    <tr>&nbsp;</tr>
+                    <tr>
+                    	<td>
+                        	<font size="-1" color="C0A9A3">用户密码 </font><input type="text" required border="1" style="background-color:#C5CBC8"\>
+                        </td>
+                    </tr>
+                    <tr>
+                    	<td align="right">
+                        	<font size="-1" color="C0A9A3">请输入长度为6~20位的密码</font>
+                        </td>
+                    </tr>
+                    <tr>&nbsp;</tr>
+                    <tr>&nbsp;</tr>
+                    <tr>
+                    	<td>
+                        	<font size="-1" color="C0A9A3">重复密码 </font><input style="background-color:#C5CBC8""type="text" required border="1"\>
+                        </td>
+                    </tr>
+                    <tr>
+                    	<td align="right">
+                        	<font size="-1" color="C0A9A3">再输入一次密码</font>
+                        </td>
+                    </tr>
+                    <tr>
+                    	<td>
+                       	<input type="submit" style="background-color:#B72403; width:200px; height:50px; font-size:25px; color:#FFF; margin-top:20px; margin-left:32px; width:180px; height:50px; border:1px solid #B72403;" value="注册查询">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <div id="main_bot_old">
+        	<form action="#" method="post">
+            	<table>
+                	<tr>&nbsp;</tr>
+                	<tr>
+                    	<td>
+                        	<font size="-1" color="C0A9A3">用户账号 </font><input type="text" style="background-color:#C5CBC8" required border="1"\>
+                        </td>
+                    </tr>
+                    <tr>
+                    	<td align="right">
+                        	<font size="-1" color="C0A9A3">请输入长度为4~20位的帐号</font>
+                        </td>
+                    </tr>
+                    <tr>&nbsp;</tr>
+                    <tr>&nbsp;</tr>
+                    <tr>
+                    	<td>
+                        	<font size="-1" color="C0A9A3">用户密码 </font><input type="text" required border="1" style="background-color:#C5CBC8"  border="1"\>
+                        </td>
+                    </tr>
+                    <tr>
+                    	<td align="right">
+                        	<font size="-1" color="C0A9A3">请输入长度为6~20位的密码</font>
+                        </td>
+                    </tr>
+ 					<tr>
+                    	<td align="right">
+                        	<input type="submit" style="background-color:#B72403; width:200px; height:50px; font-size:25px; color:#FFF; margin-top:76px; margin-left:32px; width:180px; height:50px; border:1px solid #B72403;" value="登录查询">
+                        </td>
+                    </tr>
+					
+                </table>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+
+
+</body>
+</html>

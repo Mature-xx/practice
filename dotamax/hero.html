@@ -1,0 +1,418 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>英雄界面</title>
+<style type="text/css">
+body {
+    background-color: rgb(33, 33, 33);
+    margin: 0;
+    font: 12px/1.5 Arial, 'Droid Sans', 'Hiragino Sans GB', 'Microsoft YaHei';
+    /*text-shadow: rgb(17, 17, 17) 1px 1px 0px;*/
+    
+    line-height: 20px;
+    color: #ddd;
+}
+	#ad1 {background-color:#9F3; width:100px; height:250px; margin-top:16%; margin-left:1.6%; position:fixed; background-image:url(images/c-0405-110300-dl2-r.jpg)}
+	#ad1 #x1 {width:18px; height:18px; margin-left:84px;}
+	#ad2 #x2 {width:18px; height:18px; margin-left:84px;}
+	#ad2 {background-color:#C39; width:100px; height:250px; margin-top:16%; margin-left:91%; position:fixed; background-image:url(images/c-0405-110300-dl2-l.jpg)}
+	#top {  background-color:#1A1A1A;width:100%;min-width:1000px;text-align:center;position: absolute; margin-left:auto; margin-top:0px;}
+	#top_top {width:100%; height:40px;}
+	#top_div1 {width:146px; height:28px;  margin-left:110px; float:left; margin-top:5px;}
+	#top_div2 {width:54px; height:40px; margin-left:34px; background-color:#1A1A1A; float:left; text-align:center; line-height:40px;}
+	#top_div3 {width:54px; height:40px; margin-left:34px; background-color:#3A3A3A; float:left; text-align:center; line-height:40px;;}
+	#top_div4 {width:60px; height:40px; margin-left:34px; background-color:#1A1A1A; float:left; text-align:center; line-height:40px;}
+	#top_div5 {width:54px; height:40px; margin-left:34px; background-color:#1A1A1A; float:left; text-align:center; line-height:40px;}
+	#top_div6 {width:54px; height:40px; margin-left:34px; background-color:#1A1A1A; float:left; text-align:center; line-height:40px;}
+	#top_div7 {width:54px; height:40px; margin-left:34px; background-color:#1A1A1A; float:left; text-align:center; line-height:40px;}
+	#top_div8 {width:54px; height:40px; margin-left:34px; background-color:#1A1A1A; float:left; text-align:center; line-height:40px;}
+	#top_div9 {width:54px; height:40px; margin-left:34px; background-color:#1A1A1A; float:left; text-align:center; line-height:40px;}
+	#top_div10 {width:54px; height:40px; margin-left:34px; background-color:#E4A502; float:left; text-align:center; line-height:40px;}
+	#top_div11 {width:54px; height:40px; margin-left:34px; background-color:#C30909; float:left; text-align:center; line-height:40px;}
+	#top_div12 {width:54px; height:40px; margin-left:34px; background-color:#1A1A1A; float:left; text-align:center; line-height:40px;}
+	#top_div13 {width:54px; height:40px; margin-left:34px; background-color:#1A1A1A; float:left; text-align:center; line-height:40px;}
+	#top_bot {width:100%; height:164px;}
+	#shuju {width:54px; height:88px; left:378px; top:40px;position:absolute; display:none;}
+	#shuju #shuju_b1{width:54px; height:44px; background-color:#1A1A1A; text-align:center; line-height:40px;}
+	#shuju #shuju_b2{width:54px; height:44px; background-color:#1A1A1A; text-align:center; line-height:40px;}
+	#search_block {width:338px; height:38px; position:absolute; top:100px; left:500px;border:#FFF 0px solid;}
+	#hcirl {width:18px; height:38px; background-color:#FFF;border-radius: 100px 0 0 100px ; border:#FFF 0px solid; float:left; opacity:0.5; border:#FFF 0px solid;}
+	#hcirr {width:40px; height:38px; background-color:#FFF;border-radius: 0px 100px 100px 0px; border:#FFF 0px solid; float:left; opacity:0.5;border:#FFF 0px solid;}
+	#bot_div {width:750px; height:40px; background-color:#FFF; float:left; margin-top:126px; margin-left:130px; background-color:#0A0A0A;}
+	#bot_div1 {width:91px; height:40px; background-color:#1A1A1A; text-align:center; float:left; line-height:40px;}
+	#bot_div2 {width:91px; height:40px; background-color:#0A0A0A; text-align:center; float:left; line-height:40px;}
+	#bot_div3 {width:91px; height:40px; background-color:#0A0A0A; text-align:center; float:left; line-height:40px;}
+	#bot_div4 {width:91px; height:40px; background-color:#0A0A0A; text-align:center; float:left; line-height:40px;}
+	#bot_div5 {width:91px; height:40px; background-color:#0A0A0A; text-align:center; float:left; line-height:40px;}
+	#bot_div6 {width:91px; height:40px; background-color:#0A0A0A; text-align:center; float:left; line-height:40px;}
+	#bot_div7 {width:91px; height:40px; background-color:#0A0A0A; text-align:center; float:left; line-height:40px;}
+	
+	#con {width:100%;max-width:1370px;text-align:center;position: absolute; margin-left:left; background-color:#212121; margin-top:16%;}
+	#con_top {width:500px; height:156px; color:#FFF; margin-left:100px;; margin-top:20px;}
+	
+	
+	#con_bot {width:1048px; height:455px; color:#FFF; text-align:center; font-size:12px; background-color:#212121; margin-left:150px;}
+	#line1 {width:1048px; height:31px;color:#FFF; text-align:center; font-size:12px; margin:auto auto; background-color:#0C0C0C;}
+	#line1 #b1{width:52px; height:31px; float:left;text-align:center; line-height:30px; margin-left:auto; margin-top:auto;}
+	#line1 #b2{width:52px; height:31px; float:left;text-align:center; line-height:30px; margin-left:10px; margin-top:auto;}
+	#line1 #b3{width:52px; height:31px; float:left;text-align:center; line-height:30px; margin-left:153px; margin-top:auto;}
+	#line1 #b4{width:161px; height:31px; float:left; margin:auto auto; margin-left:70px;line-height:30px;}
+	#line1 #b5{width:161px; height:31px; float:left; margin:auto auto; margin-left:180px;line-height:30px;}
+	#line1 #b6{width:161px; height:31px; float:left; margin:auto auto; margin-left:100px;line-height:30px;}
+	#line2 {width:1048px; height:45px;color:#FFF; background-color:#1A1A1A;}
+	#line2 #b1{width:52px; height:45px; float:left;text-align:center; line-height:40px; margin-left:auto; margin-top:auto;}
+	#line2 #b2{width:82px; height:45px; float:left; text-align:center; line-height:40px; margin-left:50px;}
+	#line2 #b3{width:52px; height:45px; float:left; margin:auto auto; margin-left:50px;line-height:40px;}
+	#line2 #b4{width:161px; height:45px; float:left; margin:auto auto; margin-left:100px;}
+	#line2 #b5{width:5px; height:45px; float:left; margin:auto auto; margin-left:100px;}
+	#line2 #b6{width:161px; height:45px; float:left; margin:auto auto; margin-left:100px;}
+	#line3 {width:1048px; height:45px;color:#FFF; background-color:#0C0C0C;}
+	#line3 #b1{width:52px; height:45px; float:left;text-align:center; line-height:40px; margin-left:auto; margin-top:auto;}
+	#line3 #b2{width:82px; height:45px; float:left; text-align:center; line-height:40px; margin-left:50px;}
+	#line3 #b3{width:52px; height:45px; float:left; margin:auto auto; margin-left:50px;line-height:40px;}
+	#line3 #b4{width:161px; height:45px; float:left; margin:auto auto; margin-left:100px;}
+	#line3 #b5{width:5px; height:45px; float:left; margin:auto auto; margin-left:100px;}
+	#line3 #b6{width:161px; height:45px; float:left; margin:auto auto; margin-left:100px;}
+	#line4 {width:1048px; height:45px;color:#FFF; background-color:#1A1A1A;}
+	#line4 #b1{width:52px; height:45px; float:left;text-align:center; line-height:40px; margin-left:auto; margin-top:auto;}
+	#line4 #b2{width:82px; height:45px; float:left; text-align:center; line-height:40px; margin-left:50px;}
+	#line4 #b3{width:52px; height:45px; float:left; margin:auto auto; margin-left:50px;line-height:40px;}
+	#line4 #b4{width:161px; height:45px; float:left; margin:auto auto; margin-left:100px;}
+	#line4 #b5{width:5px; height:45px; float:left; margin:auto auto; margin-left:100px;}
+	#line4 #b6{width:161px; height:45px; float:left; margin:auto auto; margin-left:100px;}
+	#line5 {width:1048px; height:45px;color:#FFF; background-color:#0C0C0C;}
+	#line5 #b1{width:52px; height:45px; float:left;text-align:center; line-height:40px; margin-left:auto; margin-top:auto;}
+	#line5 #b2{width:82px; height:45px; float:left; text-align:center; line-height:40px; margin-left:50px;}
+	#line5 #b3{width:52px; height:45px; float:left; margin:auto auto; margin-left:50px;line-height:40px;}
+	#line5 #b4{width:161px; height:45px; float:left; margin:auto auto; margin-left:100px;}
+	#line5 #b5{width:5px; height:45px; float:left; margin:auto auto; margin-left:100px;}
+	#line5 #b6{width:161px; height:45px; float:left; margin:auto auto; margin-left:100px;}
+	#line6 {width:1048px; height:45px;color:#FFF; background-color:#1A1A1A;}
+	#line6 #b1{width:52px; height:45px; float:left;text-align:center; line-height:40px; margin-left:auto; margin-top:auto;}
+	#line6 #b2{width:82px; height:45px; float:left; text-align:center; line-height:40px; margin-left:50px;}
+	#line6 #b3{width:52px; height:45px; float:left; margin:auto auto; margin-left:50px;line-height:40px;}
+	#line6 #b4{width:161px; height:45px; float:left; margin:auto auto; margin-left:100px;}
+	#line6 #b5{width:5px; height:45px; float:left; margin:auto auto; margin-left:100px;}
+	#line6 #b6{width:161px; height:45px; float:left; margin:auto auto; margin-left:100px;}
+	#line7 {width:1048px; height:45px;color:#FFF; background-color:#0C0C0C;}
+	#line7 #b1{width:52px; height:45px; float:left;text-align:center; line-height:40px; margin-left:auto; margin-top:auto;}
+	#line7 #b2{width:82px; height:45px; float:left; text-align:center; line-height:40px; margin-left:50px;}
+	#line7 #b3{width:52px; height:45px; float:left; margin:auto auto; margin-left:50px;line-height:40px;}
+	#line7 #b4{width:161px; height:45px; float:left; margin:auto auto; margin-left:100px;}
+	#line7 #b5{width:5px; height:45px; float:left; margin:auto auto; margin-left:100px;}
+	#line7 #b6{width:161px; height:45px; float:left; margin:auto auto; margin-left:100px;}
+	#line8 {width:1048px; height:45px;color:#FFF; background-color:#1A1A1A;}
+	#line8 #b1{width:52px; height:45px; float:left;text-align:center; line-height:40px; margin-left:auto; margin-top:auto;}
+	#line8 #b2{width:82px; height:45px; float:left; text-align:center; line-height:40px; margin-left:50px;}
+	#line8 #b3{width:52px; height:45px; float:left; margin:auto auto; margin-left:50px;line-height:40px;}
+	#line8 #b4{width:161px; height:45px; float:left; margin:auto auto; margin-left:100px;}
+	#line8 #b5{width:5px; height:45px; float:left; margin:auto auto; margin-left:100px;}
+	#line8 #b6{width:161px; height:45px; float:left; margin:auto auto; margin-left:100px;}
+	#line9 {width:1048px; height:45px;color:#FFF; background-color:#0C0C0C;}
+	#line9 #b1{width:52px; height:45px; float:left;text-align:center; line-height:40px; margin-left:auto; margin-top:auto;}
+	#line9 #b2{width:82px; height:45px; float:left; text-align:center; line-height:40px; margin-left:50px;}
+	#line9 #b3{width:52px; height:45px; float:left; margin:auto auto; margin-left:50px;line-height:40px;}
+	#line9 #b4{width:161px; height:45px; float:left; margin:auto auto; margin-left:100px;}
+	#line9 #b5{width:5px; height:45px; float:left; margin:auto auto; margin-left:100px;}
+	#line9 #b6{width:161px; height:45px; float:left; margin:auto auto; margin-left:100px;}
+	#line10 {width:1048px; height:45px;color:#FFF; background-color:#1A1A1A;}
+	#line10 #b1{width:52px; height:45px; float:left;text-align:center; line-height:40px; margin-left:auto; margin-top:auto;}
+	#line10 #b2{width:82px; height:45px; float:left; text-align:center; line-height:40px; margin-left:50px;}
+	#line10 #b3{width:52px; height:45px; float:left; margin:auto auto; margin-left:50px;line-height:40px;}
+	#line10 #b4{width:161px; height:45px; float:left; margin:auto auto; margin-left:100px;}
+	#line10 #b5{width:5px; height:45px; float:left; margin:auto auto; margin-left:100px;}
+	#line10 #b6{width:161px; height:45px; float:left; margin:auto auto; margin-left:100px;}
+	#line11 {width:1048px; height:45px;color:#FFF; background-color:#0C0C0C;}
+	#line11 #b1{width:52px; height:45px; float:left;text-align:center; line-height:40px; margin-left:auto; margin-top:auto;}
+	#line11 #b2{width:82px; height:45px; float:left; text-align:center; line-height:40px; margin-left:50px;}
+	#line11 #b3{width:52px; height:45px; float:left; margin:auto auto; margin-left:50px;line-height:40px;}
+	#line11 #b4{width:161px; height:45px; float:left; margin:auto auto; margin-left:100px;}
+	#line11 #b5{width:5px; height:45px; float:left; margin:auto auto; margin-left:100px;}
+	#line11 #b6{width:161px; height:45px; float:left; margin:auto auto; margin-left:100px;}
+	.con{width: 100%;height:1086px; margin: 0px auto 20px auto;margin-top: 0px; margin-bottom: 1px; padding-bottom: 1px;}
+	.main-con{ width: 1100px;margin: 0 auto;color: #ccc;}
+	#foot {width:100%;min-width:1000px;text-align: center;position: absolute;margin-left:left; bottom:-420px;} 
+	#return{width:100%;height:30px}
+	.tag{position: absolute;height: 40px;}
+</style>
+<script language="javascript">
+	function block_over(obj_id)
+	{
+		if(obj_id=="top_div3" || obj_id=="shuju1_href" || obj_id=="shuju2_href" || obj_id=="shuju_b1" || obj_id=="shuju_b2")
+		{
+			document.getElementById("shuju").style.display="block";
+			document.getElementById(obj_id).style.backgroundColor="#3A3A3A";
+			return;
+		}
+		document.getElementById(obj_id).style.backgroundColor="#3A3A3A";
+		document.getElementById("shuju").style.display="none";
+	}
+	function block_out(obj_id)
+	{
+		if(obj_id=="top_div3") return;
+		if(obj_id=="shuju")
+		{
+			document.getElementById("shuju").style.display="none";
+			return;
+		}
+		document.getElementById(obj_id).style.backgroundColor="#1A1A1A";
+	}
+	function light(obj_id)
+	{
+		var obj=document.getElementById(obj_id);
+		obj.style.backgroundColor="#11212F";
+	}
+	function light_down_1(obj_id)
+	{
+		var obj=document.getElementById(obj_id);
+		obj.style.backgroundColor="#1A1A1A";
+	}
+	function light_down_2(obj_id)
+	{
+		var obj=document.getElementById(obj_id);
+		obj.style.backgroundColor="#0C0C0C";
+	}
+</script>
+</head>
+
+<body marginheight="0" marginwidth="0" bgcolor="#1A1A1A">
+	
+	<div id="top">
+    <div id="top_top">
+       	   <div id="top_div1">
+        	<img src="images/pro_date_max_logo3.png" width="100%" height="100%">
+           </div>
+           <a href="index.html"style="color:#CCCCCC; text-decoration:none"><div id="top_div2" name="block" onMouseMove="block_over('top_div2');" onMouseOut="block_out('top_div2')">
+           <font size="-1"><b>首页</b></font>
+           </div></a>
+           <div id="top_div3" name="block" onMouseOver="block_over('top_div3');" onMouseOut="block_out('top_div3')">
+           <font size="-1"><b>数据</b></font>
+           </div>
+           <a href="prodate.html" style="color:#CCCCCC;  text-decoration:none"><div id="top_div4" name="block" onMouseOver="block_over('top_div4');" onMouseOut="block_out('top_div4')">
+            <font size="-1"><b>职业数据</b></font>
+           </div></a>
+           <a href="player.html" style="color:#CCCCCC;  text-decoration:none"><div id="top_div5" name="block" onMouseOver="block_over('top_div5');" onMouseOut="block_out('top_div5')">
+           <font size="-1"><b>玩家</b></font>
+           </div></a>
+           <a href="rank.html" style="color:#CCCCCC;  text-decoration:none"><div id="top_div6" name="block" onMouseOver="block_over('top_div6');" onMouseOut="block_out('top_div6')">
+           <font size="-1"><b>天梯</b></font>
+           </div></a>
+           <a href="live.html" style="color:#CCCCCC;  text-decoration:none"><div id="top_div7" name="block" onMouseOver="block_over('top_div7');" onMouseOut="block_out('top_div7')">
+           <font size="-1"><b>直播</b></font>
+           </div></a>
+           <a href="video.html" style="color:#CCCCCC;  text-decoration:none"><div id="top_div8" name="block" onMouseOver="block_over('top_div8');" onMouseOut="block_out('top_div8')">
+           <font size="-1"><b>视频</b></font>
+           </div></a>
+           <a href="app.html" style="color:#CCCCCC;  text-decoration:none"><div id="top_div9" name="block" onMouseOver="block_over('top_div9');" onMouseOut="block_out('top_div9')">
+           <font  size="-1"><b>APP</b></font>
+           </div></a>
+           <a href="#" style="color:#FFFFFF;  text-decoration:none"><div id="top_div10">
+           <font size="-1"><b>VIP</b></font>
+           </div></a>
+           <a href="#" style="color:#FFFFFF;  text-decoration:none"><div id="top_div11">
+            <font  size="-1"><b>竞猜</b></font>
+           </div></a>
+           <a href="login.html" style="color:#CCCCCC;  text-decoration:none"><div id="top_div12" name="block" onMouseOver="block_over('top_div12');" onMouseOut="block_out('top_div12')">
+           <font size="-1"><b>登录</b></font>
+           </div></a>
+           <a href="reg.html" style="color:#CCCCCC;  text-decoration:none"><div id="top_div13" name="block" onMouseOver="block_over('top_div13');" onMouseOut="block_out('top_div13')">
+           <font  size="-1"><b>注册</b></font>
+           </div></a>
+        </div>
+        <div id="top_bot" style="background-image:url(images/prodate_background.jpg);">
+        		<div id="shuju" onMouseOut="block_out('shuju');">
+                	<a href="hero.html" style="text-decoration:none;color:#CCCCCC;" onMouseOver="block_over('shuju1_href');"><div id="shuju_b1"  onMouseOver="block_over('shuju_b1');" onMouseOut="block_out('shuju_b1');"  onMouseOut="block_out('shuju_b1');"><font  size="-1">英雄</font></div></a>
+                    <a href="things.html" style="text-decoration:none;color:#CCCCCC;"  onMouseOver="block_over('shuju2_href');"><div id="shuju_b2"  onMouseOver="block_over('shuju_b2');" onMouseOut="block_out('shuju_b2');"  onMouseOut="block_out('shuju_b2');"><font  size="-1">物品</font></div></a>
+                </div>
+             <div id="bot_div">
+             <div id="bot_div1" name="bot_block"><a href="#"  style="color:#CCCCCC; font-size:14px; text-decoration:none;">所有英雄</a></div>
+              <div id="bot_div2"  name="bot_block"><a href="#"  style="color:#CCCCCC; font-size:14px; text-decoration:none;">胜率</a></div>
+               <div id="bot_div3"  name="bot_block"><a href="#"  style="color:#CCCCCC; font-size:14px; text-decoration:none;">最多使用</a></div>
+             <div id="bot_div4"  name="bot_block"><a href="#"  style="color:#CCCCCC; font-size:14px; text-decoration:none;">经济/经验</a></div>
+              <div id="bot_div5"  name="bot_block"><a href="#"  style="color:#CCCCCC; font-size:14px; text-decoration:none;">KDA</a></div>
+            <div id="bot_div6"  name="bot_block"><a href="#"  style="color:#CCCCCC; font-size:14px; text-decoration:none;">正反补</a></div>
+              <div id="bot_div7"  name="bot_block"><a href="#"  style="color:#CCCCCC; font-size:14px; text-decoration:none;">伤害治疗</a></div>
+             </div>
+        	<div id="shouye" style="color:#FFF; text-align:center; font-size:36px;; width:100px; height:30px; margin-top:52px; margin-left:-740px; float:left;">英雄</div>
+           <div id="search_block">
+            <div id="hcirl"></div>
+         <div id="search" style="width:280px; height:45px; float:left;"><input type="search" style="width:280px; height:38px; border:#FFF 0px solid;  opacity:0.5;border:#FFF 0px solid;" placeholder="输入国服ID或昵称"></div>
+         <div id="hcirr" ><input type="button" value="Go" style="  background-color:#FFF; border:0px #FFFFFF solid; margin:10px 0px 10px 0px;" style="width:50px; height:45px;"></div>
+         </div>
+        </div>
+    </div>
+    <div id="con">
+	    <div id="con_top"><div id="con_top_main"><div style="margin-left:-65px; width:500px; height:22px;"><font color="#CCCCCC">时间</font>
+        <select style="width:100px; height:22px; background-color:#1A1A1A; text-align:center; color:#CCCCCC; font-size:12px;" id="sel">
+        	<option>本月</option>
+            <option>全部</option>
+        </select>
+        <select style="width:100px; height:22px; background-color:#1A1A1A; text-align:center; color:#CCCCCC; font-size:12px;" id="sel">
+        	<option>全球</option>
+            <option>中国</option>
+             <option>美国</option>
+        </select></div>
+  			<br/><font size="-1" color="#CCCCCC"  > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; _Skills </font>
+               <input id="sk1" name="con_sk" type="button" value="全部分段" style="background-color:#461A19; color:#FFF; border: solid #212121;">
+        <input id="sk2" name="con_sk" type="button" value="职业比赛" style="background-color:#222222; color:#930; border: solid #212121;;">
+        <input id="sk3" name="con_sk" type="button" value="Very High" style="background-color:#222222; color:#FC0; border: solid #212121;">
+        <input id="sk4" name="con_sk" type="button" value="High" style="background-color:#222222; color:#FFF;border: solid #212121;">
+        <input id="sk5" name="con_sk" type="button" value="Normal" style="background-color:#222222; color:#CCCCCC; border: solid #212121;">
+        <br><br><font size="-1" color="#CCCCCC" >匹配方式</font> 
+        <input id="sk6" name="con_sk" type="button" value="全部比赛" style="background-color:#461A19; color:#FFF; border: solid #212121;">
+         <input id="sk7" name="con_sk" type="button" value="天梯匹配" style="background-color:#222222; color:#FC0; border: solid #212121;">
+         <input id="sk8" name="con_sk" type="button" value="普通匹配" style="background-color:#222222; color:#CCCCCC; border: solid #212121;">
+          <input id="sk9" name="con_sk" type="button" value="Solo比赛" style="background-color:#222222; color:#CCCCCC; border: solid #212121;"></div></div>
+        <div id="con_bot">
+ 			<div id="line1">
+            	<div id="b1">英雄</div>
+                <div id="b2"></div>
+                <div id="b3"></div>
+                <div id="b4">胜率</div>
+                <div id="b5">使用次数</div>
+            </div>
+            <div id="line2" onMouseOver="light('line2');" onMouseOut="light_down_1('line2');" onClick="location.href='quanneng.html';">
+                <div id="b1"><img src="images/hero1.png" width="100%"></div>
+                <div id="b2" >全能骑士</div>
+                <div id="b3"></div>
+                <div id="b4">60.49%<b/><hr size="5px" color="#33CC33" style="width:165px; margin-left:0px;"></div>
+                <div id="b5"></div>
+                <div id="b6"><font color="#CCCCCC">4003296</font><b/><hr size="5px" color="#CF9523" style="width:70px; margin-left:0px;"></div>
+            </div>
+            <div id="line3" onMouseOver="light('line3');" onMouseOut="light_down_2('line3');">
+            
+                <div id="b1"><img src="images/hero2.png" width="100%"></div>
+                <div id="b2">幽鬼</div>
+                <div id="b3"></div>
+                <div id="b4">58.74%<b/><hr size="5px" color="#33CC33" style="width:162px; margin-left:0px;"></div>
+                <div id="b5"></div>
+                <div id="b6"><font color="#CCCCCC">7894026</font><b/><hr size="5px" color="#CF9523" style="width:140px; margin-left:0px;"></div>
+            </div>
+            <div id="line4" onMouseOver="light('line4');" onMouseOut="light_down_1('line4');">
+            
+                <div id="b1"><img src="images/hero3.jpg" width="100%"></div>
+                <div id="b2">瘟疫法师</div>
+                <div id="b3"></div>
+                <div id="b4">58.35%<b/><hr size="5px" color="#33CC33" style="width:159px; margin-left:0px;"></div>
+                <div id="b5"></div>
+                <div id="b6"><font color="#CCCCCC">5040772</font><b/><hr size="5px" color="#CF9523" style="width:100px; margin-left:0px;"></div>
+            </div>
+            <div id="line5" onMouseOver="light('line5');" onMouseOut="light_down_2('line5');">
+           
+                <div id="b1"><img src="images/hero4.png" width="100%"></div>
+                 <div id="b2">亚巴顿</div>
+                <div id="b3"></div>
+                <div id="b4">57.57%<b/><hr size="5px" color="#33CC33" style="width:156px; margin-left:0px;"></div>
+                <div id="b5"></div>
+                <div id="b6"><font color="#CCCCCC">2148338</font><b/><hr size="5px" color="#CF9523" style="width:50px; margin-left:0px;"></div>
+            </div>
+            <div id="line6" onMouseOver="light('line6');" onMouseOut="light_down_1('line6');">
+           
+                <div id="b1"><img src="images/hero5.jpeg" width="100%"></div>
+                 <div id="b2">宙斯</div>
+                <div id="b3"></div>
+                <div id="b4">57.74%<b/><hr size="5px" color="#33CC33" style="width:156px; margin-left:0px;"></div>
+                <div id="b5"></div>
+                <div id="b6"><font color="#CCCCCC">7525745</font><b/><hr size="5px" color="#CF9523" style="width:130px; margin-left:0px;"></div>
+            </div>
+            <div id="line7" onMouseOver="light('line7');" onMouseOut="light_down_2('line7');">
+           
+                <div id="b1"><img src="images/hero5.jpg"width="100%"></div>
+                 <div id="b2">熊战士</div>
+                <div id="b3"></div>
+                <div id="b4">56.06%<b/><hr size="5px" color="#33CC33" style="width:150px; margin-left:0px;"></div>
+                <div id="b5"></div>
+                <div id="b6"><font color="#CCCCCC">5358029</font><b/><hr size="5px" color="#CF9523" style="width:105px; margin-left:0px;"></div>
+            </div>
+            <div id="line8" onMouseOver="light('line8');" onMouseOut="light_down_1('line8');">
+         
+                <div id="b1"><img src="images/hero6.jpg" width="100%"></div>
+                   <div id="b2">冥魂大帝</div>
+                <div id="b3"></div>
+                <div id="b4">55.06%<b/><hr size="5px" color="#33CC33" style="width:145px; margin-left:0px;"></div>
+                <div id="b5"></div>
+                <div id="b6"><font color="#CCCCCC">4230346</font><b/><hr size="5px" color="#CF9523" style="width:95px; margin-left:0px;"></div>
+            </div>
+            <div id="line9" onMouseOver="light('line9');" onMouseOut="light_down_2('line9');">
+         
+                <div id="b1"><img src="images/hero7.jpg" width="100%"></div>
+                   <div id="b2">术士</div>
+                <div id="b3"></div>
+                <div id="b4">54.91%<b/><hr size="5px" color="#33CC33" style="width:140px; margin-left:0px;"></div>
+                <div id="b5"></div>
+                <div id="b6"><font color="#CCCCCC">1699753</font><b/><hr size="5px" color="#CF9523" style="width:40px; margin-left:0px;"></div>
+            </div>
+            <div id="line10" onMouseOver="light('line10');" onMouseOut="light_down_1('line10');">
+          
+                <div id="b1"><img src="images/hero8.jpeg"width="100%"></div>
+                  <div id="b2">水晶室女</div>
+                <div id="b3"></div>
+                <div id="b4">54.91%<b/><hr size="5px" color="#33CC33" style="width:140px; margin-left:0px;"></div>
+                <div id="b5"></div>
+                <div id="b6"><font color="#CCCCCC">4481637</font><b/><hr size="5px" color="#CF9523" style="width:80px; margin-left:0px;"></div>
+            </div>
+            <div id="line11" onMouseOver="light('line11');" onMouseOut="light_down_2('line11');">
+          
+                <div id="b1"><img src="images/hero10.jpeg"width="100%"></div>
+                  <div id="b2">美杜莎</div>
+                <div id="b3"></div>
+                <div id="b4">54.71%<b/><hr size="5px" color="#33CC33" style="width:136px; margin-left:0px;"></div>
+                <div id="b5"></div>
+                <div id="b6"><font color="#CCCCCC">3017769</font><b/><hr size="5px" color="#CF9523" style="width:60px; margin-left:0px;"></div>
+            </div>
+
+
+        </div>
+    </div>
+       
+        <!-- foot sta--------------------------------------------------------->
+    <div id="foot">
+   <div style="background-color: rgb(10,10,10);border-top:1px rgb(15,15,15) solid;cursor: pointer;margin-top: -1px;height:26px;" >
+       <!------------------------------------------>
+       <div id="return" style="margin-left:auto; margin-right:auto;"><a href="#"><img src="images/main/return.png" width="28" height="26"></a>
+       </div>
+       <!------------------------------------------>
+       <div style="background-color: rgb(0,0,0);padding-top: 15px;padding-bottom: 15px;position: relative;margin-top:-10px">
+       <div style="width:1100px;margin: 0 auto;line-height: 20px;position: relative;height: 30px;">
+      
+       <div   class="tag" style="left:23%;">
+        <a href="#">
+        <img src="images/main/max_logo3.png" style="width:105px;margin-right: 15px;margin-left:10px;cursor: pointer;"></a></div>
+       <div   class="tag" style="left:37%;">
+       <a href="#">
+       <img src="images/main/lolmax.png" style="width:97px;margin-right: 10px;margin-left:10px;margin-top:2px;cursor: pointer;"></a></div>
+       <div   class="tag" style="left:50%;">
+       <a href="#">
+       <img src="images/main/d3_small.png" style="width:115px;margin-right: 10px;margin-left:10px;margin-top:2px;cursor: pointer;"></a></div>
+       <div class="tag" style="left:64%">
+       <a href="#">
+       <img src="images/main/hosmax.png" style="width:97px;margin-right: 10px;margin-left:10px;margin-top:2px;cursor: pointer;"></a></div>
+       <span style="line-height: 30px;position: absolute;right:25px;top:0px;">
+       <img src="images/main/cn.gif" width="16" height="11">
+       <img src="images/main/ru.gif" width="16" height="11">
+       <img src="images/main/en.gif" width="16" height="11">
+       <img src="images/main/ko.gif" width="16" height="11">
+       </span>
+       
+      </div>
+ 
+</div>
+<!----------------------------------->
+     <div style="padding-bottom:10px;margin: 0px auto 0px auto;background-color: #000;color: rgba(255, 255, 255, 0.30);">
+       <div style="position: relative;width: 1100px;margin: 0 auto;">
+       
+         <img src="images/main/logo_01.png" style="width:40px;"></div>
+       </div>
+       </div>
+</div>
+</div>
+<!------------------------------------>
+<div id="ad1">
+    	<div id="x1"><a href="./chuanqi.html" target="_blank"><img src="images/2016-04-19_083346.jpg"></a></div>
+    </div>
+    <div id="ad2">
+    	<div id="x2"><a href="./chuanqi.html" target="_blank"><img src="images/2016-04-19_083346.jpg"></a></div>
+    </div>
+</body>
+</html>

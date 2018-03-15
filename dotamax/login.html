@@ -1,0 +1,345 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>login</title>
+<script type="text/jscript">
+function show_div(){
+	document.getElementById("phoneLog").style.cssText="float: left; border-bottom: 1px solid white;font-size: 15px;padding: 10px 0 10px 0;margin-left: 40px;margin-right: 54px;color: white;";
+	
+	document.getElementById("webLog").style.cssText="float: right; border-bottom: 1px solid rgba(50,50,50,0);font-size: 15px;padding: 10px 0 10px 0;margin-right: 40px;margin-left: 54px;margin-top:-40px;";
+	
+}
+
+
+function show_div1(){
+
+	document.getElementById("webLog").style.cssText="float: right; border-bottom: 1px solid white;font-size: 15px;padding: 10px 0 10px 0;margin-right: 40px;margin-left: 54px;color: white;margin-top:-40px;";
+	
+	document.getElementById("phoneLog").style.cssText="float: left; border-bottom: 1px solid rgba(50,50,50,0);font-size: 15px;padding: 10px 0 10px 0;margin-left: 40px;margin-right: 54px;"
+}
+
+document.onkeydown = function(){
+    if(event.keyCode==13){
+        document.getElementById("login-btn").click();   
+        return false;                               
+    }
+}
+
+</script>
+
+<style type="text/css">
+body {
+    background-color: rgb(33, 33, 33);
+	backgrond-attachment:fixed;
+	background-position:center;
+    margin: 0 ;
+	background-image:url(images/login/bgimg.jpg);
+	
+    font: 12px/1.5 Arial, 'Droid Sans', 'Hiragino Sans GB', 'Microsoft YaHei';
+    background-size:cover;
+	position:relative;
+    color: #ddd;
+}
+#nav-bar {
+    width: 100%;
+    background-color: rgba(10,10,10,0.15);
+    height: 50px;
+    position: absolute;
+    top:0px;
+}
+*, *:active, *:focus {
+    outline: 0;
+    outline-style: none;
+    outline-width: 0;
+    -moz-outline-width: 0;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    text-decoration: none;
+}
+a:hover, a:focus {
+    color:#fff;
+}
+.selectLog{
+	background-color: rgba(50,50,50,0.6);
+	border-bottom:1px solid rgba(50,50,50,1);
+}
+.selectLog:after{
+		clear:both;
+		content:"\200B";
+		display:block;
+		height:0;
+}
+.selectLog >div:hover{
+	cursor: pointer;
+	color: white;
+}
+#phoneLog:hover,#webLog:hover{
+	cursor: pointer;
+	}
+
+.breath {
+    filter: alpha(opacity=50);
+    -moz-opacity: 0.5;
+    opacity: 0.5;
+    -webkit-animation-name: breath;
+    -webkit-animation-duration: 8s;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: infinite;
+}
+.login-in-btn {
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 38px;
+    background-color: rgb(70,175,95);
+    background-color: rgba(70,175,95,0.9);
+    color: #fff;
+    border-radius: 2px;
+    width:300px;
+    height: 38px;
+    overflow: hidden;
+    white-space: nowrap;
+    -webkit-transition: all .25s cubic-bezier(.165,.84,.44,1),opacity 1ms linear;
+    -moz-transition: all .25s cubic-bezier(.165,.84,.44,1),opacity 1ms linear;
+    transition: all .25s cubic-bezier(.165,.84,.44,1),opacity 1ms linear;
+    cursor: pointer;
+}
+.login-in-btn:focus, .login-in-btn:hover {
+  background-color: rgb(90,225,125);
+    background-color: rgba(90,225,125,0.9);
+}
+
+.sign-up-btn {
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 38px;
+    background-color: rgb(41,119,186);
+    background-color: rgba(41,119,186,0.9);
+    color: #fff;
+    border-radius: 2px;
+    width:300px;
+    height: 38px;
+    overflow: hidden;
+    white-space: nowrap;
+    -webkit-transition: all .25s cubic-bezier(.165,.84,.44,1),opacity 1ms linear;
+    -moz-transition: all .25s cubic-bezier(.165,.84,.44,1),opacity 1ms linear;
+    transition: all .25s cubic-bezier(.165,.84,.44,1),opacity 1ms linear;
+    cursor: pointer;
+}
+
+.sign-up-btn:focus, .sign-up-btn:hover {
+  background-color: rgb(61,139,226);
+    background-color: rgba(61,139,226,0.9);
+}
+
+.login-reply {
+  color:#ec3627;
+}
+
+.sign-up-btn-small {
+    font-family: Helvetica, STHeiti;
+    font-size: 13px;
+    text-align: center;
+    line-height: 35px;
+    background-color: rgba(41,119,186,0.8);
+    color: #fff;
+    border-radius: 2px;
+    margin-right: 15px;
+    margin-top: 7px;
+    width:60px;
+    height: 35px;
+    overflow: hidden;
+    white-space: nowrap;
+    -webkit-transition: all .25s cubic-bezier(.165,.84,.44,1),opacity 1ms linear;
+    -moz-transition: all .25s cubic-bezier(.165,.84,.44,1),opacity 1ms linear;
+    transition: all .25s cubic-bezier(.165,.84,.44,1),opacity 1ms linear;
+    float: left;
+}
+
+
+.sign-in-btn-small {
+    font-family: Helvetica, STHeiti;
+    font-size: 13px;
+    text-align: center;
+    line-height: 35px;
+    background-color: rgba(255,255,255,0.3);
+    color: #fff;
+    border-radius: 2px;
+    margin-right: 15px;
+    margin-top: 7px;
+    width:60px;
+    height: 35px;
+    overflow: hidden;
+    white-space: nowrap;
+    -webkit-transition: all .25s cubic-bezier(.165,.84,.44,1),opacity 1ms linear;
+    -moz-transition: all .25s cubic-bezier(.165,.84,.44,1),opacity 1ms linear;
+    transition: all .25s cubic-bezier(.165,.84,.44,1),opacity 1ms linear;
+    float: left;
+    
+}
+<link rel="stylesheet" type="text/css" href="mystyle/login/font-awesome.min.css">
+</style>
+<script src="js/login/jsbn.js"></script>
+</head>
+
+<body id="particles-js" >
+
+<script src="js/login/particles.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+particlesJS('particles-js',
+  {
+    "particles": {
+      "number": {
+        "value": 110,
+        "density": {
+          "enable": true,
+          "value_area": 800
+        }
+      },
+      "color": {
+        "value": "#ffffff"
+      },
+      "shape": {
+        "type": "circle",
+        "stroke": {
+          "width": 0,
+          "color": "#000000"
+        },
+        "polygon": {
+          "nb_sides": 5
+        },
+        "image": {
+          "src": "img/github.svg",
+          "width": 100,
+          "height": 100
+        }
+      },
+      "opacity": {
+        "value": 0.5,
+        "random": false,
+        "anim": {
+          "enable": false,
+          "speed": 1,
+          "opacity_min": 0.1,
+          "sync": false
+        }
+      },
+      "size": {
+        "value": 1,
+        "random": true,
+        "anim": {
+          "enable": false,
+          "speed": 20,
+          "size_min": 0.1,
+          "sync": false
+        }
+      },
+      "line_linked": {
+        "enable": true,
+        "distance": 40,
+        "color": "#fff",
+        "opacity": 1,
+        "width": 1
+      },
+      "move": {
+        "enable": true,
+        "speed": 3,
+        "direction": "none",
+        "random": false,
+        "straight": false,
+        "out_mode": "out",
+        "attract": {
+          "enable": false,
+          "rotateX": 600,
+          "rotateY": 1200
+        }
+      }
+    },
+    "interactivity": {
+      "detect_on": "canvas",
+      "events": {
+        "onhover": {
+          "enable": true,
+          "mode": "grab"
+        },
+        "onclick": {
+          "enable": true,
+          "mode": "push"
+        },
+        "resize": true
+      },
+      "modes": {
+        "grab": {
+          "distance": 120,
+          "line_linked": {
+            "opacity": 1
+          }
+        },
+        "bubble": {
+          "distance": 400,
+          "size": 40,
+          "duration": 2,
+          "opacity": 8,
+          "speed": 3
+        },
+        "repulse": {
+          "distance": 300
+        },
+        "push": {
+          "particles_nb": 4
+        },
+        "remove": {
+          "particles_nb": 2
+        }
+      }
+    },
+    "retina_detect": true,
+    "config_demo": {
+      "hide_card": false,
+      "background_color": "#b61924",
+      "background_image":"",
+      "background_position": "50% 50%",
+      "background_repeat": "no-repeat",
+      "background_size": "cover"
+    }
+  }
+
+);
+</script>
+
+<div id="nav-bar">
+  <div class="nav-bar"><a href="#" target="_blank">
+    <div style="margin-top: 12px;margin-left: 30px;float: left;"><img src="images/login/max_logo3.png" height="25"></div>
+    </a>
+</div>
+</div>
+<div style="z-index: 1000;position: absolute;top:20%;left :50%;margin: 0 0 0 -190px;">
+<div style="margin-left: auto;margin-right: auto;width: 300px;text-align: center;background-color: rgba(50,50,50,0.6);padding: 20px 40px 60px 40px;position: relative;">
+
+<div class="selectLog" style="position: absolute;left: 0px;top: -44px;width: 380px;;">
+    <div  id="phoneLog" onClick="show_div()" style="float: left; border-bottom: 1px solid #fff;font-size: 15px;padding: 10px 0 10px 0;margin-left: 40px;margin-right: 54px;color: #fff;">手机账号登录 </div>
+    	<div style="float:left display: inline-block;width: 1px;height: 43px;background-color: #323232;"></div>
+    <div  id="webLog" onClick="show_div1()" style="float: right;border-bottom: 1px solid rgba(50,50,50,0);font-size: 15px;padding: 10px 0 10px 0;margin-right: 40px;margin-left: 54px; margin-top:-40px; ">网站账号登陆</div>
+ </div>
+      <img src="images/login/max.png" style="width:120px;margin-bottom: 5px;">
+    <div style="margin-top:5px;margin-bottom: 20px;color:#ccc;font-size: 14px;font-weight: 600;">第一游戏数据平台 </div>
+<form action="#" method="post" id="tel">
+  <input id="user" type="text" placeholder="用户名"  class="login-input top-radius"  style="display: block;height:30px; width:300px;border-bottom: 1px solid rgb(227,227,227);" required> <br />
+  <input id="password" type="password"  style="height:30px;width:300px;margin-bottom:20px;" class="login-input bottom-radius" placeholder="密码"  required> <br />
+   <input name="" type="submit" value="登陆" class="login-in-btn" style="margin-right: 10px; border:#55cf74 solid 1px"> <br />
+   <input name="" type="button" value="创建我的Dotamax账号" class="sign-up-btn" onclick="document.location.href = 'reg.html'" style="margin-right: 10px;margin-top: 10px; border:#3076b2 solid 1px">
+   </form>
+   <div style="margin-top: 20px;text-align: left;">
+    <a href="#" style="margin-left: 3px;margin-top: 20px;color:#ccc;font-size: 12px;">忘记密码?</a>
+</div>
+<div style="position: absolute;right:40px;bottom: 20px;"><a href="javascript:history.go(-1)" style="color: rgb(152, 152, 152)">返回</a></div> 
+</div>
+</div>
+ <div style="position: fixed;bottom:20px;width: 100%;">
+        <div  style="padding-bottom:10px;text-align: center;">
+          
+            <img src="images/login/logo_01.png" style="width:40px;margin: 0 auto;" class="breath">
+              
+          </div>
+      </div>
+</body>
+</html>

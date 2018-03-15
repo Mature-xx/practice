@@ -1,0 +1,767 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>首页</title>
+<style type="text/css">
+<link rel="stylesheet" type="text/css" href="mystyle/main/dotamax_v20160413.css">
+<link rel="stylesheet" type="text/css" href="mystyle/main/popModal.css">
+body {
+    background-color: rgb(33, 33, 33);
+    margin: 0;
+    font: 12px/1.5 Arial, 'Droid Sans', 'Hiragino Sans GB', 'Microsoft YaHei';
+    /*text-shadow: rgb(17, 17, 17) 1px 1px 0px;*/
+    
+    line-height: 20px;
+    color: #ddd;
+}
+html,body,div,span,p,ul,ol,li,img{
+	padding: 0;
+	margin: 0;
+}
+	#ad1 {background-color:#9F3; width:100px; height:250px; margin-top:16%; margin-left:1.6%; position:fixed; background-image:url(images/c-0405-110300-dl2-r.jpg)}
+	#ad1 #x1 {width:18px; height:18px; margin-left:84px;}
+	#ad2 #x2 {width:18px; height:18px; margin-left:84px;}
+	#ad2 {background-color:#C39; width:100px; height:250px; margin-top:16%; margin-left:91%; position:fixed; background-image:url(images/c-0405-110300-dl2-l.jpg)}
+	#top { background-color:#1A1A1A; width:1369px; height:212px;}
+	#top_top {width:1369px; height:40px;}
+	#top_div1 {width:146px; height:28px;  margin-left:110px; float:left; margin-top:5px;}
+	#top_div2 {width:54px; height:40px; margin-left:34px; background-color:#3A3A3A; float:left; text-align:center; line-height:36px;}
+	#top_div3 {width:54px; height:40px; margin-left:34px; background-color:#1A1A1A; float:left; text-align:center; line-height:36px; color:#C0C0C0;}
+	#top_div4 {width:60px; height:40px; margin-left:34px; background-color:#1A1A1A; float:left; text-align:center; line-height:36px;}
+	#top_div5 {width:54px; height:40px; margin-left:34px; background-color:#1A1A1A; float:left; text-align:center; line-height:36px;}
+	#top_div6 {width:54px; height:40px; margin-left:34px; background-color:#1A1A1A; float:left; text-align:center; line-height:36px;}
+	#top_div7 {width:54px; height:40px; margin-left:34px; background-color:#1A1A1A; float:left; text-align:center; line-height:36px;}
+	#top_div8 {width:54px; height:40px; margin-left:34px; background-color:#1A1A1A; float:left; text-align:center; line-height:36px;}
+	#top_div9 {width:54px; height:40px; margin-left:34px; background-color:#1A1A1A; float:left; text-align:center; line-height:36px;}
+	#top_div10 {width:54px; height:40px; margin-left:34px; background-color:#E4A502; float:left; text-align:center; line-height:36px;}
+	#top_div11 {width:54px; height:40px; margin-left:34px; background-color:#C30909; float:left; text-align:center; line-height:36px;}
+	#top_div12 {width:54px; height:40px; margin-left:34px; background-color:#1A1A1A; float:left; text-align:center; line-height:36px;}
+	#top_div13 {width:54px; height:40px; margin-left:34px; background-color:#1A1A1A; float:left; text-align:center; line-height:36px;}
+	#top_bot {width:1370px; height:164px;}
+	#shuju {width:54px; height:88px; margin-left:380px; top:44px; position:absolute; display:none;}
+	#shuju #shuju_b1{width:54px; height:44px; background-color:#1A1A1A; text-align:center; line-height:40px;}
+	#shuju #shuju_b2{width:54px; height:44px; background-color:#1A1A1A; text-align:center; line-height:30px;}
+	#search_block {width:338px; height:36px; position:absolute; top:100px; left:500px;}
+	#hcirl {width:18px; height:38px; background-color:#FFF;border-radius: 100px 0 0 100px ; border:#FFF 0px solid; float:left; opacity:0.5;}
+	#hcirr {width:40px; height:38px; background-color:#FFF;border-radius: 0px 100px 100px 0px; border:#FFF 0px solid; float:left; opacity:0.5;}
+	#bot_div {width:370px; height:40px; float:left; margin-top:126px; margin-left:130px;}
+	#bot_div1 {width:91px; height:40px; background-color:#1A1A1A; text-align:center; float:left; line-height:40px;}
+	#bot_div2 {width:91px; height:40px; background-color:#0A0A0A; text-align:center; float:left; line-height:40px;}
+	#bot_div3 {width:91px; height:40px; background-color:#0A0A0A; text-align:center; float:left; line-height:40px;}
+	#bot_div4 {width:91px; height:40px; background-color:#0A0A0A; text-align:center; float:left; line-height:40px;}
+	.con{  width: 100%;margin: 0px auto 20px auto;margin-top: 0px;margin-bottom: 1px;padding-bottom: 1px;}
+	.main_con{ width: 1100px;margin: 0 auto;color: #ccc;}
+	.new-box {}
+
+.new-box-title {
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    font-weight: 700;
+    padding-left: 10px;
+    margin-bottom: 2px;
+    border: 1px rgb(40, 40, 40) solid;
+    background-color: rgb(20, 20, 20);
+    box-shadow: 0 0 1px 1px rgb(10, 10, 10);
+    color: #FFF;
+}
+
+.home-box {}
+
+.home-box-title {
+    border-bottom: 1px solid #b81714;
+    color: #ddd;
+    font-size: 14px;
+    line-height: 30px;
+    padding: 0 10px;
+    background: #333;
+    background: -moz-linear-gradient(top, #333 0, #222 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #333), color-stop(100%, #222));
+    background: -webkit-linear-gradient(top, #333 0, #222 100%);
+    background: -o-linear-gradient(top, #333 0, #222 100%);
+    background: -ms-linear-gradient(top, #333 0, #222 100%);
+    background: linear-gradient(to bottom, #333 0, #222 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#333333', endColorstr='#222222', GradientType=0);
+    border-bottom: 1px #171717 solid;
+    color: #e0e0e0;
+    text-shadow: -1px -1px 0 #000
+}
+.none-opacity-img {
+    cursor: pointer;
+    filter: alpha(opacity=100);
+    -moz-opacity: 1;
+    opacity: 1;
+    background-color: #000000;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.none-opacity-img:focus,
+.none-opacity-img:hover {
+    cursor: pointer;
+    filter: alpha(opacity=50);
+    -moz-opacity: .5;
+    opacity: .5;
+    background-color: #000000;
+}
+
+.opacity-img {
+    cursor: pointer;
+    filter: alpha(opacity=70);
+    -moz-opacity: .7;
+    opacity: .7;
+    background-color: #000000;
+}
+.play-shadow {}
+
+.play-shadow:hover,
+.play-shadow:focus {}
+
+.hero-hover {
+    width: 95px;
+    border-radius: 3px;
+}
+.live-box {
+    box-shadow: 1px 1px 1px #000;
+    width: 322px;
+    float: left;
+    position: relative;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+.tab_tr{background: linear-gradient(to bottom, rgba(5, 5, 5, 1) 0, #1c1c1c 100%);
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    cursor: pointer;
+    line-height: 28px;
+    font-size: 11px;
+    color: #fff !important;
+	}
+.tab_tr > tb{
+	 padding-left: 5px;
+    padding-right: 5px;
+    height: 40px;
+    border: 0px;
+    line-height: 16px;
+    background-color: #1c1c1c;
+    border-bottom: 1px solid rgb(15, 15, 15);
+}
+.td1{text-align: center;vertical-align: middle;height: 33px !important;}
+.td2{text-align: left;vertical-align: middle;height: 33px !important;}
+.td3{text-align: center;vertical-align: middle;height: 33px !important;}
+	.glyphicon {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.glyphicon-asterisk:before {
+    content: "\2a";
+}
+
+.glyphicon-plus:before {
+    content: "\2b";
+}
+
+.glyphicon-euro:before {
+    content: "\20ac";
+}
+
+.glyphicon-minus:before {
+    content: "\2212";
+}
+
+.glyphicon-cloud:before {
+    content: "\2601";
+}
+
+.glyphicon-envelope:before {
+    content: "\2709";
+}
+.match-list-panel{position: relative;}
+.match-list-panel .list-item{
+	display: block;
+	position: relative;
+	left: 0;
+	width: 100%;
+	cursor: pointer;
+	background: #111;
+	margin-top: 10px;
+	text-shadow: 0 1px 1px #000;
+	-webkit-transition: all 300ms ease-out;
+	-moz-transition: all 300ms ease-out;
+	transition: all 300ms ease-out;
+}
+.match-list-panel .list-item .match-img-wrap{
+	position: absolute;
+	z-index: 2;
+	left: 0;
+	top: 0;
+	width: 185px;
+	height: 120px;
+	overflow: hidden;
+}
+.match-list-panel .list-item .match-img-wrap .match-img-mask{
+	position: absolute;
+	z-index: 2;
+	left: 0;
+	top: 0;
+	width: 185px;
+	height: 120px;
+	background: -moz-linear-gradient(90deg,rgba(17,17,17,0) 60%,rgba(17,17,17,1) 90%) !important;
+    background: -webkit-gradient(linear,left top,right top,color-stop(60%,rgba(17,17,17,0)),color-stop(90%,rgba(17,17,17,1))) !important;
+    background: -webkit-linear-gradient(0deg,rgba(17,17,17,0) 60%,rgba(17,17,17,1) 90%) !important;
+    background: -o-linear-gradient(90deg,rgba(17,17,17,0) 60%,rgba(17,17,17,1) 90%) !important;
+    background: -ms-linear-gradient(90deg,rgba(17,17,17,0) 60%,rgba(17,17,17,1) 90%) !important;
+    background: linear-gradient(90deg,rgba(17,17,17,0) 60%,rgba(17,17,17,1) 90%) !important;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='rgba(17,17,17,0)',endColorstr='rgba(17,17,17,1)',GradientType=1) !important;
+}
+.match-list-panel .list-item .match-img-wrap .match-img{
+	position: absolute;
+	z-index: 1;
+	left: 5px;
+	top: 7px;
+	height: 120px;
+	opacity: .2;
+	-webkit-transform: translate(-50%,-50%);
+	-moz-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
+}
+.match-list-panel .list-item .match-desc-wrap{
+	position: absolute;
+	z-index: 3;
+	top: 0;
+	left: 0;
+	width: 100%;
+	line-height: 30px;
+	font-size: 12px;
+	color: #d2d2d2;
+	padding-right: 10px;
+	//background: #202020;
+}
+/*.match-list-panel .list-item .match-desc-wrap.ingame .status{
+	color: #C23C2A;
+}
+.match-list-panel .list-item .match-desc-wrap.bidding .status{
+	color: #79a118;
+}*/
+.match-list-panel .list-item .match-desc-wrap .game-icon{
+	display: block;
+	float: left;
+	width: 30px;
+	height: 30px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 30px 30px;
+	-webkit-transition: all 500ms ease;
+	-moz-transition: all 500ms ease;
+	transition: all 500ms ease;
+}
+.match-list-panel .list-item .match-desc-wrap .game-icon.dota2{background-image: url(../img/desc_icon_dota2_2.png);}
+.match-list-panel .list-item .match-desc-wrap .game-icon.csgo{background-image: url(../img/desc_icon_csgo.png);}
+.match-list-panel .list-item .match-desc-wrap .game-icon.other{background-image: url(../img/desc_icon_other.png);}
+.match-list-panel .list-item .match-desc-wrap .desc{
+	float: left;
+	//padding-left: 10px;
+}
+.match-list-panel .list-item .match-desc-wrap .desc .title{margin-right: 8px;}
+.match-list-panel .list-item .match-desc-wrap .start{
+	float: right;
+	font-size: 12px;
+	text-shadow: 0 1px 1px #000;
+	color: #666;
+}
+.match-list-panel .list-item .match-against-wrap{
+	display: block;
+	position: relative;
+	z-index: 3;
+	width: 100%;
+}
+.match-list-panel .list-item .match-against-wrap > .row{
+	float: right;
+	width: 600px;
+}
+.match-list-panel .list-item .match-against-wrap > .row img{
+	display: block;
+	height: 60px;
+	margin: auto;
+}
+.match-list-panel .list-item .match-against-wrap > .row > .col{float: left;height: 120px;}
+.match-list-panel .list-item .match-against-wrap > .row > .col.col-left > .info-wrap,
+.match-list-panel .list-item .match-against-wrap > .row > .col.col-right > .info-wrap{
+	width: 120px;
+	color: #d2d2d2;
+	font-size: 14px;
+	line-height: 24px;
+}
+.match-list-panel .list-item .match-against-wrap > .row > .col.col-left > .logo-wrap,
+.match-list-panel .list-item .match-against-wrap > .row > .col.col-right > .logo-wrap{
+	display: table-cell;
+	vertical-align: middle;
+	width: 100px;
+}
+.match-list-panel .list-item .match-against-wrap > .row > .col.col-left,
+.match-list-panel .list-item .match-against-wrap > .row > .col.col-right{
+	display: table;
+	width: 223px;
+}
+.match-list-panel .list-item .match-against-wrap > .row > .col.col-left > .info-wrap,
+.match-list-panel .list-item .match-against-wrap > .row > .col.col-right > .info-wrap{
+	display: table-cell;
+	vertical-align: middle;
+}
+.match-list-panel .list-item .match-against-wrap > .row > .col.col-left > .info-wrap{
+	text-align: right;
+	padding-right: 20px;
+}
+.match-list-panel .list-item .match-against-wrap > .row > .col.col-right > .info-wrap{
+	text-align: left;
+	padding-left: 20px;
+}
+.match-list-panel .list-item .match-against-wrap > .row > .col.col-left > .info-wrap p.odds,
+.match-list-panel .list-item .match-against-wrap > .row > .col.col-right > .info-wrap p.odds{font-size: 12px;color: #8E482C;}
+.match-list-panel .list-item .match-against-wrap > .row > .col.col-left > .info-wrap p.odds span,
+.match-list-panel .list-item .match-against-wrap > .row > .col.col-right > .info-wrap p.odds span{
+	font-size: 15px;
+	color: #d2d2d2;
+	line-height: 24px;
+}
+.match-list-panel .list-item .match-against-wrap > .row > .col.col-left > .logo-wrap{text-align: right;}
+.match-list-panel .list-item .match-against-wrap > .row > .v-line-wrap{
+	padding: 40px 0;
+}
+.match-list-panel .list-item .match-against-wrap > .row > .v-line-wrap .v-line{
+	background: rgba(255,255,255,.15);
+	width: 1px;
+	height: 100%;
+}
+.match-list-panel .list-item .match-against-wrap > .row > .col.col-mid{
+	display: table;
+	position: relative;
+	width: 153px;
+    padding-right: 10px;
+}
+.match-list-panel .list-item .match-against-wrap > .row > .col.col-mid > .status{
+	display: table-cell;
+	vertical-align: middle;
+	font-size: 13px;
+    line-height: 24px;
+	text-align: right;
+}
+.match-list-panel .list-item .match-against-wrap > .row > .col.col-mid > .status span{color: #666;}
+.match-list-panel .list-item .match-against-wrap.ingame > .row > .col.col-mid > .status span{color: #C23C2A;}
+.match-list-panel .list-item .match-against-wrap.bidding > .row > .col.col-mid > .status span{color: #79a118;}
+.match-list-panel .list-item .match-against-wrap > .row > .col.col-right > .logo-wrap{text-align: left;}
+.match-list-panel .list-item .bet-type-list{
+	display: block;
+	position: relative;
+	z-index: 2;
+}
+.match-list-panel .list-item.slide .bet-type-list{display: none;}
+.match-list-panel .list-item .bet-type-item{
+	line-height: 40px;
+	height: 40px;
+	background: #1b1b1b;
+	margin-top: 1px;
+	-webkit-transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    transition: all 300ms ease;
+}
+.match-list-panel .list-item .bet-type-item:first-child{margin-top: 0;}
+.match-list-panel .list-item .bet-type-item:hover{background: #282828;}
+/*.match-list-panel .list-item .bet-type-item.bidding{background: rgba(121,161,24,.2);}*/
+.match-list-panel .list-item .bet-type-item.bidding:hover{background: rgba(145,50,50,.5);}
+.match-list-panel .list-item .bet-type-item .col-1{
+	width: 17%;
+	padding-left: 10px;
+	color: #888;
+}
+.match-list-panel .list-item .bet-type-item .col-1 span{vertical-align: middle;}
+.match-list-panel .list-item .bet-type-item .col-1 span.name{color: #d2d2d2;}
+.match-list-panel .list-item .bet-type-item .col-2{
+	width: 66%;
+	color: #888;
+	font-size: 12px;
+}
+.match-list-panel .list-item .bet-type-item .col-2 > div{float: left;}
+.match-list-panel .list-item .bet-type-item .col-2 .team-1{
+	width: 27%;
+	text-align: right;
+}
+.match-list-panel .list-item .bet-type-item .col-2 .vs{
+	width: 46%;
+	text-align: center;
+	color: #d2d2d2;
+}
+.match-list-panel .list-item .bet-type-item .col-2 .team-2{
+	width: 27%;
+}
+.match-list-panel .list-item .bet-type-item .col-2 span{
+	display: inline-block;
+    height: 40px;
+    white-space: nowrap;
+	vertical-align: middle;
+    overflow: hidden;
+}
+.match-list-panel .list-item .bet-type-item .col-2 span.name{width: 85px;}
+.match-list-panel .list-item .bet-type-item .col-2 span.odd{
+	color: #d2d2d2;
+	font-size: 14px;
+}
+.match-list-panel .list-item .bet-type-item .col-2 .team-1 span.odd{margin-left: 10px;}
+.match-list-panel .list-item .bet-type-item .col-2 .team-2 span.odd{margin-right: 10px;}
+.match-list-panel .list-item .bet-type-item .col-3{
+	width: 17%;
+	padding-right: 10px;
+	text-align: right;
+	color: #666;
+}
+.match-list-panel .list-item .bet-type-item.ingame .col-3{
+	color: #C23C2A;
+}
+.match-list-panel .list-item .bet-type-item.bidding .col-3{
+	color: #79a118;
+}
+
+	#foot {width:100%;min-width:1370px;text-align: center;position: absolute;   margin-bottom:0px;margin-left:left;} 
+	#return{width:100%;height:30px}
+	.tag{position: absolute;height: 40px;}
+</style>
+<script language="javascript">
+	function block_over(obj_id)
+	{
+		if(obj_id=="top_div3" || obj_id=="shuju1_href" || obj_id=="shuju2_href" || obj_id=="shuju_b1" || obj_id=="shuju_b2")
+		{
+			document.getElementById("shuju").style.display="block";
+			document.getElementById(obj_id).style.backgroundColor="#3A3A3A";
+			return;
+		}
+		document.getElementById(obj_id).style.backgroundColor="#3A3A3A";
+		document.getElementById("shuju").style.display="none";
+	}
+	function block_out(obj_id)
+	{
+		//if(obj_id=="top_div4") return;
+		if(obj_id=="shuju")
+		{
+			document.getElementById("shuju").style.display="none";
+			return;
+		}
+		document.getElementById(obj_id).style.backgroundColor="#1A1A1A";
+	}
+</script>
+<script src="register_files/AC_RunActiveContent.js"></script>
+</head>
+
+<body  marginheight="0" marginwidth="0" bgcolor="#1A1A1A">
+	<div id="ad1">
+         
+    	<div id="x1"><a href="./chuanqi.html" target="_blank"><img src="images/main/2016-04-19_083346.jpg"></a></div>
+    </div>
+    <div id="ad2">
+    	<div id="x2"><a href="./chuanqi.html" target="_blank"><img src="images/main/2016-04-19_083346.jpg"></a></div>
+    </div>
+	<div id="top">
+    <div id="top_top">
+       	   <a href="./personal.html"><div id="top_div1">
+        	<img src="images/main/max_logo3.png" width="100%" height="100%">
+           </div></a>
+           <a href="#" style="color:#CCCCCC; text-decoration:none"><div id="top_div2" name="block" onMouseMove="block_over('top_div2');" onMouseOut="block_out('top_div2')">
+           <font size="-1"><b>首页</b></font>
+           </div></a>
+           <div id="top_div3" name="block" onMouseOver="block_over('top_div3');" onMouseOut="block_out('top_div3')">
+           <font size="-1"><b>数据</b></font>
+           </div>
+           <a href="prodate.html" style="color:#CCCCCC;  text-decoration:none"><div id="top_div4" name="block" onMouseOver="block_over('top_div4');" onMouseOut="block_out('top_div4')">
+            <font size="-1"><b>职业数据</b></font>
+           </div></a>
+           <a href="player.html" style="color:#CCCCCC;  text-decoration:none"><div id="top_div5" name="block" onMouseOver="block_over('top_div5');" onMouseOut="block_out('top_div5')">
+           <font size="-1"><b>玩家</b></font>
+           </div></a>
+           <a href="rank.html" style="color:#CCCCCC;  text-decoration:none"><div id="top_div6" name="block" onMouseOver="block_over('top_div6');" onMouseOut="block_out('top_div6')">
+           <font size="-1"><b>天梯</b></font>
+           </div></a>
+           <a href="live.html" style="color:#CCCCCC;  text-decoration:none"><div id="top_div7" name="block" onMouseOver="block_over('top_div7');" onMouseOut="block_out('top_div7')">
+           <font size="-1"><b>直播</b></font>
+           </div></a>
+           <a href="video.html" style="color:#CCCCCC;  text-decoration:none"><div id="top_div8" name="block" onMouseOver="block_over('top_div8');" onMouseOut="block_out('top_div8')">
+           <font size="-1"><b>视频</b></font>
+           </div></a>
+           <a href="app.html" style="color:#CCCCCC;  text-decoration:none"><div id="top_div9" name="block" onMouseOver="block_over('top_div9');" onMouseOut="block_out('top_div9')">
+           <font  size="-1"><b>APP</b></font>
+           </div></a>
+           <div id="top_div10">
+           <font size="-1"><b><a href="#" style="color:#FFFFFF;  text-decoration:none">VIP</a></b></font>
+           </div>
+           <div id="top_div11">
+            <font  size="-1"><b><a href="#" style="color:#FFFFFF;  text-decoration:none">竞猜</a></b></font>
+           </div>
+           <a href="login.html" style="color:#CCCCCC;  text-decoration:none"><div id="top_div12" name="block" onMouseOver="block_over('top_div12');" onMouseOut="block_out('top_div12')">
+           <font size="-1"><b>登录</b></font>
+           </div></a>
+           <a href="reg.html" style="color:#CCCCCC;  text-decoration:none"><div id="top_div13" name="block" onMouseOver="block_over('top_div13');" onMouseOut="block_out('top_div13')">
+           <font  size="-1"><b>注册</b></font>
+           </div></a>
+        </div>
+        <div id="top_bot" style="background-image:url(images/prodate_background.jpg);">
+        		<div id="shuju" onMouseOut="block_out('shuju');">
+                	<a href="hero.html" style="text-decoration:none;color:#CCCCCC;" onMouseOver="block_over('shuju1_href');"><font  size="-1"><div id="shuju_b1"  onMouseOver="block_over('shuju_b1');" onMouseOut="block_out('shuju_b1');"  onMouseOut="block_out('shuju_b1');">英雄</font></div></a>
+                    <a href="things.html" style="text-decoration:none;color:#CCCCCC;"  onMouseOver="block_over('shuju2_href');"><div id="shuju_b2"  onMouseOver="block_over('shuju_b2');" onMouseOut="block_out('shuju_b2');"  onMouseOut="block_out('shuju_b2');"><font  size="-1">物品</font></div></a>
+                </div>
+             <div id="bot_div">
+             
+</div>
+        	     <div id="shouye" style="color:#FFF; text-align:center; font-size:36px;; width:200px; height:30px; margin-top:36px; margin-left:-410px; float:left;">首页</div>
+<div id="search_block">
+            <div id="hcirl"></div>
+         <div id="search" style="width:280px; height:45px; float:left;"><input type="search" style="width:280px; height:38px; border:#FFF 0px solid;  opacity:0.5;" placeholder="输入国服ID或昵称"></div>
+         <div id="hcirr" ><input type="button" value="Go" style="  background-color:#FFF; border:0px #FFFFFF solid; margin:10px 0px 10px 0px;" style="width:50px; height:45px;"></div>
+         </div>
+        </div>
+    </div>
+    <!----------------------------------con sta------------------------------------------------------------------------------------------------------------------------------------------------->
+<div class="main" style="height: 1600px;">
+    <div class="con" style="margin-top:0px;margin-bottom:1px;padding-bottom:1px;">
+   	  <div class="main_con" >
+        <div style="margin-top: 40px;">
+        	<div style=" display: table;width: 100%;color: rgb(235, 231, 232);background-color: rgb(20, 20, 20);height: 32px;line-height: 32px;font-size: 14px;font-weight: 400;padding-left: 10px;margin-bottom: 15px;margin-top: 25px;"> <img src="images/main/tit3.png"  sytle="width:21px;height:19px;">活动专题</div>
+			<div style="float:left;width:33%;position: relative">
+<a href="#"><img src="images/main/job_bar.jpg" style="width:100%;margin-top: 10px;cursor: pointer;"></a></div>
+			
+            <div style="float:left;width:33%;position: relative"><a href="#"><img src="images/main/item_bet.png" style="width:100%;margin-top: 10px;cursor: pointer;"></a></div>
+			<div style="float:left;width:33%;position: relative"><a href="#"><img src="images/main/2015_winter.png" style="width:100%;margin-top: 10px;cursor: pointer;"></a></div>
+   
+    	</div>
+  <!--------------------------------------------------------------------------------------------CON-left----------------------------------------------------------------------------------->      
+        <div style="float:left;width:750px; margin-bottom: 8px;">
+        <div sytle="width:100%;margin-top: 20px">
+       				 <div style=" display: table;width: 100%;color: rgb(235, 231, 232);background-color: rgb(20, 20, 20);height: 32px;line-height: 32px;font-size: 14px;font-weight: 400;padding-left: 10px;margin-bottom: 15px;margin-top: 25px;"><img src="images/main/tit3.png" sytle="width:21px;height:19px;">Dota新闻</div>
+        <div align="center">
+    <p>
+      <!-- Flash图片轮播 begin -->
+      <script type="text/javascript">
+AC_FL_RunContent( 'codebase','http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0','width','590','height','300','src','iTunesAlbumArt','quality','high','pluginspage','http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash','movie','iTunesAlbumArt' ); //end AC code
+    </script>
+    </p>
+    <noscript>
+      <p style="display:inline-block; width:100%; height:100%">
+        <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0" width="737" height="301">
+          <param name="movie" value="iTunesAlbumArt.swf" />
+          <param name="quality" value="high" />
+          <embed src="iTunesAlbumArt.swf" quality="high" pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" width="737" height="301"></embed>
+          </object>
+        </p>
+    </noscript>
+    </div>              
+        	<div sytle="width:100%;margin-top: 20px">
+       				 <div style=" display: table;width: 100%;color: rgb(235, 231, 232);background-color: rgb(20, 20, 20);height: 32px;line-height: 32px;font-size: 14px;font-weight: 400;padding-left: 10px;margin-bottom: 15px;margin-top: 25px;"><img src="images/main/tit3.png" sytle="width:21px;height:19px;">直播 <a href="#"><div style="float:right"><div style="padding:2px 0px;float:left; bottom:-40px"><img src="images/main/more.png" style="width:20px;height:21px;top:5px;"></div>More</div></a></div>
+                                               <div class="new-box content-dark" style="display: table;">
+                            <!-------------视屏1-------------------------------------->  
+                           
+ <a href="DOTA2 视频 【09DOTA直播局】我上我不想3_0 Dotamax - 做国内第一游戏数据门户.html" target="_blank"><div class="live-box" style="width:240px;margin:0 10px 10px 0px;"><div style="padding:0px;margin:0px;font-size:0px;line-height: 0px;position: relative;"><img style="width:242px;height: 130px;" class="none-opacity-img" src="images/main/video.jpg">
+                           <div class="play-shadow" style="position: absolute;top:40px;left:95px;;z-index: -100;"><img src="images/main/play.png"></div></div>
+                           <div style="width:100%;display: table;position: relative;border:1px #111 solid;background-color: rgb(15,15,15);">
+                           <div style="position: absolute;top:-25px;left:7px;"></div>
+                           <div style="font-size:14px;font-weight:400;line-height:30px;float:left;margin-left:70px;color:#eee;display: table;"><div class="overflow-text" style="width:160px; padding-left:auto; padding-right:auto;" ><span>SMM2009先锋韧甲SF</span></div></div></div></div></a>
+           <!----------------------------------视屏2--------------------------->                             
+                                        <div class="live-box" style="width:240px;margin:0 10px 10px 0px;"onClick="window.location.href='DOTA2 视频 【09DOTA直播局】我上我不想3_0 Dotamax - 做国内第一游戏数据门户.html'"><div style="padding:0px;margin:0px;font-size:0px;line-height: 0px;position: relative;"><img style="width:242px;height: 130px;" class="none-opacity-img" src="images/main/video2.jpg"><div class="play-shadow" style="position: absolute;top:40px;left:95px;;z-index: -100;"><img src="images/main/play.png"></div></div><div style="width:100%;display: table;position: relative;border:1px #111 solid;background-color: rgb(15,15,15);"><div style="position: absolute;top:-25px;left:7px;"></div><div style="font-size:14px;font-weight:400;line-height:30px;float:left;margin-left:70px;color:#eee;display: table;"><div class="overflow-text" style="width:160px;"><span>Ti3 LGD VS Alliance</span></div></div></div></div>
+         <!-----------------视屏3--------------------------------------->                               
+                                        <div class="live-box" style="width:240px;margin:0 10px 10px 0px;"><div style="padding:0px;margin:0px;font-size:0px;line-height: 0px;position: relative;"><img style="width:242px;height: 130px;" class="none-opacity-img" src="images/main/video3.jpg"><div class="play-shadow" style="position: absolute;top:40px;left:95px;;z-index: -100;"><img src="images/main/play.png"></div></div><div style="width:100%;display: table;position: relative;border:1px #111 solid;background-color: rgb(15,15,15);"><div style="position: absolute;top:-25px;left:7px;"></div><div style="font-size:14px;font-weight:400;line-height:30px;float:left;margin-left:70px;color:#eee;display: table;"><div class="overflow-text" style="width:160px;"><span>YYF：圣堂刺客细节教学</span> </div></div></div></div>
+          </div>
+        </div>
+       <!-------------------------------竞猜----------------------------------------------------------------------------->
+        <div style="margin-bottom: 15px;">
+ 	<div style=" display: table;width: 100%;color: rgb(235, 231, 232);background-color: rgb(20, 20, 20);height: 32px;line-height: 32px;font-size: 14px;font-weight: 400;padding-left: 10px;margin-bottom: 15px;margin-top: 25px;"> <img src="images/main/tit3.png" width="21" height="15">比赛
+    	<a href="#"><div style="float:right"><div style="padding:2px 0px;float:left;"><img src="images/main/more.png" style="width:20px;height:21px;top:5px;"></div>More</div></a></div>
+        
+ <div class="match-list-panel">
+                                       
+          <div class="list-item dota2 clearfix "><div class="match-img-wrap"><div class="match-img-mask"></div></div><div class="match-desc-wrap bidding clearfix"><i class="game-icon dota2"></i><p class="desc"><span class="title"></span><!--<span class="sub-title">LGD-1.5</span>--></p></div><a href="#" class="match-against-wrap bidding clearfix"><div class="row"><div class="col col-left"><div class="logo-wrap"><img src="images/main/ig.png"></div><div class="info-wrap"><p class="name">IG</p></div></div><div class="col v-line-wrap"><div class="v-line"></div></div><div class="col col-right"><div class="info-wrap"><p class="name">Na'Vi</p></div><div class="logo-wrap"><img src="images/main/navi.png"></div></div><div class="col col-mid"><div class="status"></div></div></div></a></div>
+          <div class="list-item dota2 clearfix ">
+              <div class="match-img-wrap"><div class="match-img-mask"></div></div><div class="match-desc-wrap bidding clearfix"><i class="game-icon dota2"></i></div>
+          
+          <a href="#" class="match-against-wrap bidding clearfix"><div class="row" ><div class="col col-left"><div class="logo-wrap" ><img src="images/main/ehome.png" style=" display:inline-block; "></div><div class="info-wrap"><p class="name">Ehome</p></div></div><div class="col v-line-wrap"><div class="v-line"></div></div><div class="col col-right"><div class="info-wrap"><p class="name">LGD</p></div><div class="logo-wrap"><img src="images/main/LGD.png"></div></div><div class="col col-mid"><div class="status"></div></div></div></a></div></div></div></div>
+ 
+ <div style="position:absolute; min-width:900px; min-height: 600px; width:80%; opacity:0.4; margin:atuo atuo 250px auto;">
+ 
+   <img src="images/main/2016-04-24_022342.png" width="750" height="360"></div>
+ 
+      </div>
+      </div>
+      </div>
+     
+<!-------------------------------竞猜end------------------------------------------------------------------------->
+      
+ <!---------------------------------------------------------conleft end--------------------------------------------------------------------------------------------------------->
+ <!--------------------------------------------------------conright------------------------------------------------------------------------------------------------------------->
+ <div  style="width:320px;min-height: 800px;float: left;margin-left: 20px;">
+ 	<div style=" display: table;width: 100%;color: rgb(235, 231, 232);background-color: rgb(20, 20, 20);height: 32px;line-height: 32px;font-size: 14px;font-weight: 400;padding-left: 10px;margin-bottom: 15px;margin-top: 25px;"><img src="images/main/tab.png" width="19" height="16">战队排名<a href="#"><div style="float:right"><div style="padding:2px 0px;float:left;"><img src="images/main/more.png" style="width:20px;height:21px;top:5px;"></div>More</div></a></div>
+    <div id="table">
+ <table style="border-collapse: collapse;border-spacing: 1px;color: #c0c0c0;font-size: 12px; width: 96%; margin-left: auto;margin-right: auto;margin-bottom: 20px;margin-top: 10px;">
+  <tr style="background: linear-gradient(to bottom, rgba(5, 5, 5, 1) 0, #1c1c1c 100%);border-top: 1px solid #000;border-bottom: 1px solid #000;cursor: pointer; line-height: 28px;font-size: 11px;color: #fff !important;">
+    <th scope="col" style="width:20% ">排名</th>
+    <th scope="col" style="width:60%">战队</th>
+    <th scope="col" style="width:20%">MMR</th>
+  </tr>
+  <tr class="tab_tr" >
+    <td class="td1">1 <li class="glyphicon glyphicon-arrow-up"></li></td>
+    <td class="td2"><img src="images/main/saved_resource.jpg" style="height:10px;width:16px;"><span>Fnatic</span></td>
+    <td class="td3">2055</td>
+  </tr>
+  <tr class="tab_tr">
+    <td class="td1">2</td>
+    <td class="td2"><img src="images/main/saved_resource(1).jpg" style="height:10px;width:16px;"><span>Liquid</span></td>
+    <td class="td3">2032</td>
+  </tr>
+  <tr class="tab_tr">
+    <td class="td1">3</td>
+    <td class="td2"<img src="images/main/ua.gif" style="height:10px;width:16px;"><span>Na'Vi</span></td>
+    <td class="td3">2032</td>
+  </tr>
+  <tr class="tab_tr">
+    <td class="td1">4</td>
+    <td class="td2"><img src="images/main/saved_resource(2).jpg" style="height:10px;width:16px;"><span>Secret</span></td>
+    <td class="td3">2015</td>
+  </tr>
+  <tr class="tab_tr">
+    <td class="td1">5</td>
+    <td class="td2"><img src="images/main/cn.gif" style="height:10px;width:16px;"><span>Newbee</span></td>
+    <td class="td3">2004</td>
+  </tr>
+  <tr class="tab_tr">
+    <td class="td1">6</td>
+    <td class="td2"><img src="images/main/us.gif" style="height:10px;width:16px;"><span>EG</span></td>
+    <td class="td3">1989</td>
+  </tr>
+  <tr class="tab_tr">
+    <td class="td1">7</td>
+    <td class="td2"><img src="images/main/cn.gif" style="height:10px;width:16px;"><span>VG.R</span></td>
+    <td class="td3">1956</td>
+  </tr>
+  <tr class="tab_tr">
+    <td class="td1">8</td>
+    <td class="td2"><img src="images/main/us.gif" style="height:10px;width:16px;"><span>coL</span></td>
+    <td class="td3">1947</td>
+  </tr>
+  <tr class="tab_tr">
+    <td class="td1">9</td>
+    <td class="td2"><img src="images/main/us.gif" style="height:10px;width:16px;"><span>OG</span><</td>
+    <td class="td3">1941</td>
+  </tr>
+  <tr class="tab_tr">
+    <td class="td1">10</td>
+    <td class="td2"><img src="images/main/se.gif" style="height:10px;width:16px;"><span>Alliance</span></td>
+    <td class="td3">1937</td>
+  </tr>
+  <tr class="tab_tr">
+    <td class="td1">11</td>
+    <td class="td2"><img src="images/main/cn.gif" style="height:10px;width:16px;"><span>Ehome</span></td>
+    <td class="td3">1911</td>
+  </tr>
+  <tr class="tab_tr">
+    <td class="td1">12</td>
+    <td class="td2"><img src="images/main/cn.gif" style="height:10px;width:16px;"><span>LGD</span></td>
+    <td class="td3">1862</td>
+  </tr>
+  <tr class="tab_tr">
+    <td class="td1">13</td>
+    <td class="td2"><img src="images/main/ph.gif" style="height:10px;width:16px;"><span>TNC</span></td>
+    <td class="td3">1860</td>
+  </tr>
+  <tr class="tab_tr">
+    <td class="td1">14</td>
+    <td class="td2"><img src="images/main/saved_resource(3).jpg" style="height:10px;width:16px;"><span>Shazam</span></td>
+    <td class="td3">1858</td>
+  </tr>
+  <tr class="tab_tr">
+    <td class="td1">15</td>
+    <td class="td2"><img src="images/main/ru(1).gif" style="height:10px;width:16px;"><span>VP</span></td>
+    <td class="td3">1853</td>
+  </tr>
+</table>
+
+ 
+   </div>
+   
+   <a href="app.html"><div style="width:320px;height:150px; margin-top:180px;">
+   
+    <img src="images/2016-04-21_091557.jpg" style="width:100%;height:100%"></div>
+ </div></a>    
+   	  
+<!-------------------------------------------------------conright end---------------------------------------------------------------------------------------------------------->
+    </div>
+  </div>
+</div>
+    <!---------------------------------con  end-------------------------------------------->
+    <!-- foot sta--------------------------------------------------------->
+    <div id="foot">
+   <div style="background-color: rgb(10,10,10);border-top:1px rgb(15,15,15) solid;cursor: pointer;margin-top: -1px;height:26px;" >
+       <!------------------------------------------>
+       <div id="return" style="margin-left:auto; margin-right:auto;"><a href="#"><img src="images/main/return.png" width="28" height="26"></a>
+       </div>
+       <!------------------------------------------>
+       <div style="background-color: rgb(0,0,0);padding-top: -150px;padding-bottom: 15px;position: relative;margin-top:-10px">
+       <div style="width:1100px;margin: 0 auto;line-height: 20px;position: relative;height: 30px;">
+      
+       <div   class="tag" style="left:23%;">
+        <a href="#">
+        <img src="images/main/max_logo3.png" style="width:105px;margin-right: 15px;margin-left:10px;cursor: pointer;"></a></div>
+       <div   class="tag" style="left:37%;">
+       <a href="#">
+       <img src="images/main/lolmax.png" style="width:97px;margin-right: 10px;margin-left:10px;margin-top:2px;cursor: pointer;"></a></div>
+       <div   class="tag" style="left:50%;">
+       <a href="#">
+       <img src="images/main/d3_small.png" style="width:115px;margin-right: 10px;margin-left:10px;margin-top:2px;cursor: pointer;"></a></div>
+       <div class="tag" style="left:64%">
+       <a href="#">
+       <img src="images/main/hosmax.png" style="width:97px;margin-right: 10px;margin-left:10px;margin-top:2px;cursor: pointer;"></a></div>
+       <span style="line-height: 30px;position: absolute;right:25px;top:0px;">
+       <img src="images/main/cn.gif" width="16" height="11">
+       <img src="images/main/ru.gif" width="16" height="11">
+       <img src="images/main/en.gif" width="16" height="11">
+       <img src="images/main/ko.gif" width="16" height="11">
+       </span>
+       
+      </div>
+ 
+</div>
+<!----------------------------------->
+     <div style="padding-bottom:10px;margin: 0px auto 0px auto;background-color: #000;color: rgba(255, 255, 255, 0.30);">
+       <div style="position: relative;width: 1100px;margin: 0 auto;">
+       
+         <img src="images/main/logo_01.png" style="width:40px;"></div>
+       </div>
+       </div>
+</div>
+</div>
+<!------------------------------------>
+<!-----------------------foot over----------------------------------------->
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

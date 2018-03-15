@@ -1,0 +1,794 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>全能骑士</title>
+<style type="text/css">
+body {
+    background-color: rgb(33, 33, 33);
+    margin: 0;
+    font: 12px/1.5 Arial, 'Droid Sans', 'Hiragino Sans GB', 'Microsoft YaHei';
+    /*text-shadow: rgb(17, 17, 17) 1px 1px 0px;*/
+    
+    line-height: 20px;
+    color: #ddd;
+}
+	#ad1 {background-color:#9F3; width:100px; height:250px; margin-top:16%; margin-left:1.6%; position:fixed; background-image:url(images/c-0405-110300-dl2-r.jpg)}
+	#ad1 #x1 {width:18px; height:18px; margin-left:84px;}
+	#ad2 #x2 {width:18px; height:18px; margin-left:84px;}
+	#ad2 {background-color:#C39; width:100px; height:250px; margin-top:16%; margin-left:91%; position:fixed; background-image:url(images/c-0405-110300-dl2-l.jpg)}
+	#top { background-color:#1A1A1A;width:100%;min-width:1450px;text-align:center;position: absolute; margin-left:auto; margin-top:0px;}
+	#top_top {width:100%; height:40px;}
+	#top_div1 {width:146px; height:28px;  margin-left:110px; float:left; margin-top:5px;}
+	#top_div2 {width:54px; height:40px; margin-left:34px; background-color:#1A1A1A; float:left; text-align:center; line-height:40px;}
+	#top_div3 {width:54px; height:40px; margin-left:34px; background-color:#1A1A1A; float:left; text-align:center; line-height:40px;;}
+	#top_div4 {width:60px; height:40px; margin-left:34px; background-color:#1A1A1A; float:left; text-align:center; line-height:40px;}
+	#top_div5 {width:54px; height:40px; margin-left:34px; background-color:#1A1A1A; float:left; text-align:center; line-height:40px;}
+	#top_div6 {width:54px; height:40px; margin-left:34px; background-color:#1A1A1A; float:left; text-align:center; line-height:40px;}
+	#top_div7 {width:54px; height:40px; margin-left:34px; background-color:#3A3A3A; float:left; text-align:center; line-height:40px;}
+	#top_div8 {width:54px; height:40px; margin-left:34px; background-color:#1A1A1A; float:left; text-align:center; line-height:40px;}
+	#top_div9 {width:54px; height:40px; margin-left:34px; background-color:#1A1A1A; float:left; text-align:center; line-height:40px;}
+	#top_div10 {width:54px; height:40px; margin-left:34px; background-color:#E4A502; float:left; text-align:center; line-height:40px;}
+	#top_div11 {width:54px; height:40px; margin-left:34px; background-color:#C30909; float:left; text-align:center; line-height:40px;}
+	#top_div12 {width:54px; height:40px; margin-left:34px; background-color:#1A1A1A; float:left; text-align:center; line-height:40px;}
+	#top_div13 {width:54px; height:40px; margin-left:34px; background-color:#1A1A1A; float:left; text-align:center; line-height:40px;}
+	#top_bot {width:100%; height:164px;}
+	#shuju {width:54px; height:88px; left:378px; top:40px; position:absolute; display:none;}
+	#shuju #shuju_b1{width:54px; height:44px; background-color:#1A1A1A; text-align:center; line-height:40px;}
+	#shuju #shuju_b2{width:54px; height:44px; background-color:#1A1A1A; text-align:center; line-height:40px;}
+	#search_block {width:338px; height:38px; position:absolute; top:100px; left:500px;border:#FFF 0px solid;}
+	#hcirl {width:18px; height:38px; background-color:#FFF;border-radius: 100px 0 0 100px ; border:#FFF 0px solid; float:left; opacity:0.5; border:#FFF 0px solid;}
+	#hcirr {width:40px; height:38px; background-color:#FFF;border-radius: 0px 100px 100px 0px; border:#FFF 0px solid; float:left; opacity:0.5;border:#FFF 0px solid;}
+	#bot_div {width:750px; height:40px; background-color:#FFF; float:left; margin-top:126px; margin-left:130px; background-color:#0A0A0A;}
+	#bot_div1 {width:91px; height:40px; background-color:#1A1A1A; text-align:center; float:left; line-height:40px;}
+	#bot_div2 {width:91px; height:40px; background-color:#0A0A0A; text-align:center; float:left; line-height:40px;}
+	#bot_div3 {width:91px; height:40px; background-color:#0A0A0A; text-align:center; float:left; line-height:40px;}
+	#bot_div4 {width:91px; height:40px; background-color:#0A0A0A; text-align:center; float:left; line-height:40px;}
+	#bot_div6 {width:91px; height:40px; background-color:#0A0A0A; text-align:center; float:left; line-height:40px;}
+	.con{width: 100%;height:1086px; margin: 0px auto 20px auto;margin-top: 0px; margin-bottom: 1px; padding-bottom: 1px;}
+	.main-con{ width: 1100px;margin: 0 auto;color: #ccc;}
+	#foot {width:100%;min-width:1500px;text-align: center;position: absolute;bottom:-1700px; z-index:-1;} 
+	#return{width:100%;height:30px}
+	.tag{position: absolute;height: 40px;}
+	#con {width:1300px; height:560px; background-color:#212121;}
+      #con_left1{width:680px;height:300px; background-color:#1A1A1A;float:left; margin-top:250px; margin-left:140px;}
+	    #left1_top{width:624px;height:35px; background-color:#0C0;
+		float:left;}
+		#left1_left1{width:40px;height:42px; background-color:#0C0;
+		float:left; margin-top:50px; margin-left:-622px;}
+		#left1_left2{width:40px;height:42px; background-color:#0C0;
+		float:left;margin-top:92px; margin-left:-622px;}
+		#left1_left3{width:40px;height:42px; background-color:#0C0;
+		float:left;margin-top:132px; margin-left:-622px;}
+		#left1_left4{width:40px;height:42px; background-color:#0C0;
+		float:left;margin-top:174px; margin-left:-622px;}
+		#left1_left5{width:40px;height:42px; background-color:#0C0;
+		float:left;margin-top:216px; margin-left:-622px;}
+		#left1_right{width:624px;height:208px; background-color:#906;
+		float:left; margin-top:50px; margin-left:-580px;}	
+
+	  
+	 
+	  #con_left2{width:680px;height:300px; background-color:#0F6;float:left; margin-top:20px;margin-left:140px;}
+	  #left2_top2{width:680px;height:50px; background-color:#1A1A1A;float:left;}
+	        #top2_1{width:100px;height:50px; background-color:#1A1A1A;           float:left;}
+			 #top2_2{width:250px;height:50px; background-color:#1A1A1A;           float:left;}
+			  #top2_3{width:250px;height:50px; background-color:#1A1A1A;           float:left;}
+	  #left2_top1{width:680px;height:50px; background-color:#0C0C0C;float:left;}       
+	          #top1_1{width:100px;height:50px; background-color:#0C0C0C;           float:left;}
+			 #top1_2{width:250px;height:50px; background-color:#0C0C0C;           float:left;}
+			  #top1_3{width:250px;height:50px; background-color:#0C0C0C;           float:left;}
+	  #left2_top3{width:680px;height:50px; background-color:#0C0C0C;float:left;}
+	          #top3_1{width:100px;height:50px; background-color:#0C0C0C0C;           float:left;}
+			 #top3_2{width:250px;height:50px; background-color:#0C0C0C;           float:left;}
+			  #top3_3{width:250px;height:50px; background-color:#0C0C0C;           float:left;}
+	  #left2_top4{width:680px;height:50px; background-color:#1A1A1A;float:left;}
+	          #top4_1{width:100px;height:50px; background-color:#1A1A1A;           float:left;}
+			 #top4_2{width:250px;height:50px; background-color:#1A1A1A;           float:left;}
+			  #top4_3{width:250px;height:50px; background-color:#1A1A1A;           float:left;}
+	  #left2_top5{width:680px;height:50px; background-color:#0C0C0C;float:left;} 
+	         #top5_1{width:100px;height:50px; background-color:#0C0C0C;           float:left;}
+			 #top5_2{width:250px;height:50px; background-color:#0C0C0C;           float:left;}
+			  #top5_3{width:250px;height:50px; background-color:#0C0C0C;           float:left;}
+	  #left2_top6{width:680px;height:50px; background-color:#1A1A1A;float:left;}
+	  #top6_1{width:100px;height:30px; background-color:#1A1A1A;float:left;}
+			 #top6_2{width:250px;height:50px; background-color:#1A1A1A; float:left;}
+			  #top6_3{width:250px;height:50px; background-color:#1A1A1A;float:left;}
+	  
+	  
+	  
+	  
+	  
+	  
+	  #con_left3{width:680px;height:300px; background-color:#212121;float:left; margin-top:20px;margin-left:140px;}
+	     #left3_up{width:680px;height:35px; background-color:#212121;float:left;}
+		  #left3_line1{width:680px;height:50px; background-color:#0C0C0C;float:left; margin-top:10px;}
+		  #t11{width:170px;height:50px;float:left; background-color:#0C0C0C; }
+		  #t12{width:170px;height:50px;float:left; background-color:#0C0C0C; }
+		  #t13{width:170px;height:50px;float:left; background-color:#0C0C0C; }
+		  #t14{width:170px;height:50px;float:left; background-color:#0C0C0C; }
+		  #left3_line2{width:100%;height:50px; background-color:#1A1A1A;float:left;}
+		  #t21{width:170px;height:50px;float:left; background-color:#1A1A1A; }
+		  #t22{width:170px;height:50px;float:left; background-color:#1A1A1A; }
+		  #t23{width:170px;height:50px;float:left; background-color:#1A1A1A; }
+		  #t24{width:170px;height:50px;float:left; background-color:#1A1A1A; }
+		  
+		  
+		  
+		  #left3_line3{width:100%;height:50px; background-color:#0C0C0C;float:left; }
+		  #t31{width:170px;height:50px;float:left; background-color:#0C0C0C; }
+		  #t32{width:170px;height:50px;float:left; background-color:#0C0C0C; }
+		  #t33{width:170px;height:50px;float:left; background-color:#0C0C0C; }
+		  #t34{width:170px;height:50px;float:left; background-color:#0C0C0C; }
+		  
+		  
+		  
+		  #left3_line4{width:100%;height:50px; background-color:#1A1A1A;float:left;}
+		   #t41{width:170px;height:50px;float:left; background-color:#1A1A1A; }
+		  #t42{width:170px;height:50px;float:left; background-color:#1A1A1A; }
+		  #t43{width:170px;height:50px;float:left; background-color:#1A1A1A; }
+		  #t44{width:170px;height:50px;float:left; background-color:#1A1A1A; }
+		  
+		  
+		  #left3_line5{width:100%;height:50px; background-color:#0C0C0C;float:left;}
+		  #t51{width:170px;height:30px;float:left; background-color:#0C0C0C; }
+		  #t52{width:170px;height:50px;float:left; background-color:#0C0C0C; }
+		  #t53{width:170px;height:50px;float:left; background-color:#0C0C0C; }
+		  #t54{width:170px;height:50px;float:left; background-color:#0C0C0C; }
+		 
+		 
+		 
+	  #con_left4{width:680px;height:300px; background-color:#212121;float:left; margin-top:20px;margin-left:140px;}
+	  
+	       #left4_up{width:680px;height:35px; background-color:#212121;float:left;}
+		  #left4_line1{width:680px;height:50px; background-color:#0C0C0C;float:left; margin-top:10px;}
+		  #f11{width:170px;height:50px;float:left; background-color:#0C0C0C; }
+		  #f12{width:170px;height:50px;float:left; background-color:#0C0C0C; }
+		  #f13{width:170px;height:50px;float:left; background-color:#0C0C0C; }
+		  #f14{width:170px;height:50px;float:left; background-color:#0C0C0C; }
+		
+		
+		  #left4_line2{width:100%;height:50px; background-color:#1A1A1A;float:left;}
+		   #f21{width:170px;height:50px;float:left; background-color:#1A1A1A; }
+		  #f22{width:170px;height:50px;float:left; background-color:#1A1A1A; }
+		  #f23{width:170px;height:50px;float:left; background-color:#1A1A1A; }
+		  #f24{width:170px;height:50px;float:left; background-color:#1A1A1A; }
+		  
+		  
+		  #left4_line3{width:100%;height:50px; background-color:#0C0C0C;float:left; }
+		  #f31{width:170px;height:50px;float:left; background-color:#0C0C0C; }
+		  #f32{width:170px;height:50px;float:left; background-color:#0C0C0C; }
+		  #f33{width:170px;height:50px;float:left; background-color:#0C0C0C; }
+		  #f34{width:170px;height:50px;float:left; background-color:#0C0C0C; }
+		  
+		  
+		  #left4_line4{width:100%;height:50px; background-color:#1A1A1A;float:left;}
+		   #f41{width:170px;height:50px;float:left; background-color:#1A1A1A; }
+		  #f42{width:170px;height:50px;float:left; background-color:#1A1A1A; }
+		  #f43{width:170px;height:50px;float:left; background-color:#1A1A1A; }
+		  #f44{width:170px;height:50px;float:left; background-color:#1A1A1A; }
+		  
+		  
+		  #left4_line5{width:100%;height:50px; background-color:#0C0C0C;float:left;}
+		  #f51{width:170px;height:30px;float:left; background-color:#0C0C0C; }
+		  #f52{width:170px;height:50px;float:left; background-color:#0C0C0C; }
+		  #f53{width:170px;height:50px;float:left; background-color:#0C0C0C; }
+		  #f54{width:170px;height:50px;float:left; background-color:#0C0C0C; }
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  #con_left5{width:680px;height:300px; background-color:#212121;float:left; margin-top:20px;margin-left:140px;}
+	  
+	       #left5_up{width:680px;height:35px; background-color:#212121;float:left;}
+		  #left5_line1{width:680px;height:50px; background-color:#0C0C0C;float:left; margin-top:10px;}
+		  #v11{width:170px;height:50px;float:left; background-color:#0C0C0C; }
+		  #v12{width:170px;height:50px;float:left; background-color:#0C0C0C; }
+		  #v13{width:170px;height:50px;float:left; background-color:#0C0C0C; }
+		  #v14{width:170px;height:50px;float:left; background-color:#0C0C0C; }
+
+
+		  #left5_line2{width:100%;height:50px; background-color:#1A1A1A;float:left;}
+		   #v21{width:170px;height:50px;float:left; background-color:#1A1A1A; }
+		  #v22{width:170px;height:50px;float:left; background-color:#1A1A1A; }
+		  #v23{width:170px;height:50px;float:left; background-color:#1A1A1A; }
+		  #v24{width:170px;height:50px;float:left; background-color:#1A1A1A; }
+		  
+		  
+		  #left5_line3{width:100%;height:50px; background-color:#0C0C0C;float:left; }
+		  #v31{width:170px;height:50px;float:left; background-color:#0C0C0C; }
+		  #v32{width:170px;height:50px;float:left; background-color:#0C0C0C; }
+		  #v33{width:170px;height:50px;float:left; background-color:#0C0C0C; }
+		  #v34{width:170px;height:50px;float:left; background-color:#0C0C0C; }
+		  
+		  
+		  #left5_line4{width:100%;height:50px; background-color:#1A1A1A;float:left;}
+		   #v41{width:170px;height:50px;float:left; background-color:#1A1A1A; }
+		  #v42{width:170px;height:50px;float:left; background-color:#1A1A1A; }
+		  #v43{width:170px;height:50px;float:left; background-color:#1A1A1A; }
+		  #v44{width:170px;height:50px;float:left; background-color:#1A1A1A; }
+		  
+		  
+		  #left5_line5{width:100%;height:50px; background-color:#0C0C0C;float:left;}
+		  #v51{width:170px;height:30px;float:left; background-color:#0C0C0C; }
+		  #v52{width:170px;height:50px;float:left; background-color:#0C0C0C; }
+		  #v53{width:170px;height:50px;float:left; background-color:#0C0C0C; }
+		  #v54{width:170px;height:50px;float:left; background-color:#0C0C0C; }
+	  
+	  
+	  
+	  
+	  
+	  #con_left6{width:680px;height:300px; background-color:#212121;float:left; margin-top:20px;margin-left:140px;}
+	  
+	      #left6_up{width:680px;height:35px; background-color:#212121;float:left;}
+		  #left6_line1{width:680px;height:50px; background-color:#0C0C0C;float:left; margin-top:10px;}
+		  #s11{width:170px;height:50px;float:left; background-color:#0C0C0C; }
+		  #s12{width:170px;height:50px;float:left; background-color:#0C0C0C; }
+		  #s13{width:170px;height:50px;float:left; background-color:#0C0C0C; }
+		  #s14{width:170px;height:50px;float:left; background-color:#0C0C0C; }
+		  
+		  
+		  #left6_line2{width:100%;height:50px; background-color:#1A1A1A;float:left;}
+		   #s21{width:170px;height:50px;float:left; background-color:#1A1A1A; }
+		  #s22{width:170px;height:50px;float:left; background-color:#1A1A1A; }
+		  #s23{width:170px;height:50px;float:left; background-color:#1A1A1A; }
+		  #s24{width:170px;height:50px;float:left; background-color:#1A1A1A; }
+		  
+		  
+		  #left6_line3{width:100%;height:50px; background-color:#0C0C0C;float:left; }
+		  #s31{width:170px;height:50px;float:left; background-color:#0C0C0C; }
+		  #s32{width:170px;height:50px;float:left; background-color:#0C0C0C; }
+		  #s33{width:170px;height:50px;float:left; background-color:#0C0C0C; }
+		  #s34{width:170px;height:50px;float:left; background-color:#0C0C0C; }
+		  
+		  
+		  #left6_line4{width:100%;height:50px; background-color:#1A1A1A;float:left;}
+		   #s41{width:170px;height:50px;float:left; background-color:#1A1A1A; }
+		  #s42{width:170px;height:50px;float:left; background-color:#1A1A1A; }
+		  #s43{width:170px;height:50px;float:left; background-color:#1A1A1A; }
+		  #s44{width:170px;height:50px;float:left; background-color:#1A1A1A; }
+		  
+		  
+		  #left6_line5{width:100%;height:50px; background-color:#0C0C0C;float:left;}
+		  #s51{width:170px;height:30px;float:left; background-color:#0C0C0C; }
+		  #s52{width:170px;height:50px;float:left; background-color:#0C0C0C; }
+		  #s53{width:170px;height:50px;float:left; background-color:#0C0C0C; }
+		  #s54{width:170px;height:50px;float:left; background-color:#0C0C0C; }
+	  
+	  
+	  
+	  
+	  
+	  
+       #con_right1{width:480px;height:300px; background-color:#121212;float:left; margin-top:-1900px; margin-left:840px;}	
+	       #r1-top1{width:64px;height:64px; background-color:#121212;float:left;}
+		   #r1-top2{width:300px;height:64px; background-color:#121212;}
+		   #p1{width:100px;height:50px; background-color:#171717;float:left; margin-top:40px; margin-left:10px;}
+		   #p2{width:100px;height:50px; background-color:#171717;float:left; margin-top:40px; margin-left:10px;}
+		   #p3{width:100px;height:50px; background-color:#171717;float:left; margin-top:40px; margin-left:10px;}
+		   #p4{width:100px;height:50px; background-color:#171717;float:left; margin-top:40px; margin-left:10px;}
+		   #p5{width:100px;height:50px; background-color:#171717;float:left; margin-top:10px; margin-left:10px;}
+		   #p6{width:100px;height:50px; background-color:#171717;float:left; margin-top:10px; margin-left:10px;}
+		   #p7{width:100px;height:50px; background-color:#171717;float:left; margin-top:10px; margin-left:10px;}
+		   #p8{width:100px;height:50px; background-color:#171717;float:left; margin-top:10px; margin-left:10px;}
+		   #huadong{width:400px;height:50px; background:#121212;float:left; margin-top:10px; margin-left:10px;}
+		   
+	  
+	   
+	   
+	   
+	   #con_right2{width:480px;height:300px; background-color:#121212;float:left; margin-top:-1580px; margin-left:840px;}
+	    #r2-top1{width:64px;height:64px; background-color:#121212;float:left;}
+		#r2-top2{width:200px;height:64px; background-color:#121212;}
+	   #r2-center{width:480px;height:160px; background-color:#121212;float:left;}
+	   #r2-bottom{width:480px;height:60px; background-color:#121212;float:left; margin-top:20px;}	
+	   
+	   
+	   
+	   
+	   #con_right3{width:480px;height:300px; background-color:#181818;float:left; margin-top:-1260px; margin-left:840px;}	
+	    #r3-top1{width:64px;height:64px; background-color:#181818;float:left;}   
+		#r3-top2{width:200px;height:64px; background-color:#181818;}
+	   #r3-center{width:480px;height:150px; background-color:#181818;float:left;}
+	   #r3-bottom{width:480px;height:76px; background-color:#181818;float:left;}
+	   
+	   
+	   #con_right4{width:480px;height:300px; background-color:#1D1D1D;float:left; margin-top:-940px; margin-left:840px;}	
+	    #r4-top1{width:64px;height:64px; background-color:#1D1D1D;float:left;}  
+		#r4-top2{width:200px;height:64px; background-color:#1D1D1D;float:left;}
+	   #r4-center{width:480px;height:150px; background-color:#1D1D1D;float:left;}
+	   #r4-bottom{width:480px;height:86px; background-color:#1D1D1D;float:left;}
+	   
+	   
+	   #con_right5{width:480px;height:320px; background-color:#212121;float:left; margin-top:-620px; margin-left:840px;}	
+	    #r5-top1{width:64px;height:64px; background-color:#212121;float:left;}  
+		#r5-top2{width:200px;height:64px; background-color:#212121;float:left;}
+	   #r5-center{width:480px;height:210px; background-color:#212121;float:left;}
+	   #r5-bottom{width:480px;height:56px; background-color:#212121;float:left;}
+	    
+		  
+	   
+	   
+	   #con_right6{width:480px;height:300px; background-color:#212121;float:left; margin-top:-280px; margin-left:840px;}	
+	    #r6-top1{width:64px;height:64px; background-color:#212121;float:left;}  
+		#r6-top2{width:200px;height:64px; background-color:#212121;float:left;}
+	   #r6-center{width:480px;height:150px; background-color:#212121;float:left;}
+	   #r6-bottom{width:480px;height:56px; background-color:#212121;float:left;}
+	
+	
+	    
+	
+	
+
+</style>
+<script language="javascript">
+	function block_over(obj_id)
+	{
+		if(obj_id=="top_div3" || obj_id=="shuju1_href" || obj_id=="shuju2_href" || obj_id=="shuju_b1" || obj_id=="shuju_b2")
+		{
+			document.getElementById("shuju").style.display="block";
+			document.getElementById(obj_id).style.backgroundColor="#3A3A3A";
+			return;
+		}
+		document.getElementById(obj_id).style.backgroundColor="#3A3A3A";
+		document.getElementById("shuju").style.display="none";
+	}
+	function block_out(obj_id)
+	{
+		if(obj_id=="top_div3") return;
+		if(obj_id=="shuju")
+		{
+			document.getElementById("shuju").style.display="none";
+			return;
+		}
+		document.getElementById(obj_id).style.backgroundColor="#1A1A1A";
+	}
+	function level_up()
+	{
+		var tiao=document.getElementById("huadongtiao");
+		var temp;
+		var str="全能骑士等级【"+tiao.value+"】";
+		var r1=document.getElementById("r1-top2");
+		r1.innerHTML=str;
+		
+		temp=tiao.value*3;
+		temp=parseInt(51)+temp;
+		str="攻击力<br/>"+temp+" - ";
+		temp=temp+parseInt(10);
+		str+=temp;
+		var att=document.getElementById("p1");
+		att.innerHTML=str;
+		
+		
+		temp=tiao.value*0.9;
+		temp=parseInt(5.1)+temp;
+		str="护甲<br/>"+temp;
+		var att=document.getElementById("p2");
+		att.innerHTML=str;
+		
+		temp=tiao.value*1.3;
+		temp=parseInt(75)+temp;
+		str="DPS(攻速)<br/>"+temp+"(1.31)";
+		var att=document.getElementById("p3");
+		att.innerHTML=str;
+		
+		temp=tiao.value*80;
+		temp=parseInt(1336)+temp;
+		str="生命值<br/>"+temp;
+		var att=document.getElementById("p4");
+		att.innerHTML=str;
+		
+		temp=tiao.value*20;
+		temp=parseInt(595)+temp;
+		str="魔法师<br/>"+temp;
+		var att=document.getElementById("p5");
+		att.innerHTML=str;
+	
+	}
+</script>
+</head>
+
+<body marginheight="0" marginwidth="0" bgcolor="#1A1A1A">
+
+
+	
+	<div id="top">
+    <div id="top_top">
+       	   <div id="top_div1">
+        	<img src="images/pro_date_max_logo3.png" width="100%" height="100%">
+           </div>
+           <a href="index.html" style="color:#CCCCCC; text-decoration:none"><div id="top_div2" name="block" onMouseMove="block_over('top_div2');" onMouseOut="block_out('top_div2')">
+           <font size="-1"><b>首页</b></font>
+           </div></a>
+           <div id="top_div3" name="block" onMouseOver="block_over('top_div3');" onMouseOut="block_out('top_div3')">
+           <font size="-1"><b>数据</b></font>
+           </div>
+           <a href="prodate.html"style="color:#CCCCCC;  text-decoration:none"><div id="top_div4" name="block" onMouseOver="block_over('top_div4');" onMouseOut="block_out('top_div4')">
+            <font size="-1"><b>职业数据</b></font>
+           </div></a>
+           <a href="player.html" style="color:#CCCCCC;  text-decoration:none"><div id="top_div5" name="block" onMouseOver="block_over('top_div5');" onMouseOut="block_out('top_div5')">
+           <font size="-1"><b>玩家</b></font>
+           </div></a>
+          <a href="rank.html" style="color:#CCCCCC;  text-decoration:none"><div id="top_div6" name="block" onMouseOver="block_over('top_div6');" onMouseOut="block_out('top_div6')">
+           <font size="-1"><b>天梯</b></font>
+           </div></a>
+          <a href="live.html" style="color:#CCCCCC;  text-decoration:none"><div id="top_div7" name="block" onMouseOver="block_over('top_div7');" onMouseOut="block_out('top_div7')">
+           <font size="-1"><b>直播</b></font>
+           </div></a>
+           <a href="video.html" style="color:#CCCCCC;  text-decoration:none"><div id="top_div8" name="block" onMouseOver="block_over('top_div8');" onMouseOut="block_out('top_div8')">
+           <font size="-1"><b>视频</b></font>
+           </div></a>
+           <a href="app.html" style="color:#CCCCCC;  text-decoration:none"><div id="top_div9" name="block" onMouseOver="block_over('top_div9');" onMouseOut="block_out('top_div9')">
+           <font  size="-1"><b>APP</b></font>
+           </div></a>
+           <a href="#" style="color:#FFFFFF;  text-decoration:none"><div id="top_div10">
+           <font size="-1"><b>VIP</b></font>
+           </div></a>
+           <a href="#" style="color:#FFFFFF;  text-decoration:none"><div id="top_div11">
+            <font  size="-1"><b>竞猜</b></font>
+           </div></a>
+           <a href="login.html" style="color:#CCCCCC;  text-decoration:none"><div id="top_div12" name="block" onMouseOver="block_over('top_div12');" onMouseOut="block_out('top_div12')">
+           <font size="-1"><b>登录</b></font>
+           </div></a>
+           <a href="reg.html" style="color:#CCCCCC;  text-decoration:none"><div id="top_div13" name="block" onMouseOver="block_over('top_div13');" onMouseOut="block_out('top_div13')">
+           <font  size="-1"><b>注册</b></font>
+           </div></a>
+      </div>
+        <div id="top_bot" style="background-image:url(images/prodate_background.jpg);">
+        		<div id="shuju" onMouseOut="block_out('shuju');">
+                	<a href="hero.html" style="text-decoration:none;color:#CCCCCC;" onMouseOver="block_over('shuju1_href');"><div id="shuju_b1"  onMouseOver="block_over('shuju_b1');" onMouseOut="block_out('shuju_b1');"  onMouseOut="block_out('shuju_b1');"><font  size="-1">英雄</font></div></a>
+                    <a href="things.html" style="text-decoration:none;color:#CCCCCC;"  onMouseOver="block_over('shuju2_href');"><div id="shuju_b2"  onMouseOver="block_over('shuju_b2');" onMouseOut="block_out('shuju_b2');"  onMouseOut="block_out('shuju_b2');"><font  size="-1">物品</font></div></a>
+</div>
+<div id="bot_div">
+             <div id="bot_div1" name="bot_block"><a href="#"  style="color:#CCCCCC; font-size:14px; text-decoration:none;">综合统计</a></div>
+              <div id="bot_div2"  name="bot_block"><a href="#"  style="color:#CCCCCC; font-size:14px; text-decoration:none;">技能加点</a></div>
+               <div id="bot_div3"  name="bot_block"><a href="#"  style="color:#CCCCCC; font-size:14px; text-decoration:none;">物品</a></div>
+             <div id="bot_div4"  name="bot_block"><a href="#"  style="color:#CCCCCC; font-size:14px; text-decoration:none;">对手英雄分析</a></div>
+            <div id="bot_div6"  name="bot_block"><a href="#"  style="color:#CCCCCC; font-size:14px; text-decoration:none;">队友英雄分析</a></div>
+              
+             </div>
+        	<div id="shouye" style="color:#FFF;  font-size:25px;; width:200px; height:30px; margin-top:20px; margin-left:-750px; float:left;"><img src="images/hero1.png"></div>
+<div id="mingming" style="color:#FFF;  font-size:25px;; width:300px; height:30px; margin-top:50px; margin-left:-650px; float:left;">全能骑士<br>  <font size="-1.5">使用次数：4003296</font> <font size="-1.5" color="#CF9523">  胜率：60.49%</font></div>
+           <div id="search_block">
+            <div id="hcirl"></div>
+         <div id="search" style="width:280px; height:45px; float:left;"><input type="search" style="width:280px; height:38px; border:#FFF 0px solid;  opacity:0.5;border:#FFF 0px solid;" placeholder="输入国服ID或昵称"></div>
+         <div id="hcirr" ><input type="button" value="Go" style="  background-color:#FFF; border:0px #FFFFFF solid; margin:10px 0px 10px 0px;" style="width:50px; height:45px;"></div>
+         </div>
+        </div>
+    </div>
+            <!--zhuti-->
+    <div id="con">
+         <div id="con_left1">
+                <div id="left1_top"><img src="images/quan2.jpg"></div>
+                <div id="left1_left1"><img src="images/quan3.gif" style="width:100%;height:100%;"></div>
+                <div id="left1_left2"><img src="images/quan4.jpg" style="width:100%;height:100%;"></div> 
+                <div id="left1_left3"><img src="images/quan5.jpg" style="width:100%;height:100%;"></div> 
+                <div id="left1_left4"><img src="images/quan6.jpg" style="width:100%;height:100%;"></div>
+                <div id="left1_left5"><img src="images/quan7.jpg" style="width:100%;height:100%;"></div>
+                <div id="left1_right"><img src="images/quan1.jpg"></div>         
+         
+         
+         </div>
+         <div id="con_left2">
+         <div id="left2_top1">
+           <div id="top1_1" style="text-align:center;margin-top:10px; font-size:14px; color:#FFF;">物品</div>
+           <div id="top1_2" style="text-align:center;margin-top:10px;font-size:14px; color:#FFF;">使用次数</div>
+           <div id="top1_3" style="text-align:center; margin-top:10px;font-size:14px; color:#FFF;">胜率</div>
+         
+         </div> 
+         <div id="left2_top2">
+         <div id="top2_1" style="text-align:center; margin-top:10px;font-size:14px; ">奥术鞋</div>
+           <div id="top2_2">2180162<b/><hr size="5px" color="#CCCCCC" style="width:240px; margin-left:0px;"></div>
+           <div id="top2_3">56.93%<b/><hr size="5px" color="#33CC33" style="width:150px; margin-left:0px;"></div>
+         
+         </div>
+         <div id="left2_top3">
+         <div id="top3_1" style="text-align:center; margin-top:10px;font-size:14px;">灵魂之戒</div>
+           <div id="top3_2">1952794<b/><hr size="5px" color="#CCCCCC" style="width:220px; margin-left:0px;"></div>
+           <div id="top3_3">61.04%<b/><hr size="5px" color="#33CC33" style="width:170px; margin-left:0px;"></div>
+         
+         </div>
+         <div id="left2_top4">
+         <div id="top4_1" style="text-align:center; margin-top:10px;font-size:14px;">阿哈利姆神杖</div>
+           <div id="top4_2">1263409<b/><hr size="5px" color="#CCCCCC" style="width:180px; margin-left:0px;"></div>
+           <div id="top4_3">75.44%<b/><hr size="5px" color="#33CC33" style="width:220px; margin-left:0px;"></div>
+         
+         </div>
+         <div id="left2_top5">
+         <div id="top5_1" style="text-align:center; margin-top:10px;font-size:14px;">卫士胫甲</div>
+           <div id="top5_2">1141062<b/><hr size="5px" color="#CCCCCC" style="width:165px; margin-left:0px;"></div>
+           <div id="top5_3">76.21%<b/><hr size="5px" color="#33CC33" style="width:225px; margin-left:0px;"></div>
+         </div>
+         <div id="left2_top6">
+         <div id="top6_1" style="text-align:center; margin-top:10px;font-size:14px; line-height:-10px;">梅肯斯姆</div>
+           <div id="top6_2">894341<b/><hr size="5px" color="#CCCCCC" style="width:160px; margin-left:0px;"></div>
+           <div id="top6_3">57.54%<b/><hr size="5px" color="#33CC33" style="width:156px; margin-left:0px;"></div>
+         </div>
+         
+         
+         
+         
+         
+         
+         
+         </div>
+         <div id="con_left3">
+         <div  id="left3_up"><img src="images/quan8.jpg" ></div>
+         <div  id="left3_line1">
+             <div id="t11" style="text-align:center;margin-top:10px; font-size:14px; color:#FFF;">英雄</div>
+             <div id="t12" style="text-align:center;margin-top:10px; font-size:14px; color:#FFF;">克制指数</div>
+             <div id="t13" style="text-align:center;margin-top:10px; font-size:14px; color:#FFF;">全能骑士 胜率</div>
+             <div id="t14" style="text-align:center;margin-top:10px; font-size:14px; color:#FFF;">使用次数</div>
+             </div>
+         <div  id="left3_line2">
+         <div id="t21" style="text-align:center; margin-top:10px;font-size:14px;">幻影刺客</div>
+            <div id="t22">6.00%<b/><hr size="5px" color="#33CC33" style="width:160px; margin-left:0px;"></div>
+            <div id="t23">64.93%<b/><hr size="5px" color="#CF9523" style="width:120px; margin-left:0px;"></div>
+            <div id="t24" style="text-align:center;"><h4>331023</h4></div>
+         </div>
+            
+         <div  id="left3_line3">
+         <div id="t31" style="text-align:center; margin-top:10px;font-size:14px;">噬魂鬼</div>
+            <div id="t32">5.87%<b/><hr size="5px" color="#33CC33" style="width:158px; margin-left:0px;"></div>
+            <div id="t33">64.06%<b/><hr size="5px" color="#CF9523" style="width:115px; margin-left:0px;"></div>
+            <div id="t34" style="text-align:center;"><h4>179466</h4></div></div>
+         <div  id="left3_line4">
+         <div id="t41" style="text-align:center; margin-top:10px;font-size:14px;">幽鬼</div>
+            <div id="t42">5.59%<b/><hr size="5px" color="#33CC33" style="width:150px; margin-left:0px;"></div>
+            <div id="t43">54.72%<b/><hr size="5px" color="#CF9523" style="width:90px; margin-left:0px;"></div>
+            <div id="t44" style="text-align:center;"><h4>401373</h4></div></div>
+         <div  id="left3_line5">
+         <div id="t51" style="text-align:center; margin-top:10px;font-size:14px;">混沌骑士</div>
+            <div id="t52">4.40%<b/><hr size="5px" color="#33CC33" style="width:120px; margin-left:0px;"></div>
+            <div id="t53">61.14%<b/><hr size="5px" color="#CF9523" style="width:110px; margin-left:0px;"></div>
+            <div id="t54" style="text-align:center;"><h4>114109</h4></div></div>
+         
+         
+         
+          
+         </div>
+         <div id="con_left4">
+         <div  id="left3_up"><img src="images/quan9.jpg" ></div>
+         <div  id="left4_line1">
+         <div id="f11" style="text-align:center;margin-top:10px; font-size:14px; color:#FFF;">英雄</div>
+             <div id="f12" style="text-align:center;margin-top:10px; font-size:14px; color:#FFF;">克制指数</div>
+             <div id="f13" style="text-align:center;margin-top:10px; font-size:14px; color:#FFF;">全能骑士胜率</div>
+             <div id="f14" style="text-align:center;margin-top:10px; font-size:14px; color:#FFF;">使用次数</div></div>
+           <div  id="left4_line2">
+           <div id="f21" style="text-align:center; margin-top:10px;font-size:14px;">谜团</div>
+            <div id="f22" >-5.08%<b/><hr size="5px" color="#660000"; style="width:160px; margin-left:0px;"></div>
+            <div id="f23">55.50%<b/><hr size="5px" color="#CF9523" style="width:120px; margin-left:0px;"></div>
+            <div id="f24" style="text-align:center;"><h4>100440</h4></div></div>
+         <div  id="left4_line3">
+         <div id="f31" style="text-align:center; margin-top:10px;font-size:14px;">暗影恶魔  </div>
+            <div id="f32">-4.98%<b/><hr size="5px" color="#660000" style="width:155px; margin-left:0px;"></div>
+            <div id="f33">62.65%<b/><hr size="5px" color="#CF9523" style="width:132px; margin-left:0px;"></div>
+            <div id="f34" style="text-align:center;"><h4>51299</h4></div></div>
+         <div  id="left4_line4">
+         <div id="f41" style="text-align:center; margin-top:10px;font-size:14px;">神谕者</div>
+            <div id="f42">-4.94%<b/><hr size="5px" color="#660000" style="width:143px; margin-left:0px;"></div>
+            <div id="f43">63.57%<b/><hr size="5px" color="#CF9523" style="width:136px; margin-left:0px;"></div>
+            <div id="f44" style="text-align:center;"><h4>54097</h4></div></div>
+         <div  id="left4_line5">
+         <div id="f51" style="text-align:center; margin-top:10px;font-size:14px;">死亡先知</div>
+            <div id="f52">-4.68%<b/><hr size="5px" color="#660000" style="width:140px; margin-left:0px;"></div>
+            <div id="f53">58.72%<b/><hr size="5px" color="#CF9523" style="width:128px; margin-left:0px;"></div>
+            <div id="f54" style="text-align:center;"><h4>110168</h4></div></div>
+         
+         
+         
+         
+         </div>
+         <div id="con_left5">
+         <div  id="left3_up"><img src="images/quan10.jpg" ></div>
+         <div  id="left5_line1">
+         <div id="v11" style="text-align:center;margin-top:10px; font-size:14px; color:#FFF;">英雄</div>
+             <div id="v12" style="text-align:center;margin-top:10px; font-size:14px; color:#FFF;">配合指数</div>
+             <div id="v13" style="text-align:center;margin-top:10px; font-size:14px; color:#FFF;">全能骑士胜率</div>
+             <div id="v14" style="text-align:center;margin-top:10px; font-size:14px; color:#FFF;">使用次数</div></div>
+           <div  id="left5_line2">
+           <div id="v21" style="text-align:center; margin-top:10px;font-size:14px;">黑鸟</div>
+            <div id="v22">4.79%<b/><hr size="5px" color="#33CC33" style="width:160px; margin-left:0px;"></div>
+            <div id="v23">64.85%<b/><hr size="5px" color="#CF9523" style="width:128px; margin-left:0px;"></div>
+            <div id="v24" style="text-align:center;"><h4>412978</h4></div></div>
+         <div  id="left5_line3"><div id="v31" style="text-align:center; margin-top:10px;font-size:14px;">帕吉</div>
+            <div id="v32">3.13%<b/><hr size="5px" color="#33CC33" style="width:125px; margin-left:0px;"></div>
+            <div id="v33">64.01%<b/><hr size="5px" color="#CF9523" style="width:125px; margin-left:0px;"></div>
+            <div id="v34" style="text-align:center;"><h4>421337</h4></div></div>
+         <div  id="left5_line4">
+         <div id="v41" style="text-align:center; margin-top:10px;font-size:14px;">哈斯卡</div>
+            <div id="v42">2.90%<b/><hr size="5px" color="#33CC33" style="width:120px; margin-left:0px;"></div>
+            <div id="v43">57.46%<b/><hr size="5px" color="#CF9523" style="width:120px; margin-left:0px;"></div>
+            <div id="v44" style="text-align:center;"><h4>110172</h4></div></div>
+         <div  id="left5_line5">
+         <div id="v51" style="text-align:center; margin-top:10px;font-size:14px;">水晶室女</div>
+            <div id="v52">2.50%<b/><hr size="5px" color="#33CC33" style="width:110px; margin-left:0px;"></div>
+            <div id="v53">66.71%<b/><hr size="5px" color="#CF9523" style="width:135px; margin-left:0px;"></div>
+            <div id="v54" style="text-align:center;"><h4>110830</h4></div></div>
+         
+         
+         
+         
+         
+         
+         
+         </div>
+         <div id="con_left6">
+         <div  id="left3_up"><img src="images/quan11.jpg" ></div>
+         <div  id="left6_line1">
+         <div id="s11" style="text-align:center;margin-top:10px; font-size:14px; color:#FFF;">英雄</div>
+             <div id="s12" style="text-align:center;margin-top:10px; font-size:14px; color:#FFF;">配合指数</div>
+             <div id="s13" style="text-align:center;margin-top:10px; font-size:14px; color:#FFF;">全能骑士胜率</div>
+             <div id="s14" style="text-align:center;margin-top:10px; font-size:14px; color:#FFF;">使用次数</div></div>
+           <div  id="left6_line2">
+           <div id="s21" style="text-align:center; margin-top:10px;font-size:14px;">维萨吉</div>
+            <div id="s22">-4.26%<b/><hr size="5px" color="#660000" style="width:160px; margin-left:0px;"></div>
+            <div id="s23">52.61%<b/><hr size="5px" color="#CF9523" style="width:120px; margin-left:0px;"></div>
+            <div id="s24" style="text-align:center;"><h4>138732</h4></div></div>
+         <div  id="left6_line3">
+         <div id="s31" style="text-align:center; margin-top:10px;font-size:14px;">神谕者</div>
+            <div id="s32">-4.12%<b/><hr size="5px" color="#660000" style="width:155px; margin-left:0px;"></div>
+            <div id="s33">51.51%<b/><hr size="5px" color="#CF9523" style="width:118px; margin-left:0px;"></div>
+            <div id="s34" style="text-align:center;"><h4>24504</h4></div></div>
+         <div  id="left6_line4">
+         <div id="s41" style="text-align:center; margin-top:10px;font-size:14px;">主宰</div>
+            <div id="s42">-4.07%<b/><hr size="5px" color="#660000" style="width:150px; margin-left:0px;"></div>
+            <div id="s43">59.29%<b/><hr size="5px" color="#CF9523" style="width:130px; margin-left:0px;"></div>
+            <div id="s44" style="text-align:center;"><h4>300575</h4></div></div>
+         <div  id="left6_line5">
+         <div id="s51" style="text-align:center; margin-top:5px;font-size:14px;">术士</div>
+            <div id="s52">-3.87%<b/><hr size="5px" color="#660000" style="width:145px; margin-left:0px;"></div>
+            <div id="s53">62.57%<b/><hr size="5px" color="#CF9523" style="width:135px; margin-left:0px;"></div>
+            <div id="s54" style="text-align:center;"><h4>48306</h4></div></div>
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         </div>
+             <div id="con_right">
+                 <div id="con_right1">
+                 <div id="r1-top1"><img src="images/hero1.png"  style="height:100%"> </div>
+                 <div id="r1-top2" style="line-height:60px; font-size:16px; text-align:center;">全能骑士等级【1】</div>
+                 <div id="huadong" style="text-align:center; line-height:60px;"><input type="range" max=25 min=1 width=200px value="0" onChange="level_up();" id="huadongtiao"></div>
+                 <div id="p1" style=" font-size:16px; text-align:center;">攻击力<br>
+51 - 61</div>
+                 <div id="p2" style=" font-size:16px; text-align:center;">护甲<br>
+5.1</div> 
+                 <div id="p3" style=" font-size:16px; text-align:center;">移动速度<br>
+305</div> 
+                 <div id="p4" style=" font-size:16px; text-align:center;">DPS(攻速)<br>
+75 (1.31)</div> 
+                 <div id="p5" style=" font-size:16px; text-align:center;">生命值<br>
+1336</div> 
+                 <div id="p6" style=" font-size:16px; text-align:center;">魔法值<br>
+595</div> 
+                 <div id="p7" style=" font-size:16px; text-align:center;">转身速度<br>
+0.600000</div> 
+                 <div id="p8" style=" font-size:16px; text-align:center;">攻击前摇
+0.433000</div>  
+                 
+                 
+                 
+                 </div>
+                 
+                 
+                 
+                 <div id="con_right2">
+                 <div id="r2-top1" ><img src="images/quan3.gif"></div>
+                 <div id="r2-top2" style="line-height:60px; font-size:16px; text-align:center;">洗礼</div>
+                 <div id="r2-center"><font color="#FFFFFF" size="-1">立即治疗一个友方单位，并对周围敌军造成伤害.</font><font size="-2">全知的牧师们善于清除己方战士们身心中的污染.<br></font>治疗/伤害:<font color="#FF6600">90/180/270/360</font><br> 作用范围:<font color="#FF6600">260</font><br> 影响:<font color="#FF6600">友方单位,敌方单位</font><br> 技能:<font color="#FF6600">单位目标</font><br> 伤害类型:<font color="#CC0000">纯粹</font><br> 无视技能免疫:<font color="#FF6600">否</font><br></div>
+                 <div id="r2-bottom"><img src="images/quan12.jpg"></div>
+                 
+                 </div>
+                 <div id="con_right3">
+                  <div id="r3-top1"><img src="images/quan4.jpg"></div>
+                  <div id="r3-top2" style=" line-height:60px;font-size:16px; text-align:center;">驱逐</div>
+                 <div id="r3-center"><font color="#FFFFFF" size="-1">创造出一个神圣守卫环绕目标，使目标获得技能免疫状态和100%的魔法抗性.</font><br><font size="-2">当面对着牺牲之渊时，普里斯特对魔法的适应能力得到了测试是证实.</font><br>持续时间:<font color="#FF6600">6.0/8.0/10.0/12.0 </font><br>影响:<font color="#FF6600">友方单位</font> <br>技能:<font color="#FF6600">单位目标</font><br> 无视技能免疫:<font color="#FF6600">否</font><br><font color="#33CC00">tips: 驱逐的效果与其他技能免疫技能和物品相同，但是驱逐可以被净化。</font></div>
+                 <div id="r3-bottom"><img src="images/quan13.jpg"></div></div>
+                 
+                 
+                 
+                 <div id="con_right4">
+                  <div id="r3-top1"><img src="images/quan5.jpg"></div>
+                  <div id="r3-top2" style=" line-height:60px;font-size:16px; text-align:center;">退化光环</div>
+                 <div id="r3-center"><font color="#FFFFFF" size="-1">极大程度的减缓附近敌人的移动速度和攻击速度，包括技能免疫状态下的敌人。</font><br><font size="-2">作为神圣的化身，普里斯特．雷霆之怒足以削弱那些不忠之徒。</font><br>
+移动速度减缓：<font color="#FF6600">-10% / -18% / -26% / -34%</font> <br>
+攻击速度降低：<font color="#FF6600">-10 / -18 / -26 / -34</font> <br>
+作用范围：<font color="#FF6600">350</font> <br>
+技能：<font color="#FF6600">被动,光环</font> <br>
+无视技能免疫：<font color="#33CC00">是</font> <br></div>
+                 <div id="r3-bottom"><font color="#33CC00">tips:</font></div></div>
+                 
+                 
+                 <div id="con_right5">
+                   <div id="r5-top1"><img src="images/quan6.jpg"></div>
+                   <div id="r5-top2" style="line-height:60px;font-size:16px; text-align:center;">守护天使</div>
+                   <div id="r5-center"><font color="#FFFFFF" size="-1">全能骑士召唤出守护天使，使附近的友方单位对物理伤害免疫。 可用神杖升级</font><font size="-2">全知之主对那些被普利斯特称为“朋友”的人降下保护结界。</font> <br>
+持续时间：<font color="#FF6600">6.0 / 7.0 / 8.0</font> <br>
+作用范围：<font color="#FF6600">600 / 600 / 600</font> <br>
+神杖升级持续时间：<font color="#FF6600">8.0 / 9.0 / 10.0</font> <br>
+技能：<font color="#FF6600">无目标</font> <br>
+无视技能免疫<font color="#33CC00">：是</font> <br>
+<font color="#FF6699">可用阿哈利姆神杖升级技能威力。</font> <br>
+<font color="#FF6699">提升持续时间，作用范围变为全地图，对建筑有效。</font><br> 
+<font color="#33CC00">tips: 效果无视技能免疫。可以被驱散。</font></div>
+
+                   <div id="r5-bottom"><img src="images/quan14.jpg"></div></div>
+                 
+                 
+                 <div id="con_right6">
+                  <div id="r6-top1"><img src="images/quan7.jpg"></div>
+                   <div id="r6-top2" style="line-height:60px;font-size:16px; text-align:center;">属性附加</div>
+                   <div id="r6-center"><font color="#FFFFFF" size="-1">消耗技能点提升所有属性</font> <br>
+附加:<font color="#FF6600">2.0</font> <br>
+技能：<font color="#FF6600">被动</font> <br></div>
+                   <div id="r6-bottom"><font color="#33CC00">tips:</font> </div>
+                   
+                   
+                   
+                   
+                   
+                   </div>
+                 
+          
+             </div>
+             
+       
+    </div>
+  </div>
+  
+  
+     <!-- foot sta--------------------------------------------------------->
+    <div id="foot">
+   <div style="background-color: rgb(10,10,10);border-top:1px rgb(15,15,15) solid;cursor: pointer;margin-top: -1px;height:26px;" >
+       <!------------------------------------------>
+       <div id="return" style="margin-left:auto; margin-right:auto;"><a href="#"><img src="images/main/return.png" width="28" height="26"></a>
+       </div>
+       <!------------------------------------------>
+       <div style="background-color: rgb(0,0,0);padding-top: 15px;padding-bottom: 15px;position: relative;margin-top:-10px">
+       <div style="width:1100px;margin: 0 auto;line-height: 20px;position: relative;height: 30px;">
+      
+       <div   class="tag" style="left:23%;">
+        <a href="#">
+        <img src="images/main/max_logo3.png" style="width:105px;margin-right: 15px;margin-left:10px;cursor: pointer;"></a></div>
+       <div   class="tag" style="left:37%;">
+       <a href="#">
+       <img src="images/main/lolmax.png" style="width:97px;margin-right: 10px;margin-left:10px;margin-top:2px;cursor: pointer;"></a></div>
+       <div   class="tag" style="left:50%;">
+       <a href="#">
+       <img src="images/main/d3_small.png" style="width:115px;margin-right: 10px;margin-left:10px;margin-top:2px;cursor: pointer;"></a></div>
+       <div class="tag" style="left:64%">
+       <a href="#">
+       <img src="images/main/hosmax.png" style="width:97px;margin-right: 10px;margin-left:10px;margin-top:2px;cursor: pointer;"></a></div>
+       <span style="line-height: 30px;position: absolute;right:25px;top:0px;">
+       <img src="images/main/cn.gif" width="16" height="11">
+       <img src="images/main/ru.gif" width="16" height="11">
+       <img src="images/main/en.gif" width="16" height="11">
+       <img src="images/main/ko.gif" width="16" height="11">
+       </span>
+       
+      </div>
+ 
+</div>
+<!----------------------------------->
+     <div style="padding-bottom:10px;margin: 0px auto 0px auto;background-color: #000;color: rgba(255, 255, 255, 0.30);">
+       <div style="position: relative;width: 1100px;margin: 0 auto;">
+       
+         <img src="images/main/logo_01.png" style="width:40px;"></div>
+       </div>
+       </div>
+</div>
+</div>
+<!------------------------------------>
+   
+</body>
+</html>

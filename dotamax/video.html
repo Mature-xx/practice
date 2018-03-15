@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>DOTA2 Video</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<link rel="stylesheet" type="text/css" href="css/dotamax_v20160413.css">
+<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+<style type="text/css">
+body {
+    background-color: rgb(33, 33, 33);
+    margin: 0;
+    font: 12px/1.5 Arial, 'Droid Sans', 'Hiragino Sans GB', 'Microsoft YaHei';
+    /*text-shadow: rgb(17, 17, 17) 1px 1px 0px;*/
+    
+    line-height: 20px;
+    color: #ddd;
+}
+	
+	#ad1 {background-color:#9F3; width:100px; height:250px; margin-top:16%; margin-left:1.6%; position:fixed; background-image:url(images/c-0405-110300-dl2-r.jpg)}
+	#ad1 #x1 {width:18px; height:18px; margin-left:84px;}
+	#ad2 #x2 {width:18px; height:18px; margin-left:84px;}
+	#ad2 {background-color:#C39; width:100px; height:250px; margin-top:16%; margin-left:91%; position:fixed; background-image:url(images/c-0405-110300-dl2-l.jpg)}
+	#top {  background-color:#1A1A1A;width:100%;min-width:1500px;text-align:center;position: absolute; margin-left:auto; margin-top:0px;}
+	#top_top {width:100%; height:40px;}
+	#top_div1 {width:146px; height:28px;  margin-left:110px; float:left; margin-top:5px;}
+	#top_div2 {width:54px; height:40px; margin-left:34px; background-color:#1A1A1A; float:left; text-align:center; line-height:40px;}
+	#top_div3 {width:54px; height:40px; margin-left:34px; background-color:#1A1A1A; float:left; text-align:center; line-height:40px;;}
+	#top_div4 {width:60px; height:40px; margin-left:34px; background-color:#1A1A1A; float:left; text-align:center; line-height:40px;}
+	#top_div5 {width:54px; height:40px; margin-left:34px; background-color:#1A1A1A; float:left; text-align:center; line-height:40px;}
+	#top_div6 {width:54px; height:40px; margin-left:34px; background-color:#1A1A1A; float:left; text-align:center; line-height:40px;}
+	#top_div7 {width:54px; height:40px; margin-left:34px; background-color:#1A1A1A; float:left; text-align:center; line-height:40px;}
+	#top_div8 {width:54px; height:40px; margin-left:34px; background-color:#3A3A3A; float:left; text-align:center; line-height:40px;}
+	#top_div9 {width:54px; height:40px; margin-left:34px; background-color:#1A1A1A; float:left; text-align:center; line-height:40px;}
+	#top_div10 {width:54px; height:40px; margin-left:34px; background-color:#E4A502; float:left; text-align:center; line-height:40px;}
+	#top_div11 {width:54px; height:40px; margin-left:34px; background-color:#C30909; float:left; text-align:center; line-height:40px;}
+	#top_div12 {width:54px; height:40px; margin-left:34px; background-color:#1A1A1A; float:left; text-align:center; line-height:40px;}
+	#top_div13 {width:54px; height:40px; margin-left:34px; background-color:#1A1A1A; float:left; text-align:center; line-height:40px;}
+	#top_bot {width:100%; height:164px;}
+	#shuju {width:54px; height:88px;left:378px; top:40px; position:absolute; display:none;}
+	#shuju #shuju_b1{width:54px; height:44px; background-color:#1A1A1A; text-align:center; line-height:40px;}
+	#shuju #shuju_b2{width:54px; height:44px; background-color:#1A1A1A; text-align:center; line-height:40px;}
+	#search_block {width:338px; height:38px; position:absolute; top:100px; left:500px;}
+	#hcirl {width:18px; height:38px; background-color:#FFF;border-radius: 100px 0 0 100px ; border:#FFF 0px solid; float:left; opacity:0.5;}
+	#hcirr {width:40px; height:38px; background-color:#FFF;border-radius: 0px 100px 100px 0px; border:#FFF 0px solid; float:left; opacity:0.5;}
+	#bot_div {width:364px; height:40px; float:left; margin-top:126px; margin-left:130px;}
+	#bot_div1 {width:91px; height:40px; background-color:#1A1A1A; text-align:center; float:left; line-height:40px;}
+	#bot_div2 {width:91px; height:40px; background-color:#0A0A0A; text-align:center; float:left; line-height:40px;}
+	#bot_div3 {width:91px; height:40px; background-color:#0A0A0A; text-align:center; float:left; line-height:40px;}
+	#bot_div4 {width:91px; height:40px; background-color:#0A0A0A; text-align:center; float:left; line-height:40px;}
+	
+	
+	#con {width:100%;max-width:1500px;text-align:center;position: absolute; margin-left:left; background-color:#212121; margin-top:14%; left:7%;}
+	#con_top { color:#FFF;text-align:center; margin-top:-10px; margin-left:-7%; width:100%; height:10px;}
+	#con_bot {width:100%;max-width:100%;text-align:center; margin-top:0;color:#FFF; font-size:12px; margin-left:20%; background-color:#212121;}
+	#line1 {width:1048px; height:31px;color:#FFF; text-align:center; font-size:12px; background-color:#0C0C0C; float:left;}
+	#line1 #b1{width:52px; height:31px; float:left;text-align:center; line-height:30px; margin-top:auto;}
+	#line1 #b2{width:52px; height:31px; float:left;text-align:center; line-height:30px; margin-left:50px; margin-top:auto;}
+	#line1 #b3{width:52px; height:31px; float:left;text-align:center; line-height:30px; margin-left:50px; margin-top:auto;}
+	#line1 #b4{width:52px; height:31px; float:left; margin:auto auto; margin-left:150px;line-height:30px;}
+	#line1 #b5{width:52px; height:31px; float:left;text-align:center; line-height:30px; margin-left:150px; margin-top:auto;}
+	#line1 #b6{width:52px; height:31px; float:left;text-align:center; line-height:30px; margin-left:150px; margin-top:auto;}
+	#line1 #b7{width:52px; height:31px; float:left; margin:auto auto; margin-left:50px;line-height:30px;}
+	#line2 {width:1048px; height:45px;color:#FFF; background-color:#1A1A1A; float:left;}
+	#line2 #b1{width:52px; height:45px; float:left;text-align:center; line-height:40px; margin-left:0px;}
+	#line2 #b2{width:52px; height:45px; float:left; text-align:center; line-height:40px; margin-left:50px;}
+	#line2 #b3{width:52px; height:45px; float:left; margin:auto auto; margin-left:50px;margin-top:10px;}
+	#line2 #b4{width:161px; height:45px; float:left;margin-left:100px; margin-top:10px;}
+	#line2 #b5{width:161px; height:45px; float:left;margin-left:36px; margin-top:10px;}
+	#line2 #b6{width:52px; height:45px; float:left; margin-left:98px;margin-top:10px;}
+	#line2 #b7{width:52px; height:45px; float:left;margin-left:50px;margin-top:10px;}
+	#line3 {width:1048px; height:45px;color:#FFF; background-color:#0C0C0C; float:left;}
+	#line3 #b1{width:52px; height:45px; float:left;text-align:center; line-height:40px; margin-left:0px;}
+	#line3 #b2{width:52px; height:45px; float:left; text-align:center; line-height:40px; margin-left:50px;}
+	#line3 #b3{width:52px; height:45px; float:left; margin:auto auto; margin-left:50px;margin-top:10px;}
+	#line3 #b4{width:161px; height:45px; float:left;margin-left:100px; margin-top:10px;}
+	#line3 #b5{width:161px; height:45px; float:left;margin-left:36px; margin-top:10px;}
+	#line3 #b6{width:52px; height:45px; float:left; margin-left:98px;margin-top:10px;}
+	#line3 #b7{width:52px; height:45px; float:left;margin-left:50px;margin-top:10px;}
+	#line4 {width:1048px; height:45px;color:#FFF; background-color:#1A1A1A; float:left;}
+	#line4 #b1{width:52px; height:45px; float:left;text-align:center; line-height:40px; margin-left:0px;}
+	#line4 #b2{width:52px; height:45px; float:left; text-align:center; line-height:40px; margin-left:50px;}
+	#line4 #b3{width:52px; height:45px; float:left; margin:auto auto; margin-left:50px;margin-top:10px;}
+	#line4 #b4{width:161px; height:45px; float:left;margin-left:100px; margin-top:10px;}
+	#line4 #b5{width:161px; height:45px; float:left;margin-left:36px; margin-top:10px;}
+	#line4 #b6{width:52px; height:45px; float:left; margin-left:98px;margin-top:10px;}
+	#line4 #b7{width:52px; height:45px; float:left;margin-left:50px;margin-top:10px;}
+	#line5 {width:1048px; height:45px;color:#FFF; background-color:#0C0C0C; float:left;}
+	#line5 #b1{width:52px; height:45px; float:left;text-align:center; line-height:40px; margin-left:0px;}
+	#line5 #b2{width:52px; height:45px; float:left; text-align:center; line-height:40px; margin-left:50px;}
+	#line5 #b3{width:52px; height:45px; float:left; margin:auto auto; margin-left:50px;margin-top:10px;}
+	#line5 #b4{width:161px; height:45px; float:left;margin-left:100px; margin-top:10px;}
+	#line5 #b5{width:161px; height:45px; float:left;margin-left:36px; margin-top:10px;}
+	#line5 #b6{width:52px; height:45px; float:left; margin-left:98px;margin-top:10px;}
+	#line5 #b7{width:52px; height:45px; float:left;margin-left:50px;margin-top:10px;}
+	#line6 {width:1048px; height:45px;color:#FFF; background-color:#1A1A1A; float:left;}
+	#line6 #b1{width:52px; height:45px; float:left;text-align:center; line-height:40px; margin-left:0px;}
+	#line6 #b2{width:52px; height:45px; float:left; text-align:center; line-height:40px; margin-left:50px;}
+	#line6 #b3{width:52px; height:45px; float:left; margin:auto auto; margin-left:50px;margin-top:10px;}
+	#line6 #b4{width:161px; height:45px; float:left;margin-left:100px; margin-top:10px;}
+	#line6 #b5{width:161px; height:45px; float:left;margin-left:36px; margin-top:10px;}
+	#line6 #b6{width:52px; height:45px; float:left; margin-left:98px;margin-top:10px;}
+	#line6 #b7{width:52px; height:45px; float:left;margin-left:50px;margin-top:10px;}
+	#line7 {width:1048px; height:45px;color:#FFF; background-color:#0C0C0C; float:left;}
+	#line7 #b1{width:52px; height:45px; float:left;text-align:center; line-height:40px; margin-left:0px;}
+	#line7 #b2{width:52px; height:45px; float:left; text-align:center; line-height:40px; margin-left:50px;}
+	#line7 #b3{width:52px; height:45px; float:left; margin:auto auto; margin-left:50px;margin-top:10px;}
+	#line7 #b4{width:161px; height:45px; float:left;margin-left:100px; margin-top:10px;}
+	#line7 #b5{width:161px; height:45px; float:left;margin-left:36px; margin-top:10px;}
+	#line7 #b6{width:52px; height:45px; float:left; margin-left:98px;margin-top:10px;}
+	#line7 #b7{width:52px; height:45px; float:left;margin-left:50px;margin-top:10px;}
+	#line8 {width:1048px; height:45px;color:#FFF; background-color:#1A1A1A; float:left;}
+	#line8 #b1{width:52px; height:45px; float:left;text-align:center; line-height:40px; margin-left:0px;}
+	#line8 #b2{width:52px; height:45px; float:left; text-align:center; line-height:40px; margin-left:50px;}
+	#line8 #b3{width:52px; height:45px; float:left; margin:auto auto; margin-left:50px;margin-top:10px;}
+	#line8 #b4{width:161px; height:45px; float:left;margin-left:100px; margin-top:10px;}
+	#line8 #b5{width:161px; height:45px; float:left;margin-left:36px; margin-top:10px;}
+	#line8 #b6{width:52px; height:45px; float:left; margin-left:98px;margin-top:10px;}
+	#line8 #b7{width:52px; height:45px; float:left;margin-left:50px;margin-top:10px;}
+	#line9 {width:1048px; height:45px;color:#FFF; background-color:#0C0C0C; float:left;}
+	#line9 #b1{width:52px; height:45px; float:left;text-align:center; line-height:40px; margin-left:0px;}
+	#line9 #b2{width:52px; height:45px; float:left; text-align:center; line-height:40px; margin-left:50px;}
+	#line9 #b3{width:52px; height:45px; float:left; margin:auto auto; margin-left:50px;margin-top:10px;}
+	#line9 #b4{width:161px; height:45px; float:left;margin-left:100px; margin-top:10px;}
+	#line9 #b5{width:161px; height:45px; float:left;margin-left:36px; margin-top:10px;}
+	#line9 #b6{width:52px; height:45px; float:left; margin-left:98px;margin-top:10px;}
+	#line9 #b7{width:52px; height:45px; float:left;margin-left:50px;margin-top:10px;}
+	#line10 {width:1048px; height:45px;color:#FFF; background-color:#1A1A1A; float:left;}
+	#line10 #b1{width:52px; height:45px; float:left;text-align:center; line-height:40px; margin-left:0px;}
+	#line10 #b2{width:52px; height:45px; float:left; text-align:center; line-height:40px; margin-left:50px;}
+	#line10 #b3{width:52px; height:45px; float:left; margin:auto auto; margin-left:50px;margin-top:10px;}
+	#line10 #b4{width:161px; height:45px; float:left;margin-left:100px; margin-top:10px;}
+	#line10 #b5{width:161px; height:45px; float:left;margin-left:36px; margin-top:10px;}
+	#line10 #b6{width:52px; height:45px; float:left; margin-left:98px;margin-top:10px;}
+	#line10 #b7{width:52px; height:45px; float:left;margin-left:50px;margin-top:10px;}
+	#line11{width:1048px; height:45px;color:#FFF; background-color:#0C0C0C; float:left;}
+	#line11 #b1{width:52px; height:45px; float:left;text-align:center; line-height:40px; margin-left:0px;}
+	#line11 #b2{width:52px; height:45px; float:left; text-align:center; line-height:40px; margin-left:50px;}
+	#line11 #b3{width:52px; height:45px; float:left; margin:auto auto; margin-left:50px;margin-top:10px;}
+	#line11 #b4{width:161px; height:45px; float:left;margin-left:100px; margin-top:10px;}
+	#line11 #b5{width:161px; height:45px; float:left;margin-left:36px; margin-top:10px;}
+	#line11 #b6{width:52px; height:45px; float:left; margin-left:98px;margin-top:10px;}
+	#line11 #b7{width:52px; height:45px; float:left;margin-left:50px;margin-top:10px;}
+	.con{width: 100%;height:1086px; margin: 0px auto 20px auto;margin-top: 0px; margin-bottom: 1px; padding-bottom: 1px;}
+	.main-con{ width: 1100px;margin: 0 auto;color: #ccc;}
+		#foot {width:100%;min-width:1500px;text-align: center;position: absolute;margin-left:left; bottom:-1650px;} 
+	#return{width:100%;height:30px}
+	.tag{position: absolute;height: 40px;}
+	
+</style>
+</head>
+<script language="javascript">
+	function block_over(obj_id)
+	{
+		if(obj_id=="top_div3" || obj_id=="shuju1_href" || obj_id=="shuju2_href" || obj_id=="shuju_b1" || obj_id=="shuju_b2")
+		{
+			document.getElementById("shuju").style.display="block";
+			document.getElementById(obj_id).style.backgroundColor="#3A3A3A";
+			return;
+		}
+		document.getElementById(obj_id).style.backgroundColor="#3A3A3A";
+		document.getElementById("shuju").style.display="none";
+	}
+	function block_out(obj_id)
+	{
+		if(obj_id=="top_div6") return;
+		if(obj_id=="shuju")
+		{
+			document.getElementById("shuju").style.display="none";
+			return;
+		}
+		document.getElementById(obj_id).style.backgroundColor="#1A1A1A";
+	}
+		function light(obj_id)
+	{
+		var obj=document.getElementById(obj_id);
+		obj.style.backgroundColor="#11212F";
+	}
+	function light_down_1(obj_id)
+	{
+		var obj=document.getElementById(obj_id);
+		obj.style.backgroundColor="#1A1A1A";
+	}
+	function light_down_2(obj_id)
+	{
+		var obj=document.getElementById(obj_id);
+		obj.style.backgroundColor="#0C0C0C";
+	}
+</script>
+<body  marginwidth="100%" bgcolor="#1A1A1A">
+
+	<div id="top">
+    <div id="top_top">
+       	   <div id="top_div1">
+        	<img src="images/pro_date_max_logo3.png" width="100%" height="100%">
+           </div>
+           <a href="index.html" style="color:#CCCCCC; text-decoration:none"><div id="top_div2" name="block" onMouseMove="block_over('top_div2');" onMouseOut="block_out('top_div2')">
+           <font size="-1"><b>首页</b></font>
+           </div></a>
+           <div id="top_div3" name="block" onMouseOver="block_over('top_div3');" onMouseOut="block_out('top_div3')">
+           <font size="-1"><b>数据</b></font>
+           </div>
+           <a href="prodate.html" style="color:#CCCCCC;  text-decoration:none"><div id="top_div4" name="block" onMouseOver="block_over('top_div4');" onMouseOut="block_out('top_div4')">
+            <font size="-1"><b>职业数据</b></font>
+           </div></a>
+           <a href="player.html" style="color:#CCCCCC;  text-decoration:none"><div id="top_div5" name="block" onMouseOver="block_over('top_div5');" onMouseOut="block_out('top_div5')">
+           <font size="-1"><b>玩家</b></font>
+           </div></a>
+           <a href="rank.html" style="color:#CCCCCC;  text-decoration:none"><div id="top_div6" name="block" onMouseOver="block_over('top_div6');" onMouseOut="block_out('top_div6')">
+           <font size="-1"><b>天梯</b></font>
+           </div></a>
+           <a href="live.html" style="color:#CCCCCC;  text-decoration:none"><div id="top_div7" name="block" onMouseOver="block_over('top_div7');" onMouseOut="block_out('top_div7')">
+           <font size="-1"><b>直播</b></font>
+           </div></a>
+           <a href="#" style="color:#CCCCCC;  text-decoration:none"><div id="top_div8" name="block" onMouseOver="block_over('top_div8');" onMouseOut="block_out('top_div8')">
+           <font size="-1"><b>视频</b></font>
+           </div></a>
+           <a href="app.html" style="color:#CCCCCC;  text-decoration:none"><div id="top_div9" name="block" onMouseOver="block_over('top_div9');" onMouseOut="block_out('top_div9')">
+           <font  size="-1"><b>APP</b></font>
+           </div></a>
+           <a href="#" style="color:#FFFFFF;  text-decoration:none"><div id="top_div10">
+           <font size="-1"><b>VIP</b></font>
+           </div></a>
+           <a href="#" style="color:#FFFFFF;  text-decoration:none"><div id="top_div11">
+            <font  size="-1"><b>竞猜</b></font>
+           </div></a>
+           <a href="login.html" style="color:#CCCCCC;  text-decoration:none"><div id="top_div12" name="block" onMouseOver="block_over('top_div12');" onMouseOut="block_out('top_div12')">
+           <font size="-1"><b>登录</b></font>
+           </div></a>
+           <a href="reg.html" style="color:#CCCCCC;  text-decoration:none"><div id="top_div13" name="block" onMouseOver="block_over('top_div13');" onMouseOut="block_out('top_div13')">
+           <font  size="-1"><b>注册</b></font>
+           </div></a>
+        </div>
+        <div id="top_bot" style="background-image:url(images/prodate_background.jpg);">
+        		<div id="shuju" onMouseOut="block_out('shuju');">
+                	<a href="hero.html" style="text-decoration:none;color:#CCCCCC;" onMouseOver="block_over('shuju1_href');"><div id="shuju_b1"  onMouseOver="block_over('shuju_b1');" onMouseOut="block_out('shuju_b1');"  onMouseOut="block_out('shuju_b1');"><font  size="-1">英雄</font></div></a>
+                    <a href="things.html" style="text-decoration:none;color:#CCCCCC;"  onMouseOver="block_over('shuju2_href');"><div id="shuju_b2"  onMouseOver="block_over('shuju_b2');" onMouseOut="block_out('shuju_b2');"  onMouseOut="block_out('shuju_b2');"><font  size="-1">物品</font></div></a>
+                </div>
+            <div id="bot_div">
+            
+             </div>
+         <div id="shouye" style="color:#FFF; text-align:center; font-size:30px;; width:230px; height:30px; margin-top:54px; margin-left:-370px; float:left;">Dotamax视频</div>
+           <div id="search_block">
+            <div id="hcirl"></div>
+         <div id="search" style="width:280px; height:38px; float:left;"><input type="search" style="width:280px; height:38px; border:#FFF 0px solid;  opacity:0.5;" placeholder="输入国服ID或昵称"></div>
+         <div id="hcirr" ><input type="button" value="Go" style="  background-color:#FFF; border:0px #FFFFFF solid; margin:10px 0px 10px 0px;" style="width:50px; height:45px;"></div>
+         </div>
+        </div>
+    </div>
+    <div id="con">
+   	<div id="con_top">
+    <div class="main-shadow-box"><div class="main-container" style="margin-top:0px;margin-bottom:1px;padding-bottom:1px;">
+<div class="container xuning-box radius-top"><div style="margin-bottom:20px;color:#999;text-align: center;"></div><div class="filter-container new-box" style="padding-top: 18px;width:968px;margin-left: 25px;margin-top:20px;display: table"><div style="padding-left:0px;display: table"><div class="nabtn-title" style="padding-top:1px;"><a href="video.html">全部视频:</a></div><div style="display: table;"><div class="video-user" style="background-color: #ccc;color: #333 !important;border-radius: 3px;">
+            
+                  显示全部
+            
+          </div><div class="video-user" >
+                 <a href="video dota.html"> Dota </a>
+                </a></div><div class="video-user" ><a href="video dota2.html">
+              Dota2
+            </a></div></div></div><div style="padding-left:0px;display: table"><div class="nabtn-title" style="padding-top:1px;">知名解说:</div><div style="display: table;"><div class="video-user" ><a href="video zhou.html">
+              Zhou
+            </a></div><div class="video-user" ><a href="video zhou.html">
+              伍声2009
+            </a></div><div class="video-user" >
+              Pis
+            </a></div><div class="video-user" >
+              海涛
+            </a></div><div class="video-user" >
+              情书dota
+            </a></div><div class="video-user" >
+              GuAi小乖
+            </a></div><div class="video-user" >
+              Nada
+            </a></div><div class="video-user" >
+              WoDotA
+            </a></div><div class="video-user" >
+              牛蛙
+            </a></div><div class="video-user" >
+              小满解说
+            </a></div><div class="video-user" >
+              zhou宝龙视频
+            </a></div><div class="video-user" >
+              满楼水平
+            </a></div><div class="video-user" >
+              游戏风云Gamefy
+            </a></div><div class="video-user" >
+              七煌七宝
+            </a></div><div class="video-user" >
+              西瓦幽鬼
+            </a></div><div class="video-user" >
+              凯文解说
+            </a></div><div class="video-user" >
+              梅西解说
+            </a></div><div class="video-user" >
+              Ksssssss陈彬
+            </a></div><div class="video-user" >
+              柒单车
+            </a></div><div class="video-user" >
+              紫色水离子
+            </a></div><div class="video-user" >
+              老跳出品
+            </a></div><div class="video-user" >
+              Zero出品
+            </a></div><div class="video-user" >
+              瓜瓜
+            </a></div></div></div><div style="padding-left:0px;display: table"><div class="nabtn-title" style="padding-top:1px;">美女解说:</div><div class="video-user" ><a href="video youxiaoxue.html">
+              攸小雪
+            </a></div><div class="video-user" >
+              陈雅
+            </a></div><div class="video-user" >
+              喵喵解说
+            </a></div><div class="video-user" >
+              Pc冷冷
+            </a></div><div class="video-user" >
+              伊美丽
+            </a></div><div class="video-user" >
+              舞儿解说
+            </a></div></div>
+    </div>
+    <div id="con_bot">
+    
+     </div><div class="title-hori">热门视频</div><div style="display:table;width: 1088px; margin-left: 25px;float: left;margin-bottom: 2px;padding-top:10px;"><div class="live-box" style="width:240px;margin:10px 10px 10px 0px;"><a href="video.html" target="_blank"><div style="padding:0px;margin:0px;font-size:0px;line-height: 0px;position: relative;"><img style="width:242px;height: 130px;" class="none-opacity-img" src="images/054104085717111E6A0A46044828D24C" /><div class="play-shadow" style="position: absolute;top:40px;left:95px;z-index: -100;"><img src="images/play.png"></div></div><div style="width:100%;display: table;position: relative;border:1px #111 solid;background-color: rgb(15,15,15);">
+    <div style="font-size:14px;font-weight:400;line-height:30px;float:left;margin-left:5px;color:#eee;display: table;" ><div class="overflow-text" style="width:235px;font-size: 12px;">【小满dota】小满尸王首秀！最简单好用的团战之王！
+                </div></div><div class="overflow-text" style="color:#999;text-align: left;font-size: 11px;display: table;width:100%;padding:0 5px 5px 5px;"><div class="overflow-text" style="float: left;width: 110px;text-align: left;">小满解说 2天前
+                   </div><div class="overflow-text" style="float: right;margin-right: 10px;width: 120px;text-align: right;"><span class="glyphicon glyphicon-eye-open"></span>
+                     148,832  
+                      <span class="glyphicon glyphicon-time"></span>
+                     36:23  
+                  </div></div></div></a></div><div class="live-box" style="width:240px;margin:10px 10px 10px 0px;"><a href="video.html" target="_blank"><div style="padding:0px;margin:0px;font-size:0px;line-height: 0px;position: relative;"><img style="width:242px;height: 130px;" class="none-opacity-img" src="images/05410408571768216A0A49044900CB21" /><div class="play-shadow" style="position: absolute;top:40px;left:95px;z-index: -100;"><img src="images/play.png"></div></div><div style="width:100%;display: table;position: relative;border:1px #111 solid;background-color: rgb(15,15,15);">
+                  <div style="font-size:14px;font-weight:400;line-height:30px;float:left;margin-left:5px;color:#eee;display: table;" ><div class="overflow-text" style="width:235px;font-size: 12px;">【舞儿DotA第一视角】赏金猎人，来把圣剑大战5核心
+                </div></div><div class="overflow-text" style="color:#999;text-align: left;font-size: 11px;display: table;width:100%;padding:0 5px 5px 5px;"><div class="overflow-text" style="float: left;width: 110px;text-align: left;">舞儿解说 2天前
+                   </div><div class="overflow-text" style="float: right;margin-right: 10px;width: 120px;text-align: right;"><span class="glyphicon glyphicon-eye-open"></span>
+                     39,793  
+                      <span class="glyphicon glyphicon-time"></span>
+                     51:37  
+                  </div></div></div></a></div>
+                  <div class="live-box" style="width:240px;margin:10px 10px 10px 0px;"><a href="video.html" target="_blank"><div style="padding:0px;margin:0px;font-size:0px;line-height: 0px;position: relative;"><img style="width:242px;height: 130px;" class="none-opacity-img" src="images/0541040857174B066A0A46043F24DACB"/><div class="play-shadow" style="position: absolute;top:40px;left:95px;z-index: -100;"><img src="images/play.png" ></div></div><div style="width:100%;display: table;position: relative;border:1px #111 solid;background-color: rgb(15,15,15);"></div-->
+                  <div style="font-size:14px;font-weight:400;line-height:30px;float:left;margin-left:5px;color:#eee;display: table;" ><div class="overflow-text" style="width:235px;font-size: 12px;">【离子DOTA2解说】Miracle vs W33 以后就要说9000分大神了
+                </div></div><div class="overflow-text" style="color:#999;text-align: left;font-size: 11px;display: table;width:100%;padding:0 5px 5px 5px;"><div class="overflow-text" style="float: left;width: 110px;text-align: left;">紫色水离子 2天前
+                   </div><div class="overflow-text" style="float: right;margin-right: 10px;width: 120px;text-align: right;"><span class="glyphicon glyphicon-eye-open"></span>
+                     35,594  
+                      <span class="glyphicon glyphicon-time"></span>
+                     45:16  
+                  </div></div></div></a></div><div class="live-box" style="width:240px;margin:10px 10px 10px 0px;"><a href="video.html" target="_blank"><div style="padding:0px;margin:0px;font-size:0px;line-height: 0px;position: relative;"><img style="width:242px;height: 130px;" class="none-opacity-img" src="images/054104085716A1F06A0A400494669F97" /><div class="play-shadow" style="position: absolute;top:40px;left:95px;z-index: -100;"><img src="images/play.png"></div></div><div style="width:100%;display: table;position: relative;border:1px #111 solid;background-color: rgb(15,15,15);">
+                  <div style="font-size:14px;font-weight:400;line-height:30px;float:left;margin-left:5px;color:#eee;display: table;" ><div class="overflow-text" style="width:235px;font-size: 12px;">【离子DOTA2解说】IG.430军团 咚咚咚战个痛快
+                </div></div><div class="overflow-text" style="color:#999;text-align: left;font-size: 11px;display: table;width:100%;padding:0 5px 5px 5px;"><div class="overflow-text" style="float: left;width: 110px;text-align: left;">紫色水离子 15小时前
+                   </div><div class="overflow-text" style="float: right;margin-right: 10px;width: 120px;text-align: right;"><span class="glyphicon glyphicon-eye-open"></span>
+                     10,949  
+                      <span class="glyphicon glyphicon-time"></span>
+                     47:25  
+                  </div></div></div></a></div><div class="live-box" style="width:240px;margin:10px 10px 10px 0px;"><a href="video.html" target="_blank"><div style="padding:0px;margin:0px;font-size:0px;line-height: 0px;position: relative;"><img style="width:242px;height: 130px;" class="none-opacity-img" src="images/05410408571936C76A0A46044B9B3B13.jpg" /><div class="play-shadow" style="position: absolute;top:40px;left:95px;z-index: -100;"><img src="images/play.png"></div></div><div style="width:100%;display: table;position: relative;border:1px #111 solid;background-color: rgb(15,15,15);">
+                  <div style="font-size:14px;font-weight:400;line-height:30px;float:left;margin-left:5px;color:#eee;display: table;" ><div class="overflow-text" style="width:235px;font-size: 12px;">【牛蛙dota】受折磨的灵魂，双二十超强煤气罐
+                </div></div><div class="overflow-text" style="color:#999;text-align: left;font-size: 11px;display: table;width:100%;padding:0 5px 5px 5px;"><div class="overflow-text" style="float: left;width: 110px;text-align: left;">牛蛙 9小时前
+                   </div><div class="overflow-text" style="float: right;margin-right: 10px;width: 120px;text-align: right;"><span class="glyphicon glyphicon-eye-open"></span>
+                     5,830  
+                      <span class="glyphicon glyphicon-time"></span>
+                     35:12  
+                  </div></div></div></a></div><div class="live-box" style="width:240px;margin:10px 10px 10px 0px;"><a href="video.html" target="_blank"><div style="padding:0px;margin:0px;font-size:0px;line-height: 0px;position: relative;"><img style="width:242px;height: 130px;" class="none-opacity-img" src="images/054104085716CB3D6A0A4304581386A4" /><div class="play-shadow" style="position: absolute;top:40px;left:95px;z-index: -100;"><img src="images/play.png"></div></div><div style="width:100%;display: table;position: relative;border:1px #111 solid;background-color: rgb(15,15,15);">
+                  <div style="font-size:14px;font-weight:400;line-height:30px;float:left;margin-left:5px;color:#eee;display: table;" ><div class="overflow-text" style="width:235px;font-size: 12px;">哥手单车就是为了告诉你Pis不适合这个版本了 ^_^
+                </div></div><div class="overflow-text" style="color:#999;text-align: left;font-size: 11px;display: table;width:100%;padding:0 5px 5px 5px;"><div class="overflow-text" style="float: left;width: 110px;text-align: left;">凯文解说 2天前
+                   </div><div class="overflow-text" style="float: right;margin-right: 10px;width: 120px;text-align: right;"><span class="glyphicon glyphicon-eye-open"></span>
+                     24,171  
+                      <span class="glyphicon glyphicon-time"></span>
+                     44:15  
+                  </div></div></div></a></div><div class="live-box" style="width:240px;margin:10px 10px 10px 0px;"><a href="/video/youku/?link=XMTU0MTk5NzE4OA==" target="_blank"><div style="padding:0px;margin:0px;font-size:0px;line-height: 0px;position: relative;"><img style="width:242px;height: 130px;" class="none-opacity-img" src="images/0541040857174B066A0A46043F24DACB" /><div class="play-shadow" style="position: absolute;top:40px;left:95px;z-index: -100;"><img src="images/play.png"></div></div><div style="width:100%;display: table;position: relative;border:1px #111 solid;background-color: rgb(15,15,15);"><div style="font-size:14px;font-weight:400;line-height:30px;float:left;margin-left:5px;color:#eee;display: table;" ><div class="overflow-text" style="width:235px;font-size: 12px;">[!Attacker昆卡第一视角(13-8-25)]以海贼王之名向胜利扬帆！[Lan]
+                </div></div><div class="overflow-text" style="color:#999;text-align: left;font-size: 11px;display: table;width:100%;padding:0 5px 5px 5px;"><div class="overflow-text" style="float: left;width: 110px;text-align: left;">Lan 1天前
+                   </div><div class="overflow-text" style="float: right;margin-right: 10px;width: 120px;text-align: right;"><span class="glyphicon glyphicon-eye-open"></span>
+                     2,635  
+                      <span class="glyphicon glyphicon-time"></span>
+                     1:32:39  
+                  </div></div></div></a></div><div class="live-box" style="width:240px;margin:10px 10px 10px 0px;"><a href="/video/youku/?link=XMTU0MzUzNTQ0MA==" target="_blank"><div style="padding:0px;margin:0px;font-size:0px;line-height: 0px;position: relative;"><img style="width:242px;height: 130px;" class="none-opacity-img" src="images/05410408571693766A0A4F13311D42F7" /><div class="play-shadow" style="position: absolute;top:40px;left:95px;z-index: -100;"><img src="images/play.png"></div></div><div style="width:100%;display: table;position: relative;border:1px #111 solid;background-color: rgb(15,15,15);">
+                  <div style="font-size:14px;font-weight:400;line-height:30px;float:left;margin-left:5px;color:#eee;display: table;" ><div class="overflow-text" style="width:235px;font-size: 12px;">南风dota解说 名主播解说对黑剧集 对线略虚？那么团战碾压
+                </div></div><div class="overflow-text" style="color:#999;text-align: left;font-size: 11px;display: table;width:100%;padding:0 5px 5px 5px;"><div class="overflow-text" style="float: left;width: 110px;text-align: left;">南风 11小时前
+                   </div><div class="overflow-text" style="float: right;margin-right: 10px;width: 120px;text-align: right;"><span class="glyphicon glyphicon-eye-open"></span>
+                     210  
+                      <span class="glyphicon glyphicon-time"></span>
+                     32:21  
+                  </div></div></div></a></div></div><div id="recent_videos" class="title-hori">最新视频</div><div style="display:table;width: 1088px; margin-left: 25px;float: left;margin-bottom: 20px;padding-top:10px;"><div class="live-box" style="width:240px;margin:10px 10px 10px 0px;"><a href="video.html" target="_blank"><div style="padding:0px;margin:0px;font-size:0px;line-height: 0px;position: relative;"><img style="width:242px;height: 130px;" class="none-opacity-img" src="images/054104085716A1F06A0A400494669F97.jpg" /><div class="play-shadow" style="position: absolute;top:40px;left:95px;z-index: -100;"><img src="images/play.png"></div></div><div style="width:100%;display: table;position: relative;border:1px #111 solid;background-color: rgb(15,15,15);"><div style="font-size:12px;font-weight:400;line-height:30px;float:left;margin-left:5px;color:#eee;display: table;" ><div class="overflow-text" style="width:235px;">演员解说 电棍夜魔激情大战熊猫钢背猪
+                </div></div><div class="overflow-text" style="color:#999;text-align: left;font-size: 11px;display: table;width:100%;padding:0 5px 5px 5px;;"><div class="overflow-text" style="float: left;width: 110px;text-align: left;">找好演员 7小时前</div><div class="overflow-text" style="float: right;margin-right: 10px;width: 120px;text-align: right;"><span class="glyphicon glyphicon-eye-open"></span>
+                     97  
+                     <span class="glyphicon glyphicon-time"></span>
+                     1:06:57  
+                  </div></div></div></a></div><div class="live-box" style="width:240px;margin:10px 10px 10px 0px;"><a href="video.html" target="_blank"><div style="padding:0px;margin:0px;font-size:0px;line-height: 0px;position: relative;"><img style="width:242px;height: 130px;" class="none-opacity-img" src="images/054104085717C9AE6A0A3F0449252EF8" /><div class="play-shadow" style="position: absolute;top:40px;left:95px;z-index: -100;"><img src="images/play.png"></div></div><div style="width:100%;display: table;position: relative;border:1px #111 solid;background-color: rgb(15,15,15);">
+                  <div style="font-size:12px;font-weight:400;line-height:30px;float:left;margin-left:5px;color:#eee;display: table;" ><div class="overflow-text" style="width:235px;">【牛蛙dota】受折磨的灵魂，双二十超强煤气罐
+                </div></div><div class="overflow-text" style="color:#999;text-align: left;font-size: 11px;display: table;width:100%;padding:0 5px 5px 5px;;"><div class="overflow-text" style="float: left;width: 110px;text-align: left;">牛蛙 9小时前</div><div class="overflow-text" style="float: right;margin-right: 10px;width: 120px;text-align: right;"><span class="glyphicon glyphicon-eye-open"></span>
+                     5,830  
+                     <span class="glyphicon glyphicon-time"></span>
+                     35:12  
+                  </div></div></div></a></div><div class="live-box" style="width:240px;margin:10px 10px 10px 0px;"><a href="video.html" target="_blank"><div style="padding:0px;margin:0px;font-size:0px;line-height: 0px;position: relative;"><img style="width:242px;height: 130px;" class="none-opacity-img" src="images/054104085716FF2C6A0A4004959979BF" /><div class="play-shadow" style="position: absolute;top:40px;left:95px;z-index: -100;"><img src="images/play.png"></div></div><div style="width:100%;display: table;position: relative;border:1px #111 solid;background-color: rgb(15,15,15);">
+                  <div style="font-size:12px;font-weight:400;line-height:30px;float:left;margin-left:5px;color:#eee;display: table;" ><div class="overflow-text" style="width:235px;">丸子DOTA斧王：像吃了兴奋剂一样战斗
+                </div></div><div class="overflow-text" style="color:#999;text-align: left;font-size: 11px;display: table;width:100%;padding:0 5px 5px 5px;;"><div class="overflow-text" style="float: left;width: 110px;text-align: left;">章鱼丸718 11小时前</div><div class="overflow-text" style="float: right;margin-right: 10px;width: 120px;text-align: right;"><span class="glyphicon glyphicon-eye-open"></span>
+                     85  
+                     <span class="glyphicon glyphicon-time"></span>
+                     49:44  
+                  </div></div></div></a></div><div class="live-box" style="width:240px;margin:10px 10px 10px 0px;"><a href="video.html" target="_blank"><div style="padding:0px;margin:0px;font-size:0px;line-height: 0px;position: relative;"><img style="width:242px;height: 130px;" class="none-opacity-img" src="images/0541040857158D426A0A3F045FE03337" /><div class="play-shadow" style="position: absolute;top:40px;left:95px;z-index: -100;"><img src="images/play.png"></div></div><div style="width:100%;display: table;position: relative;border:1px #111 solid;background-color: rgb(15,15,15);">
+                  <div style="font-size:12px;font-weight:400;line-height:30px;float:left;margin-left:5px;color:#eee;display: table;" ><div class="overflow-text" style="width:235px;">南风dota解说 名主播解说对黑剧集 对线略虚？那么团战碾压
+                </div></div><div class="overflow-text" style="color:#999;text-align: left;font-size: 11px;display: table;width:100%;padding:0 5px 5px 5px;;"><div class="overflow-text" style="float: left;width: 110px;text-align: left;">南风 11小时前</div><div class="overflow-text" style="float: right;margin-right: 10px;width: 120px;text-align: right;"><span class="glyphicon glyphicon-eye-open"></span>
+                     210  
+                     <span class="glyphicon glyphicon-time"></span>
+                     32:21  
+                  </div></div></div></a></div><div class="live-box" style="width:240px;margin:10px 10px 10px 0px;"><a href="video.html" target="_blank"><div style="padding:0px;margin:0px;font-size:0px;line-height: 0px;position: relative;"><img style="width:242px;height: 130px;" class="none-opacity-img" src="images/0541040857173F976A0A472C2126C036" /><div class="play-shadow" style="position: absolute;top:40px;left:95px;z-index: -100;"><img src="images/play.png"></div></div><div style="width:100%;display: table;position: relative;border:1px #111 solid;background-color: rgb(15,15,15);">
+                  <div style="font-size:12px;font-weight:400;line-height:30px;float:left;margin-left:5px;color:#eee;display: table;" ><div class="overflow-text" style="width:235px;">【离子DOTA2解说】IG.430军团 咚咚咚战个痛快
+                </div></div><div class="overflow-text" style="color:#999;text-align: left;font-size: 11px;display: table;width:100%;padding:0 5px 5px 5px;;"><div class="overflow-text" style="float: left;width: 110px;text-align: left;">紫色水离子 15小时前</div><div class="overflow-text" style="float: right;margin-right: 10px;width: 120px;text-align: right;"><span class="glyphicon glyphicon-eye-open"></span>
+                     10,949  
+                     <span class="glyphicon glyphicon-time"></span>
+                     47:25  
+                  </div></div></div></a></div><div class="live-video.html" target="_blank"><div style="padding: 0px; margin: 0px; font-size: 0px; line-height: 0px; position: relative; width: 240px;"><div class="play-shadow" style="position: absolute;top:40px;left:95px;z-index: -100;"><img src="images/play.png"></div></div></a></div><div class="live-box" style="width:240px;margin:10px 10px 10px 0px;"><a href="video.html" target="_blank"><div style="padding:0px;margin:0px;font-size:0px;line-height: 0px;position: relative;"><img style="width:242px;height: 130px;" class="none-opacity-img" src="images/054104085716A1F06A0A400494669F97.jpg" /><div class="play-shadow" style="position: absolute;top:40px;left:95px;z-index: -100;"><img src="images/play.png"></div></div><div style="width:100%;display: table;position: relative;border:1px #111 solid;background-color: rgb(15,15,15);">
+                  <div style="font-size:12px;font-weight:400;line-height:30px;float:left;margin-left:5px;color:#eee;display: table;" ><div class="overflow-text" style="width:235px;">丸子DOTA群内战：三个奶妈的故事
+                </div></div><div class="overflow-text" style="color:#999;text-align: left;font-size: 11px;display: table;width:100%;padding:0 5px 5px 5px;;"><div class="overflow-text" style="float: left;width: 110px;text-align: left;">章鱼丸718 1天前</div><div class="overflow-text" style="float: right;margin-right: 10px;width: 120px;text-align: right;"><span class="glyphicon glyphicon-eye-open"></span>
+                     209  
+                     <span class="glyphicon glyphicon-time"></span>
+                     35:38  
+                  </div></div></div></a></div><div class="live-box" style="width:240px;margin:10px 10px 10px 0px;"><a href="video.html" target="_blank"><div style="padding:0px;margin:0px;font-size:0px;line-height: 0px;position: relative;"><img style="width:242px;height: 130px;" class="none-opacity-img" src="images/054104085716CB3D6A0A4304581386A4.jpg" /><div class="play-shadow" style="position: absolute;top:40px;left:95px;z-index: -100;"><img src="images/play.png"></div></div><div style="width:100%;display: table;position: relative;border:1px #111 solid;background-color: rgb(15,15,15);">
+                  <div style="font-size:12px;font-weight:400;line-height:30px;float:left;margin-left:5px;color:#eee;display: table;" ><div class="overflow-text" style="width:235px;">【舞儿DotA第一视角】赏金猎人，来把圣剑大战5核心
+                </div></div><div class="overflow-text" style="color:#999;text-align: left;font-size: 11px;display: table;width:100%;padding:0 5px 5px 5px;;"><div class="overflow-text" style="float: left;width: 110px;text-align: left;">舞儿解说 2天前</div><div class="overflow-text" style="float: right;margin-right: 10px;width: 120px;text-align: right;"><span class="glyphicon glyphicon-eye-open"></span>
+                     39,793  
+                     <span class="glyphicon glyphicon-time"></span>
+                     51:37  
+                  </div></div></div></a></div><div class="live-box" style="width:240px;margin:10px 10px 10px 0px;"><a href="video.html" target="_blank"><div style="padding:0px;margin:0px;font-size:0px;line-height: 0px;position: relative;"><img style="width:242px;height: 130px;" class="none-opacity-img" src="images/0541040857173F976A0A472C2126C036" /><div class="play-shadow" style="position: absolute;top:40px;left:95px;z-index: -100;"><img src="images/play.png"></div></div><div style="width:100%;display: table;position: relative;border:1px #111 solid;background-color: rgb(15,15,15);"><div style="font-size:12px;font-weight:400;line-height:30px;float:left;margin-left:5px;color:#eee;display: table;" ><div class="overflow-text" style="width:235px;">哥手单车就是为了告诉你Pis不适合这个版本了 ^_^
+                </div></div><div class="overflow-text" style="color:#999;text-align: left;font-size: 11px;display: table;width:100%;padding:0 5px 5px 5px;;"><div class="overflow-text" style="float: left;width: 110px;text-align: left;">凯文解说 2天前</div><div class="overflow-text" style="float: right;margin-right: 10px;width: 120px;text-align: right;"><span class="glyphicon glyphicon-eye-open"></span>
+                     24,171  
+                     <span class="glyphicon glyphicon-time"></span>
+                     44:15  
+                  </div></div></div></a></div><div class="live-box" style="width:240px;margin:10px 10px 10px 0px;"><a href="video.html" target="_blank"><div style="padding:0px;margin:0px;font-size:0px;line-height: 0px;position: relative;"><img style="width:242px;height: 130px;" class="none-opacity-img" src="images/0541040857174B066A0A46043F24DACB" /><div class="play-shadow" style="position: absolute;top:40px;left:95px;z-index: -100;"><img src="images/play.png"></div></div><div style="width:100%;display: table;position: relative;border:1px #111 solid;background-color: rgb(15,15,15);">
+                  <div style="font-size:12px;font-weight:400;line-height:30px;float:left;margin-left:5px;color:#eee;display: table;" ><div class="overflow-text" style="width:235px;">【离子DOTA2解说】Miracle vs W33 以后就要说9000分大神了
+                </div></div><div class="overflow-text" style="color:#999;text-align: left;font-size: 11px;display: table;width:100%;padding:0 5px 5px 5px;;"><div class="overflow-text" style="float: left;width: 110px;text-align: left;">紫色水离子 2天前</div><div class="overflow-text" style="float: right;margin-right: 10px;width: 120px;text-align: right;"><span class="glyphicon glyphicon-eye-open"></span>
+                     35,594  
+                     <span class="glyphicon glyphicon-time"></span>
+                     45:16  
+                  </div></div></div></a></div><div class="live-box" style="width:240px;margin:10px 10px 10px 0px;"><a href="video.html" target="_blank"><div style="padding:0px;margin:0px;font-size:0px;line-height: 0px;position: relative;"><img style="width:242px;height: 130px;" class="none-opacity-img" src="images/054104085717C9AE6A0A3F0449252EF8" /><div class="play-shadow" style="position: absolute;top:40px;left:95px;z-index: -100;"><img src="images/play.png"></div></div><div style="width:100%;display: table;position: relative;border:1px #111 solid;background-color: rgb(15,15,15);">
+                  <div style="font-size:12px;font-weight:400;line-height:30px;float:left;margin-left:5px;color:#eee;display: table;" ><div class="overflow-text" style="width:235px;">【小满dota】小满尸王首秀！最简单好用的团战之王！
+                </div></div><div class="overflow-text" style="color:#999;text-align: left;font-size: 11px;display: table;width:100%;padding:0 5px 5px 5px;;"><div class="overflow-text" style="float: left;width: 110px;text-align: left;">小满解说 2天前</div><div class="overflow-text" style="float: right;margin-right: 10px;width: 120px;text-align: right;"><span class="glyphicon glyphicon-eye-open"></span>
+                     148,832  
+                     <span class="glyphicon glyphicon-time"></span>
+                     36:23  
+                  </div></div></div></a></div><div class="live-box" style="width:240px;margin:10px 10px 10px 0px;"><a href="video.html" target="_blank"><div style="padding:0px;margin:0px;font-size:0px;line-height: 0px;position: relative;"><img style="width:242px;height: 130px;" class="none-opacity-img" src="images/05410408571827B66A0A440AFBFF81BF" /><div class="play-shadow" style="position: absolute;top:40px;left:95px;z-index: -100;"><img src="images/play.png"></div></div><div style="width:100%;display: table;position: relative;border:1px #111 solid;background-color: rgb(15,15,15);">
+                  <div style="font-size:12px;font-weight:400;line-height:30px;float:left;margin-left:5px;color:#eee;display: table;" ><div class="overflow-text" style="width:235px;">【DOTA2】LGD vs IG.V Bo3 #1 领秀解说WCAS2补位赛
+                </div></div><div class="overflow-text" style="color:#999;text-align: left;font-size: 11px;display: table;width:100%;padding:0 5px 5px 5px;;"><div class="overflow-text" style="float: left;width: 110px;text-align: left;">领秀 2天前</div><div class="overflow-text" style="float: right;margin-right: 10px;width: 120px;text-align: right;"><span class="glyphicon glyphicon-eye-open"></span>
+                     2,983  
+                     <span class="glyphicon glyphicon-time"></span>
+                     1:05:59  
+                  </div></div></div></a></div><div class="live-box" style="width:240px;margin:10px 10px 10px 0px;"><a href="video.html" target="_blank"><div style="padding:0px;margin:0px;font-size:0px;line-height: 0px;position: relative;"><img style="width:242px;height: 130px;" class="none-opacity-img" src="images/0541040857158D426A0A3F045FE03337" /><div class="play-shadow" style="position: absolute;top:40px;left:95px;z-index: -100;"><img src="images/play.png"></div></div><div style="width:100%;display: table;position: relative;border:1px #111 solid;background-color: rgb(15,15,15);">
+                   <div style="font-size:12px;font-weight:400;line-height:30px;float:left;margin-left:5px;color:#eee;display: table;" ><div class="overflow-text" style="width:235px;">狂湿Dota刚背兽—中期无解的存在
+                </div></div><div class="overflow-text" style="color:#999;text-align: left;font-size: 11px;display: table;width:100%;padding:0 5px 5px 5px;;"><div class="overflow-text" style="float: left;width: 110px;text-align: left;">狂湿 2天前</div><div class="overflow-text" style="float: right;margin-right: 10px;width: 120px;text-align: right;"><span class="glyphicon glyphicon-eye-open"></span>
+                     106,972  
+                     <span class="glyphicon glyphicon-time"></span>
+                     40:04  
+                  </div></div></div></a></div><div class="live-box" style="width:240px;margin:10px 10px 10px 0px;"><a href="video.html" target="_blank"><div style="padding:0px;margin:0px;font-size:0px;line-height: 0px;position: relative;"><img style="width:242px;height: 130px;" class="none-opacity-img" src="images/0541040857173F976A0A472C2126C036" /><div class="play-shadow" style="position: absolute;top:40px;left:95px;z-index: -100;"><img src="images/play.png"></div></div><div style="width:100%;display: table;position: relative;border:1px #111 solid;background-color: rgb(15,15,15);">
+                  <div style="font-size:12px;font-weight:400;line-height:30px;float:left;margin-left:5px;color:#eee;display: table;" ><div class="overflow-text" style="width:235px;">【DOTA2】LGD vs IG.V Bo3 #2 领秀解说WCAS2补位赛
+                </div></div><div class="overflow-text" style="color:#999;text-align: left;font-size: 11px;display: table;width:100%;padding:0 5px 5px 5px;;"><div class="overflow-text" style="float: left;width: 110px;text-align: left;">领秀 2天前</div><div class="overflow-text" style="float: right;margin-right: 10px;width: 120px;text-align: right;"><span class="glyphicon glyphicon-eye-open"></span>
+                     1,961  
+                     <span class="glyphicon glyphicon-time"></span>
+                     49:56  
+                  </div></div></div></a></div><div class="live-box" style="width:240px;margin:10px 10px 10px 0px;"><a href="video.html" target="_blank"><div style="padding:0px;margin:0px;font-size:0px;line-height: 0px;position: relative;"><img style="width:242px;height: 130px;" class="none-opacity-img" src="images/05410408571693766A0A4F13311D42F7" /><div class="play-shadow" style="position: absolute;top:40px;left:95px;z-index: -100;"><img src="images/play.png"></div></div>
+                  <div style="width:100%;display: table;position: relative;border:1px #111 solid;background-color: rgb(15,15,15);">
+                  <div style="font-size:12px;font-weight:400;line-height:30px;float:left;margin-left:5px;color:#eee;display: table;" ><div class="overflow-text" style="width:235px;">【DOTA2】LGD vs IG.V Bo3 #3 领秀解说WCAS2补位赛
+                </div></div><div class="overflow-text" style="color:#999;text-align: left;font-size: 11px;display: table;width:100%;padding:0 5px 5px 5px;;"><div class="overflow-text" style="float: left;width: 110px;text-align: left;">领秀 2天前</div><div class="overflow-text" style="float: right;margin-right: 10px;width: 120px;text-align: right;"><span class="glyphicon glyphicon-eye-open"></span>
+                     2,726  
+                     <span class="glyphicon glyphicon-time"></span>
+                     37:50  
+                  </div></div></div></a></div><div class="live-box" style="width:240px;margin:10px 10px 10px 0px;"><a href="video.html==" target="_blank"><div style="padding:0px;margin:0px;font-size:0px;line-height: 0px;position: relative;"><img style="width:242px;height: 130px;" class="none-opacity-img" src="images/0541040857167CE16A0A472C215387A3" /><div class="play-shadow" style="position: absolute;top:40px;left:95px;z-index: -100;"><img src="images/play.png"></div></div><div style="width:100%;display: table;position: relative;border:1px #111 solid;background-color: rgb(15,15,15);">
+                  <div style="font-size:12px;font-weight:400;line-height:30px;float:left;margin-left:5px;color:#eee;display: table;" ><div class="overflow-text" style="width:235px;">丸子DOTA猴子：再猥琐也禁不住斧王尸王蹂躏
+                </div></div><div class="overflow-text" style="color:#999;text-align: left;font-size: 11px;display: table;width:100%;padding:0 5px 5px 5px;;"><div class="overflow-text" style="float: left;width: 110px;text-align: left;">章鱼丸718 2天前</div><div class="overflow-text" style="float: right;margin-right: 10px;width: 120px;text-align: right;"><span class="glyphicon glyphicon-eye-open"></span>
+                     1,134  
+                     <span class="glyphicon glyphicon-time"></span>
+                     44:04  
+                  </div></div></div></a></div>
+    </div>
+    </div>
+
+        			
+ 
+        <!-- foot sta--------------------------------------------------------->
+    <div id="foot">
+   <div style="background-color: rgb(10,10,10);border-top:1px rgb(15,15,15) solid;cursor: pointer;margin-top: -1px;height:26px;" >
+       <!------------------------------------------>
+       <div id="return" style="margin-left:auto; margin-right:auto;"><a href="#"><img src="images/main/return.png" width="28" height="26"></a>
+       </div>
+       <!------------------------------------------>
+       <div style="background-color: rgb(0,0,0);padding-top: 15px;padding-bottom: 15px;position: relative;margin-top:-10px">
+       <div style="width:1100px;margin: 0 auto;line-height: 20px;position: relative;height: 30px;">
+      
+       <div   class="tag" style="left:23%;">
+        <a href="#">
+        <img src="images/main/max_logo3.png" style="width:105px;margin-right: 15px;margin-left:10px;cursor: pointer;"></a></div>
+       <div   class="tag" style="left:37%;">
+       <a href="#">
+       <img src="images/main/lolmax.png" style="width:97px;margin-right: 10px;margin-left:10px;margin-top:2px;cursor: pointer;"></a></div>
+       <div   class="tag" style="left:50%;">
+       <a href="#">
+       <img src="images/main/d3_small.png" style="width:115px;margin-right: 10px;margin-left:10px;margin-top:2px;cursor: pointer;"></a></div>
+       <div class="tag" style="left:64%">
+       <a href="#">
+       <img src="images/main/hosmax.png" style="width:97px;margin-right: 10px;margin-left:10px;margin-top:2px;cursor: pointer;"></a></div>
+       <span style="line-height: 30px;position: absolute;right:25px;top:0px;">
+       <img src="images/main/cn.gif" width="16" height="11">
+       <img src="images/main/ru.gif" width="16" height="11">
+       <img src="images/main/en.gif" width="16" height="11">
+       <img src="images/main/ko.gif" width="16" height="11">
+       </span>
+       
+      </div>
+ 
+</div>
+<!----------------------------------->
+     <div style="padding-bottom:10px;margin: 0px auto 0px auto;background-color: #000;color: rgba(255, 255, 255, 0.30);">
+       <div style="position: relative;width: 1100px;margin: 0 auto;">
+       
+         <img src="images/main/logo_01.png" style="width:40px;"></div>
+       </div>
+       </div>
+</div>
+</div>
+<!------------------------------------>
+ 
+                </body>
+                </html>
