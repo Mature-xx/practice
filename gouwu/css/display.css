@@ -1,0 +1,378 @@
+*{margin:0;padding:0;box-sizing: border-box;}
+h1,h2,h3,h4,h5,h6{font-size: 100%;}
+a{text-decoration: none;}
+ul,ol{list-style: none;}
+.clear{clear: both;float:none;height: 0;overflow: hidden;}
+table{border-collapse: collapse;border-spacing: 0;}
+/*头部*/
+body{
+    background: #ececec;
+}
+
+header .contWidth{
+    margin: 0 auto;
+    height:155px;
+    width: 990px;
+    position: relative;
+    background-color: #ececec;
+}
+header .contWidth .logo{
+    float: left;
+    margin: 10px 0 0 20px;
+    line-height: 80px;
+}
+
+header .contWidth .search{
+    position: absolute;
+    left: 350px;
+    top: 40px;
+}
+header .contWidth .search .searchImage{
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    width: 30px;
+    height: 30px;
+    background: url(../images/zoom.gif) no-repeat;
+
+}
+header .contWidth .search input{
+    padding-left: 40px;
+    width: 350px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+}
+
+header .contWidth nav{
+    height: 50px;
+    background-color: #4a4a4a;
+    width: 990px;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
+
+header .contWidth nav ul li{
+    float: left;
+    display: inline;
+    margin-right: 14px;
+    position: relative;
+}
+
+header .contWidth nav ul li:hover .subitem{
+  display: block;
+}
+
+header .contWidth nav ul li>a{
+    color: white;
+    padding: 0 16px;
+    line-height: 50px;
+    display: block;
+}
+header .contWidth nav ul li>a:visited{color:white;}
+
+.subitem{
+    position: absolute;
+    top: 50px;
+    overflow: hidden;
+    left: 0px;
+    width: 450px;
+    min-height: 100px;
+    background-color: #ffffff;
+    display: none;
+    z-index: 1000;
+}
+
+.subitem .fore{
+    border-top-style:none;
+}
+.subitem dl{
+    float: left;
+    overflow: hidden;
+    width:450px;
+    border-top:1px dashed #c4c4c4;
+}
+.subitem dl dt{
+float: left;
+font-weight: bold;
+padding: 15px 3px;
+text-align: center;
+width: 70px;
+}
+.subitem dl dd{
+    float: left;
+    width:380px ;
+    padding: 0px;
+    height: auto !important;
+    text-align: center;
+}
+.subitem dl dd em{
+float: left;
+font-style: normal;
+height: 14px;
+margin: 5px 0;
+line-height: 14px;
+padding: 0 8px;
+border-right: 1px solid #cccccc;
+}
+.subitem dl dd em a{
+color: #666666;
+font-size: 12px;
+}
+.subitem dl dd em a:hover{
+    color: red;
+}
+
+/*中部开始*/
+#container{
+    clear: left;
+    margin: 0 auto;
+    position: relative;
+    width: 990px;
+}
+
+.content{
+    height: 560px;
+    overflow: hidden;
+    padding: 10px 0;
+}
+.jnCatelog{
+    float: left;
+    height: 560px;
+    margin: 0 11px 0 0;
+    overflow: hidden;
+    width: 187px;
+    background: white;
+}
+
+
+.jnCatelog h2{
+   font-size: 16px;
+   height: 30px;
+   line-height: 30px;
+   color: #fff;
+   background-color: #6e6e6e;
+   text-indent: 13px;
+}
+.jnCateinfo{
+    border:1px solid #6e6e6e;
+    border-style: none solid solid;
+    border-width: 0 1px 1px;
+    height: 524px;
+    overflow: hidden;
+    padding: 5px 10px 0;
+    width: 187px;
+}
+
+.jnCateinfo h3{
+    border-bottom: 1px dashed black;
+    height: 24px;
+    line-height: 24px;
+    width: 164px;
+}
+
+.jnCateinfo ul{
+    float: left;
+    white-space: nowrap;
+    padding: 0 2px 8px;
+}
+.jnCateinfo ul li{
+    float: left;
+    height: 24px;
+    line-height: 24px;
+    width: 79px;
+    overflow: hidden;
+    position: relative;
+    font-size: 12px;
+}
+.jnCateinfo ul li a{
+    color: #aeadae;
+}
+.jnCateinfo ul li a:hover{
+    color: #008cd7;
+}
+
+.jnCateinfo ul li a.promoted{
+    color: #f9044e;
+}
+
+.jnCateinfo ul li .hot{
+    background: url(../images/hot.gif) no-repeat scroll 0 0 transparent;
+    height: 16px;
+    width: 21px;
+    top:0;
+    position: absolute;
+}
+
+    
+/*展示图*/
+#jnProitem{
+    float: left;
+    width: 312px;
+    height: 560px;
+    display: inline;
+}
+#jnProitem .jqzoomWrap {
+    border: 1px solid #BBBBBB;
+    cursor: pointer;
+    float: left;
+    padding: 0;
+    position: relative;
+}
+#jnProitem span {
+    clear: both;
+    display: block;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    text-align: center;
+    width: 320px;
+}
+#jnProitem ul.imgList{
+    height: 80px;
+}
+#jnProitem ul.imgList li { 
+    float:left;
+    margin-right:10px;  
+}
+#jnProitem ul.imgList li img { 
+    width:60px; 
+    height:60px; 
+    padding:1px;
+    background:#EEE;
+    cursor:pointer; 
+}
+#jnProitem ul.imgList li img:hover { 
+    padding:1px; 
+    background:#999; 
+}
+
+.tab{ 
+    clear:both;
+    float: left;
+    height: 230px;
+    overflow: hidden;
+    width: 310px;
+}
+.tab .tab_menu { 
+    clear:both;
+}
+.tab .tab_menu li { 
+    float:left; 
+    text-align:center; 
+    cursor:pointer; 
+    list-style:none; 
+    padding:1px 6px; 
+    margin-right:4px; 
+    background:#F1F1F1;
+    border:1px solid #898989; 
+    border-bottom:none;
+}
+.tab .tab_menu li.hover { 
+    background:#DFDFDF;
+}
+.tab .tab_menu li.selected { 
+    color:#FFF; 
+    background:#6D84B4;
+}
+.tab .tab_box { 
+    clear:both; 
+    border:1px solid #898989;
+}
+.tab .hide{
+    display:none
+}
+
+
+
+#jnDetails{
+    float: left;
+    display: inline;
+    overflow: hidden;
+    width: 468px;
+}
+#jnDetails {
+    float: left;
+    display:inline;
+    overflow: hidden;
+    width: 468px;
+}
+#jnDetails .jnProDetail{
+    padding:0 10px 10px 10px;
+}
+#jnDetails .jnProDetailList li{
+    line-height:25px;
+    float:left;
+    width:100%;
+}
+#jnDetails .jnProDetailList strong.del {
+    color: #404040;
+    font-size: 12px;
+    position: static;
+    text-decoration: line-through;
+}
+#jnDetails .jnProDetailList strong {
+    font-weight:400;
+}
+#jnDetails .jnProDetailList .tbDetailPrice strong {
+    font-weight: 700;
+    color: #FF5500;
+    font: 24px Tahoma,Arial,Helvetica,sans-serif;
+    padding-right: 5px;
+    vertical-align: middle;
+}
+#jnDetails .jnProDetailList .color_change li , #jnDetails .jnProDetailList .pro_size li{ 
+    float:left; 
+    margin-right:10px; 
+    width:40px;
+}
+#jnDetails .jnProDetailList .color_change img { 
+    width:30px; 
+    height:30px; 
+    padding:1px; 
+    background:#EEE;
+    border:1px solid #BBB;
+    cursor:pointer; 
+}
+#jnDetails .jnProDetailList .color_change img:hover,#jnDetails .jnProDetailList .color_change img.hover { 
+    border:1px solid #f60;
+}
+#jnDetails .jnProDetailList .pro_size li{
+    display:block; 
+    margin-right:6px;
+    border:1px solid #AAA;
+    cursor:pointer; 
+    width:30px; 
+    height:30px; 
+    line-height:30px; 
+    overflow:hidden;
+    text-align:center;
+}
+#jnDetails .jnProDetailList .pro_size li.cur{
+    border:1px solid #AAA;
+    background-color:#f60;
+}
+
+
+
+/*底部*/
+footer{
+    border-top: 1px dashed #aeaeae;
+    width: 990px;
+    margin: 30px auto;
+    height: 100px;
+    position: relative;
+}
+footer .tubiao{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    cursor: pointer;
+}
+
+footer .yuju{
+  position: absolute;
+  bottom: 0;
+  left: 40%;
+}
+

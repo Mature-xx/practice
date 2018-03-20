@@ -1,0 +1,446 @@
+*{margin:0;padding:0;box-sizing: border-box;}
+h1,h2,h3,h4,h5,h6{font-size: 100%;}
+a{text-decoration: none;}
+ul,ol{list-style: none;}
+.clear{clear: both;float:none;height: 0;overflow: hidden;}
+table{border-collapse: collapse;border-spacing: 0;}
+/*头部*/
+body{
+    background: #ececec;
+}
+
+header .contWidth{
+    margin: 0 auto;
+    height:155px;
+    width: 990px;
+    position: relative;
+    background-color: #ececec;
+}
+header .contWidth .logo{
+    float: left;
+    margin: 10px 0 0 20px;
+    line-height: 80px;
+}
+
+header .contWidth .search{
+    position: absolute;
+    left: 350px;
+    top: 40px;
+}
+header .contWidth .search .searchImage{
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    width: 30px;
+    height: 30px;
+    background: url(../images/zoom.gif) no-repeat;
+
+}
+header .contWidth .search input{
+    padding-left: 40px;
+    width: 350px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+}
+
+header .contWidth nav{
+    height: 50px;
+    background-color: #4a4a4a;
+    width: 990px;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
+
+header .contWidth nav ul li{
+    float: left;
+    display: inline;
+    margin-right: 14px;
+    position: relative;
+}
+
+header .contWidth nav ul li:hover .subitem{
+  display: block;
+}
+
+header .contWidth nav ul li>a{
+    color: white;
+    padding: 0 16px;
+    line-height: 50px;
+    display: block;
+}
+header .contWidth nav ul li>a:visited{color:white;}
+
+.subitem{
+    position: absolute;
+    top: 50px;
+    overflow: hidden;
+    left: 0px;
+    width: 450px;
+    min-height: 100px;
+    background-color: #ffffff;
+    display: none;
+    z-index: 1000;
+}
+
+.subitem .fore{
+    border-top-style:none;
+}
+.subitem dl{
+    float: left;
+    overflow: hidden;
+    width:450px;
+    border-top:1px dashed #c4c4c4;
+}
+.subitem dl dt{
+float: left;
+font-weight: bold;
+padding: 15px 3px;
+text-align: center;
+width: 70px;
+}
+.subitem dl dd{
+    float: left;
+    width:380px ;
+    padding: 0px;
+    height: auto !important;
+    text-align: center;
+}
+.subitem dl dd em{
+float: left;
+font-style: normal;
+height: 14px;
+margin: 5px 0;
+line-height: 14px;
+padding: 0 8px;
+border-right: 1px solid #cccccc;
+}
+.subitem dl dd em a{
+color: #666666;
+font-size: 12px;
+}
+.subitem dl dd em a:hover{
+    color: red;
+}
+
+/*中部开始*/
+#container{
+    clear: left;
+    margin: 0 auto;
+    position: relative;
+    width: 990px;
+}
+
+.content{
+    height: 560px;
+    overflow: hidden;
+    padding: 10px 0;
+}
+.jnCatelog{
+    float: left;
+    height: 560px;
+    margin: 0 11px 0 0;
+    overflow: hidden;
+    width: 187px;
+    background: white;
+}
+
+.jnImageroll{
+    float: left;
+    height: 320px;
+    margin: 0 11px 0 0;
+    overflow: hidden;
+    position: relative;
+    width: 550px;
+    background: red;
+}
+
+.jnNotice{
+    float: left;
+    height: 321px;
+    overflow: hidden;
+    width: 230px;
+}
+
+.jnBrand{
+    float: left;
+    height: 230px;
+    margin: 10px 0 0;
+    overflow: hidden;
+    width: 790px;
+}
+
+.jnCatelog h2{
+   font-size: 16px;
+   height: 30px;
+   line-height: 30px;
+   color: #fff;
+   background-color: #6e6e6e;
+   text-indent: 13px;
+}
+.jnCateinfo{
+    border:1px solid #6e6e6e;
+    border-style: none solid solid;
+    border-width: 0 1px 1px;
+    height: 524px;
+    overflow: hidden;
+    padding: 5px 10px 0;
+    width: 187px;
+}
+
+.jnCateinfo h3{
+    border-bottom: 1px dashed black;
+    height: 24px;
+    line-height: 24px;
+    width: 164px;
+}
+
+.jnCateinfo ul{
+    float: left;
+    white-space: nowrap;
+    padding: 0 2px 8px;
+}
+.jnCateinfo ul li{
+    float: left;
+    height: 24px;
+    line-height: 24px;
+    width: 79px;
+    overflow: hidden;
+    position: relative;
+    font-size: 12px;
+}
+.jnCateinfo ul li a{
+    color: #aeadae;
+}
+.jnCateinfo ul li a:hover{
+    color: #008cd7;
+}
+
+.jnCateinfo ul li a.promoted{
+    color: #f9044e;
+}
+
+.jnCateinfo ul li .hot{
+    background: url(../images/hot.gif) no-repeat scroll 0 0 transparent;
+    height: 16px;
+    width: 21px;
+    top:0;
+    position: absolute;
+}
+
+/*图片滚动*/
+.jnImageroll img{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.jnImageroll div {
+   bottom: 0;
+   position: absolute;
+   overflow: hidden;
+   float: left;
+}
+.jnImageroll div a{
+    background-color: #444444;
+    color: #fff;
+    display: inline-block;
+     float: left;
+     height: 48px;
+     margin-right: 2px;
+     overflow: hidden;
+     text-align: center;
+     width: 108px;   
+}
+
+.jnImageroll div a em{
+    cursor: pointer;
+    display: block;
+    margin:5px;
+    line-height: 16px;
+    height: 16px;
+    overflow: hidden;
+    width: 105px;
+    font-size: 12px;
+    font-style: normal;
+}
+
+
+
+.jnImageroll a.chos{
+    background-color:#37A7D7;
+}
+
+/*动态*/
+
+#jnMiaosha {
+    float: left;
+    height: 176px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    width: 230px;
+}
+.JS_css3 img {
+    -webkit-transition:1s all;
+    -moz-transition:1s all;
+    -o-transition:1s all;
+    transition:1s all;
+}
+.JS_css3:hover img {
+    -webkit-transform:rotate(360deg);
+    -moz-transform:rotate(360deg);
+    -o-transform:rotate(360deg);
+    transform:rotate(360deg);
+}
+#jnNoticeInfo {
+    float: left;
+    border: 1px solid #DFDFDF;
+    height: 133px;
+    overflow: hidden;
+    width: 228px;
+}
+#jnNoticeInfo h2 {
+    height: 23px;
+    line-height: 23px;
+    border-bottom: 1px solid #DFDFDF;
+    text-indent:12px;
+}
+#jnNoticeInfo ul {
+    float: left;
+    padding: 6px 2px 0 12px;
+}
+#jnNoticeInfo li {
+    height: 20px;
+    line-height: 20px;
+    overflow: hidden;
+}
+#jnNoticeInfo li a{
+    color:#666666;
+}
+#jnNoticeInfo li a:hover{
+    color: #008CD7;
+    text-decoration: none;
+}
+
+/*Brand*/
+#jnBrandTab {
+    border-bottom: 1px solid #E4E4E4;
+    height: 29px;
+    position: relative;
+    width: 790px;
+    float: left;
+}
+#jnBrandTab h2 {
+    height: 29px;
+    line-height: 29px;
+    left: 0;
+    position: absolute;
+    width: 100px;
+}
+#jnBrandTab ul {
+    position: absolute;
+    right: 0;
+    top: 5px;
+}
+#jnBrandTab li {
+    float: left;
+    margin: 0 10px 0 0;
+}
+#jnBrandTab li.chos{
+    padding-bottom: 3px;
+}
+#jnBrandTab .chos a{
+  background: #fa5889;
+  color: #fff;
+  outline: 0 none;
+}
+#jnBrandTab li a {
+    background-color: #E4E4E4;
+    color: #000000;
+    display: inline-block;
+    height: 20px;
+    line-height: 20px;
+    padding: 0 10px;
+}
+
+#jnBrandContent {
+    float: left;
+    height: 188px;
+    overflow: hidden;
+    margin: 8px 5px;
+    width: 790px;
+    position: relative;
+}
+#jnBrandList {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 3200px;
+}
+#jnBrandContent li {
+    float: left;
+    height: 188px;
+    overflow: hidden;
+    position: relative;
+    width: 196px;
+}
+#jnBrandContent li img {
+    left: 2px;
+    position: absolute;
+    top: 0;
+}
+#jnBrandContent li span {
+    background-color: #EFEFEF;
+    bottom:0;
+    left: 2px;
+    color: #666666;
+    display: inline-block;
+    font-size: 14px;
+    height: 24px;
+    line-height: 24px;
+    overflow: hidden;
+    position: absolute;
+    text-align: center;
+    width: 183px;
+}
+#jnBrandContent li a {
+    color:#666666;
+}
+#jnBrandContent li a:hover{
+    color: #008CD7;
+    text-decoration: none;
+}
+
+.imageMask{
+    background-color:#ffffff; 
+    filter:alpha(opacity=1);
+    opacity: 0; 
+    cursor: pointer;
+}
+.imageOver{
+    background:url(../images/zoom.gif) no-repeat 50% 50%;   
+    opacity: 0.6;   
+}
+
+
+/*底部*/
+footer{
+    border-top: 1px dashed #aeaeae;
+    width: 990px;
+    margin: 30px auto;
+    height: 100px;
+    position: relative;
+}
+footer .tubiao{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    cursor: pointer;
+}
+
+footer .yuju{
+  position: absolute;
+  bottom: 0;
+  left: 40%;
+}
+
